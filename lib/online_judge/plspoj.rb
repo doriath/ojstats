@@ -40,7 +40,7 @@ module OnlineJudge
       if fields.size == 8 && fields[1].to_i.to_s == fields[1]
         {
           id: fields[1].to_i,
-          submitted_at: DateTime.parse(fields[2]),
+          submitted_at: Time.zone.parse(fields[2]),
           problem: fields[3],
           result: fields[4],
           time: fields[5].to_f,
