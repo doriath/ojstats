@@ -1,1 +1,13 @@
-Hello world
+%h1 Ranking
+%table.table.table-striped
+  %thead
+    %tr
+      %th #
+      %th User
+      %th Score
+  %tbody
+    - @ranking.positions.each_with_index do |position, index|
+      %tr
+        %td= index + 1
+        %td= link_to position.user_name, user_path(position.user_id)
+        %td= position.score

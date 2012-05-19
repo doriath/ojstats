@@ -10,7 +10,7 @@ class Ranking
   def rebuild
     self.positions = []
     User.all.each do |user|
-      self.positions.create!(user: user.display_name, score: user.accepted_problems.size)
+      self.positions.create!(user: user, user_name: user.display_name, score: user.accepted_problems.size)
     end
   end
 end

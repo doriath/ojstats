@@ -1,0 +1,20 @@
+.row
+  .span6
+    = gravatar_image_tag(@user.email, alt: @user.display_name, gravatar: {size: 200})
+  .span6
+    %h2= @user.display_name
+
+
+%h1 Solved problems
+%table.table.table-striped
+  %thead
+    %tr
+      %th #
+      %th Problem name
+      %th Score
+  %tbody
+    - @user.accepted_problems.each_with_index do |accepted_problem, index|
+      %tr
+        %td= index + 1
+        %td= accepted_problem.problem.name
+        %td= accepted_problem.score

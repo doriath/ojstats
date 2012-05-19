@@ -41,11 +41,11 @@ class User
   # field :authentication_token, :type => String
 
   has_many :accepted_problems
-  field :online_judges, type: Hash
+  field :online_judges, type: Hash, default: {}
   field :display_name, type: String
 
   def import_accepted_problems
-    plspoj_login = online_judges[:plspoj]
+    plspoj_login = online_judges['plspoj']
     fetched_problems = OnlineJudge::Plspoj.new.fetch_accepted_problems(plspoj_login)
 
     fetched_problems.each do |fetched_problem|
