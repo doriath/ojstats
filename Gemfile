@@ -26,10 +26,10 @@ gem 'jquery-rails'
 gem 'typhoeus'
 gem 'gravatar_image_tag'
 
+gem 'thin'
 
 group :development do
   gem 'quiet_assets'
-  gem 'thin'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'yard-cucumber'
