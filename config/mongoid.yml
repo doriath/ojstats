@@ -8,4 +8,5 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOLAB_URI'] %>
+  host: localhost
+  database: ojstats

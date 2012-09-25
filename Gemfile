@@ -37,6 +37,7 @@ group :development do
   gem 'awesome_print'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'capistrano'
 end
 
 group :test do
