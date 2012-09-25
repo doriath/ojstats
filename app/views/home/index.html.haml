@@ -6,6 +6,25 @@
       %th User
       %th Score
   %tbody
+    %ul.nav.nav-tabs
+      %li.pull-right.dropdown
+        %a.dropdown-toggle{ "data-toggle" => "dropdown", href: "#" }
+          Old standings
+          %b.caret
+        %ul.dropdown-menu
+          %a Weeks
+          %a Months
+          %a Years
+
+      %li.pull-right
+        %a All time
+      %li.pull-right
+        %a Year
+      %li.pull-right
+        %a Month
+      %li.active.pull-right
+        %a Week
+
     - @ranking.positions.each_with_index do |position, index|
       %tr
         %td= index + 1
