@@ -3,6 +3,8 @@ Ojstats::Application.routes.draw do
 
   root to: 'home#index'
 
+   resources :standings
+
   resources :users, only: :show do
     collection do
       post :import
