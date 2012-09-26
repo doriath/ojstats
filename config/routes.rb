@@ -1,9 +1,9 @@
 Ojstats::Application.routes.draw do
   devise_for :users
 
-  root to: 'home#index'
+  root to: 'standings#index'
 
-   resources :standings
+  resources :standings
 
   resources :users, only: :show do
     collection do
