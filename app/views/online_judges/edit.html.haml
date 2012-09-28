@@ -1,0 +1,8 @@
+%h1= @online_judge.name
+
+= simple_form_for(@online_judge, url: online_judge_path(@online_judge.name), html: { method: :put, class: 'form-horizontal' }) do |f|
+  = f.error_notification
+  = f.hidden_field :name
+  = f.input :login
+  .form-actions
+    = f.button :submit, "Link the account"

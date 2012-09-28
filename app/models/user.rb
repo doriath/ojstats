@@ -40,22 +40,10 @@ class User
   ## Token authenticatable
   # field :authentication_token, :type => String
 
-  has_many :accepted_problems
-  field :online_judges, type: Hash, default: {}
   field :display_name, type: String
+  validates_presence_of :display_name
 
-  def import_accepted_problems
-    plspoj_login = online_judges['plspoj']
-    fetched_problems = OnlineJudge::Plspoj.new.fetch_accepted_problems(plspoj_login)
+  has_many :accepted_problems
 
-    fetched_problems.each do |fetched_problem|
-      problem = Problem.find_or_fetch_by(name: fetched_problem[:problem], online_judge: 'plspoj')
-      if accepted_problems.where(problem_id: problem.id, online_judge: 'plspoj').first == nil
-        accepted_problems.create!(problem: problem,
-                                  online_judge: 'plspoj',
-                                  accepted_at: fetched_problem[:accepted_at],
-                                  score: problem.score)
-      end
-    end
-  end
+  embeds_many :online_judges, class_name: 'OnlineJudge', inverse_of: :user
 end

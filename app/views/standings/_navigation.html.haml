@@ -1,14 +1,5 @@
 %ul.nav.nav-tabs
-  %li.pull-right.dropdown
-    %a.dropdown-toggle{ "data-toggle" => "dropdown", href: "#" }
-      Old standings
-      %b.caret
-    %ul.dropdown-menu
-      %a Weeks
-      %a Months
-      %a Years
-
-  %li.pull-right= link_to 'All time', standings_path(date: Date.today, span: 'all_time')
-  %li.pull-right= link_to 'Year', standings_path(date: Date.today, span: 'year')
-  %li.pull-right= link_to 'Month', standings_path(date: Date.today, span: 'month')
-  %li.pull-right= link_to 'Week', standings_path(date: Date.today, span: 'week')
+  %li.pull-right{class: ('active' if @span=='all_time')}= link_to 'All time', standings_path(date: Date.today, span: 'all_time')
+  %li.pull-right{class: ('active' if @span=='year')}= link_to 'Year', standings_path(date: Date.today, span: 'year')
+  %li.pull-right{class: ('active' if @span=='month')}= link_to 'Month', standings_path(date: Date.today, span: 'month')
+  %li.pull-right{class: ('active' if @span=='week')}= link_to 'Week', standings_path(date: Date.today, span: 'week')

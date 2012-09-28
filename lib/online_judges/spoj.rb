@@ -1,7 +1,7 @@
 require 'typhoeus'
 
-module OnlineJudge
-  class Plspoj
+module OnlineJudges
+  class Spoj
     def fetch_submissions(user_name)
       parse_signedlist fetch_signedlist user_name
     end
@@ -21,10 +21,11 @@ module OnlineJudge
     end
 
     def fetch_signedlist(user_name)
-      Typhoeus::Request.get("http://pl.spoj.pl/status/#{user_name}/signedlist/").body
+      Typhoeus::Request.get("http://www.spoj.pl/status/#{user_name}/signedlist/").body
     end
 
     def parse_signedlist(signedlist)
+      p signedlist
       submits = []
 
       lines = signedlist.split("\n")

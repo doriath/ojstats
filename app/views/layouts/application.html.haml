@@ -27,7 +27,7 @@
             %ul.nav.pull-right
               - if current_user
                 %li
-                  = link_to edit_user_registration_path do
+                  = link_to online_judges_path do
                     %i.icon-user.icon-white
                 %li.divider-vertical
                 %li= link_to 'Sign out', destroy_user_session_path, method: :delete
@@ -37,14 +37,16 @@
                 %li= link_to 'Sign up', new_user_registration_path
 
     .container
-
       .content
         .row
           .span12
+            - flash.each do |name, msg|
+              %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+                %a.close{"data-dismiss" => "alert"} &#215;
+                = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
             = yield
 
       %footer
-        %p &copy; Company 2012
     /
       Javascripts
       \==================================================

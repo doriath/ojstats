@@ -1,0 +1,21 @@
+%ul.nav.nav-tabs
+  %li.pull-right= link_to 'Profile', edit_user_registration_path
+  %li.pull-right.active= link_to 'Online Judge Configuration', online_judges_path
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Online Judge
+  %tbody
+    - ['plspoj', 'spoj'].each do |online_judge|
+      %tr
+        %td= online_judge
+        - if @online_judges_by_name[online_judge]
+          %td
+            Registered as
+            = link_to @online_judges_by_name[online_judge].first.login, edit_online_judge_path(online_judge)
+          %td= link_to "Refresh", refresh_online_judge_path(online_judge), method: 'POST'
+        - else
+          %td
+            = link_to "Not registered? Link your account", new_online_judge_path(name: online_judge)
+          %td

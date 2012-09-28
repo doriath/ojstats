@@ -1,9 +1,10 @@
+%ul.nav.nav-tabs
+  %li.pull-right.active= link_to 'Profile', edit_user_registration_path
+  %li.pull-right= link_to 'Online Judge Configuration', online_judges_path
+
 = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f|
-  %legend Edit #{resource_name.to_s.humanize}
   = f.error_notification
   = f.input :display_name, required: true
-  = f.simple_fields_for :online_judges do |online_judges_form|
-    = online_judges_form.input :plspoj, label: 'PLSPOJ', input_html: {value: resource.online_judges['plspoj']}
 
   = f.input :email, required: true, autofocus: true
   = f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false
@@ -12,7 +13,6 @@
 
   .form-actions
     = f.button :submit, "Update", class: 'btn-primary'
-    = link_to 'Import', import_users_path, class: 'btn', method: :post
 
 %h3 Cancel my account
 %p
