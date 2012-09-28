@@ -23,7 +23,9 @@
             %span.icon-bar
             %span.icon-bar
           %a.brand(href=root_url) Online Judge Stats
-          .container.nav-collapse
+          .container.nav-collapse.collapse
+            %ul.nav
+              %li{class: ("active" if params[:controller] == "standings")}= link_to "Ranking", root_path
             %ul.nav.pull-right
               - if current_user
                 %li
