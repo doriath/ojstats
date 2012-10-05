@@ -40,6 +40,6 @@ group :development do
   gem 'capistrano'
 end
 
-group :test do
+group :test, :development do
   gem 'rspec-rails'
 end
