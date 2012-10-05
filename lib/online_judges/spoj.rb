@@ -25,7 +25,6 @@ module OnlineJudges
     end
 
     def parse_signedlist(signedlist)
-      p signedlist
       submits = []
 
       lines = signedlist.split("\n")
