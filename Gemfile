@@ -39,6 +39,7 @@ group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'capistrano'
+  gem 'capistrano_colors'
 end
 
 group :test, :development do
