@@ -38,6 +38,7 @@ group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'capistrano'
+  gem 'whenever', require: false
 end
 
 group :test, :development do
