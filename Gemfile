@@ -27,6 +27,7 @@ gem 'typhoeus'
 gem 'gravatar_image_tag'
 
 gem 'thin'
+gem 'whenever', require: false
 
 group :development do
   gem 'quiet_assets'
@@ -38,7 +39,6 @@ group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'capistrano'
-  gem 'whenever', require: false
 end
 
 group :test, :development do
