@@ -49,6 +49,7 @@ class Ranking
     User.all.each do |user|
       positions << { user: user, user_name: user.display_name, score: user.accepted_problems.where(accepted_at: @start_date..@end_date).size }
     end
+    positions.sort! { |x, y| y[:score] <=> x[:score] }
     positions
   end
 end
