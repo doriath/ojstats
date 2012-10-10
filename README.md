@@ -1,4 +1,4 @@
-Online Judge Stats [![Build Status](https://travis-ci.org/doriath/ojstats.png)](https://travis-ci.org/doriath/ojstats)
+Online Judge Stats [![Build Status](https://travis-ci.org/doriath/ojstats.png)](https://travis-ci.org/doriath/ojstats) [![StillMaintain Status](http://stillmaintained.com/doriath/ojstats.png)](http://stillmaintained.com/doriath/ojstats.png)
 ==================
 
 Online Judge Stats is a website used to gather statistics about number of
