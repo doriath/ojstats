@@ -27,3 +27,6 @@ namespace :deploy do
     run "touch #{current_release}/tmp/restart.txt"
   end
 end
+
+require './config/boot'
+require 'airbrake/capistrano'

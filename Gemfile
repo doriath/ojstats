@@ -29,6 +29,8 @@ gem 'gravatar_image_tag'
 gem 'thin'
 gem 'whenever', require: false
 
+gem 'airbrake'
+
 group :development do
   gem 'quiet_assets'
   gem 'pry-rails'
