@@ -20,5 +20,5 @@
         %td= l(accepted_problem.accepted_at)
         %td= accepted_problem.problem.name
         %td
-          %span{ class: "badge #{accepted_problem.online_judge}"}= accepted_problem.online_judge
+          %span{class: ['badge', accepted_problem.online_judge]}= accepted_problem.online_judge
         %td= accepted_problem.score

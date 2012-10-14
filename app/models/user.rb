@@ -52,10 +52,9 @@ class User
   end
 
   def judges_points start_date, end_date
-    points = {}
-    accepted_problems.where(accepted_at: start_date..end_date).each do |problem|
-      points[problem.online_judge] = points[problem.online_judge] ? points[problem.online_judge] + 1 : 1
-    end
-    points.inject([]) { |res, (judge, points)| res << {name: judge, points: points} }.sort_by{|a| a[:name] }
+    ['spoj', 'plspoj'].map do |online_judge|
+      points = accepted_problems.where(accepted_at: start_date..end_date, online_judge: online_judge).size
+      {name: online_judge, points: points}
+    end.sort_by{|judge| judge[:name] }
   end
 end

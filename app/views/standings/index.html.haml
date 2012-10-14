@@ -15,5 +15,5 @@
         %td= link_to position[:user_name], user_path(position[:user].id)
         %td
           - position[:judges_points].each do |judge|
-            %span{ class: "badge #{judge[:name]}", title: judge[:name]}= judge[:points]
+            %span{class: ['badge', judge[:name]], title: judge[:name]}= judge[:points]
         %td= position[:score]
