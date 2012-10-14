@@ -46,4 +46,15 @@ class User
   has_many :accepted_problems
 
   embeds_many :online_judges, class_name: 'OnlineJudge', inverse_of: :user
+
+  def points start_date, end_date
+    accepted_problems.where(accepted_at: start_date..end_date).size
+  end
+
+  def judges_points start_date, end_date
+    ['spoj', 'plspoj'].map do |online_judge|
+      points = accepted_problems.where(accepted_at: start_date..end_date, online_judge: online_judge).size
+      {name: online_judge, points: points}
+    end.sort_by{|judge| judge[:name] }
+  end
 end
