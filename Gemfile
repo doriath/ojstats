@@ -31,6 +31,7 @@ gem 'whenever', require: false
 
 gem 'airbrake'
 gem 'newrelic_rpm'
+gem 'newrelic_moped'
 
 group :development do
   gem 'quiet_assets'
