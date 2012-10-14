@@ -30,6 +30,7 @@ gem 'thin'
 gem 'whenever', require: false
 
 gem 'airbrake'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'quiet_assets'
