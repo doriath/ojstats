@@ -15,8 +15,8 @@ group :assets do
   gem 'twitter-bootstrap-rails'
 end
 
-gem "mongoid", "~> 2.4"
-gem "bson_ext", "~> 1.5"
+gem 'mongoid', '~> 3.0'
+gem 'bson_ext'
 gem 'devise'
 
 gem 'haml-rails'

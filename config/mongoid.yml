@@ -1,12 +1,20 @@
 development:
-  host: localhost
-  database: ojstats_development
+  sessions:
+    default:
+      database: ojstats_development
+      hosts:
+        - localhost:27017
 
 test:
-  host: localhost
-  database: ojstats_test
+  sessions:
+    default:
+      database: ojstats_test
+      hosts:
+        - localhost:27017
 
-# set these environment variables on your prod server
 production:
-  host: localhost
-  database: ojstats
+  sessions:
+    default:
+      database: ojstats
+      hosts:
+        - localhost:27017
