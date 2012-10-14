@@ -46,4 +46,16 @@ class User
   has_many :accepted_problems
 
   embeds_many :online_judges, class_name: 'OnlineJudge', inverse_of: :user
+
+  def points start_date, end_date
+    accepted_problems.where(accepted_at: start_date..end_date).size
+  end
+
+  def judges_points start_date, end_date
+    points = {}
+    accepted_problems.where(accepted_at: start_date..end_date).each do |problem|
+      points[problem.online_judge] = points[problem.online_judge] ? points[problem.online_judge] + 1 : 1
+    end
+    points.inject([]) { |res, (judge, points)| res << {name: judge, points: points} }.sort_by{|a| a[:name] }
+  end
 end

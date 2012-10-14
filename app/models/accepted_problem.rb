@@ -7,4 +7,6 @@ class AcceptedProblem
 
   belongs_to :user
   belongs_to :problem
+
+  scope :ordered, order: 'accepted_at'
 end

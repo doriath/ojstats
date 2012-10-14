@@ -10,11 +10,15 @@
   %thead
     %tr
       %th #
+      %th Timestamp
       %th Problem name
       %th Score
   %tbody
-    - @user.accepted_problems.each_with_index do |accepted_problem, index|
+    - @user.accepted_problems.ordered.each_with_index do |accepted_problem, index|
       %tr
         %td= index + 1
+        %td= l(accepted_problem.accepted_at)
         %td= accepted_problem.problem.name
+        %td
+          %span{ class: "badge #{accepted_problem.online_judge}"}= accepted_problem.online_judge
         %td= accepted_problem.score
