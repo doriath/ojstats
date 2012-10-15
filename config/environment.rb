@@ -6,11 +6,11 @@ Ojstats::Application.initialize!
 
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
-  :tls => true,
   :address => "smtp.gmail.com",
   :port => 587,
   :domain => "gmail.com",
-  :authentication => :login,
   :user_name => APP_CONFIG['mailer']['user_name'],
-  :password => APP_CONFIG['mailer']['password']
+  :password => APP_CONFIG['mailer']['password'],
+  :authentication => 'plain',
+  :enable_starttls_auto => true,
 }
