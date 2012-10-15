@@ -1,0 +1,12 @@
+production:
+  mailer:
+    user_name: <gmail_user>
+    password: <gmail_password>
+development:
+  mailer:
+    user_name: <gmail_user>
+    password: <gmail_password>
+test:
+  mailer:
+    user_name: <gmail_user>
+    password: <gmail_password>

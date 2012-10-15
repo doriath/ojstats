@@ -26,7 +26,15 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_release}/tmp/restart.txt"
   end
+
+  desc "Symlink shared configs and folders on each release."
+  task :symlink_shared do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
+  end
 end
+
+after 'deploy:update_code', 'deploy:symlink_shared'
 
 require './config/boot'
 require 'airbrake/capistrano'
