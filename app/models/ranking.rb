@@ -45,11 +45,6 @@ class Ranking
   end
 
   def build_standings
-    positions = []
-    User.all.each do |user|
-      positions << { user: user, user_name: user.display_name, score: user.points(@start_date, @end_date), judges_points: user.judges_points(@start_date, @end_date)}
-    end
-    positions.sort! { |x, y| y[:score] <=> x[:score] }
-    positions
+    User.all.map{ |user| RankingPosition.new(user, @start_date, @end_date) }.sort! { |a, b| a.score <=> b.score }
   end
 end
