@@ -15,7 +15,7 @@ class JudgeResult
   private
 
   def compute_points
-      @user.accepted_problems.where(accepted_at: @start_date..@end_date, online_judge: @name).size
+    @user.accepted_problems.where(accepted_at: @start_date..@end_date, online_judge: @name).size
   end
 end
 

@@ -28,6 +28,6 @@ class RankingPosition
   end
 
   def compute_judges
-    ['spoj', 'plspoj'].map{ |online_judge| JudgeResult.new online_judge, @user, @start_date, @end_date }.sort_by{|judge| judge.name }
+    ['spoj', 'plspoj'].map{ |online_judge| JudgeResult.new online_judge, @user, @start_date, @end_date }.sort_by!{|judge| judge.name}
   end
 end

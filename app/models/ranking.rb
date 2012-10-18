@@ -45,6 +45,6 @@ class Ranking
   end
 
   def build_standings
-    User.all.map{ |user| RankingPosition.new(user, @start_date, @end_date) }.sort! { |a, b| a.score <=> b.score }.reverse!
+    User.all.map{ |user| RankingPosition.new(user, @start_date, @end_date) }.sort!{|a, b| b.score <=> a.score}
   end
 end
