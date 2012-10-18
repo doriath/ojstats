@@ -3,8 +3,6 @@ class RankingPosition
     @user = user
     @start_date = start_date
     @end_date = end_date
-    @score = total_score
-    @judges = judges_scores
   end
 
   def user_name
@@ -16,20 +14,20 @@ class RankingPosition
   end
 
   def score
-    @score
+    @score ||= compute_score
   end
 
   def judges
-    @judges
+    @judges ||= compute_judges
   end
 
   private
 
-  def total_score
+  def compute_score
     @user.accepted_problems.where(accepted_at: @start_date..@end_date).size
   end
 
-  def judges_scores
+  def compute_judges
     ['spoj', 'plspoj'].map{ |online_judge| JudgeResult.new online_judge, @user, @start_date, @end_date }.sort_by{|judge| judge.name }
   end
 end
