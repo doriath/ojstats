@@ -1,5 +1,4 @@
 class Ranking
-
   def initialize date, span
     set_dates(date, span)
     @positions = build_standings
