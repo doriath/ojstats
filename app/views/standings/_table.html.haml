@@ -8,7 +8,7 @@
       %th Score
   %tbody
     = render 'navigation'
-    = render 'custom_filter' if @span == "custom"
+    = render 'custom_filter' if show_filter == true
 
     - @ranking.positions.each_with_index do |position, index|
       %tr
