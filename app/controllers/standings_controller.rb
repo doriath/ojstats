@@ -2,19 +2,19 @@ class StandingsController < ApplicationController
   before_filter :get_date, except: :custom
 
   def week
-    @start_date = @start_date - @start_date.cwday.days
-    @end_date = @start_date + 6.days
+    @start_date = @start_date.beginning_of_week
+    @end_date = @start_date.end_of_week
     generate_ranking
   end
 
   def month
-    @start_date = @start_date - @start_date.day + 1.day
+    @start_date = @start_date.beginning_of_month
     @end_date = @start_date.next_month - @start_date.next_month.day
     generate_ranking
   end
 
   def year
-    @start_date = @start_date - @start_date.yday + 1.day
+    @start_date = @start_date.beginning_of_year
     @end_date = @start_date.next_year - @start_date.next_year.yday
     generate_ranking
   end
