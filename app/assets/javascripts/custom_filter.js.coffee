@@ -29,8 +29,7 @@ class CustomFilter
     window.location = url if @validate()
 
   createUrl: ->
-    url = "/standings"
-    url += "?span=custom"
+    url = "/standings/custom?"
     url += @startDateSelect.getUrlFor("start_date")
     url += @endDateSelect.getUrlFor("end_date")
     return url
