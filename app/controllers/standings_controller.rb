@@ -1,33 +1,31 @@
 class StandingsController < ApplicationController
-  before_filter :get_date, except: :custom
-
   def week
-    @start_date = @start_date.beginning_of_week
-    @end_date = @start_date.end_of_week
+    @start_date = date_param.beginning_of_week
+    @end_date = date_param.end_of_week
     generate_ranking
   end
 
   def month
-    @start_date = @start_date.beginning_of_month
-    @end_date = @start_date.next_month - @start_date.next_month.day
+    @start_date = date_param.beginning_of_month
+    @end_date = date_param.end_of_month
     generate_ranking
   end
 
   def year
-    @start_date = @start_date.beginning_of_year
-    @end_date = @start_date.next_year - @start_date.next_year.yday
+    @start_date = date_param.beginning_of_year
+    @end_date = date_param.end_of_year
     generate_ranking
   end
 
   def all_time
-    @end_date = @start_date
-    @start_date = Date.parse("1970-01-01")
+    @end_date = date_param
+    @start_date = Date.new 1970, 1, 1
     generate_ranking
   end
 
   def custom
-    @start_date = params[:start_date]
-    @end_date = params[:end_date]
+    @start_date = start_date_param
+    @end_date = end_date_param
     generate_ranking
   end
 
@@ -37,7 +35,15 @@ class StandingsController < ApplicationController
     @ranking = Ranking.new(@start_date, @end_date)
   end
 
-  def get_date
-    @start_date = params[:date].to_date || Date.today
+  def date_param
+    (params[:date] || Date.today).to_date
+  end
+
+  def start_date_param
+    (params[:start_date] || Date.today).to_date
+  end
+
+  def end_date_param
+    (params[:end_date] || Date.today).to_date
   end
 end
