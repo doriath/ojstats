@@ -24,7 +24,7 @@ class RankingPosition
   private
 
   def compute_score
-    @user.accepted_problems.where(accepted_at: @start_date..@end_date).size
+    @user.accepted_problems.where(accepted_at: @start_date..(@end_date + 1)).size
   end
 
   def compute_judges
