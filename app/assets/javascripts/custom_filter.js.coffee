@@ -2,6 +2,7 @@ $ ->
   $form = $(".custom_filter_form")
   customFilter = new CustomFilter($form) unless $form.length == 0
 
+  $('.placek').dropkick()
 
 
 
