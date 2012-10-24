@@ -10,6 +10,6 @@
  *
  *= require_self
  *= require bootstrap-datepicker
- *= require dropkick
  *= require_tree .
+ *= require dropkick
 */

@@ -2,12 +2,47 @@ ul
   margin: 0px
 
 .custom_filter_form.well
-  height: 66px
+  height: 186px
   padding: 13px 19px 10px 19px
 
   .inline
     float: left
     margin: 0px 10px 0px 0px
+    .row
+      opacity: 0.3
+      margin-left: 0px
+      width: 440px
+      height: 30px
+      padding: 10px 0px
+      .legend
+        width: 95px
+        float: left
+        padding: 6px 0px
+        &:hover
+          cursor: pointer
+        overflow: hidden
+
+        .label
+          float: right
+      .inline
+        float: left
+
+      input
+        border-radius: 0px
+        -moz-border-radius: 0px
+        -webkit-border-radius: 0px
+        margin-right: 0px
+        width: 290px
+        &.stacked
+          width: 30px
+
+      .help-block
+        margin-left: 95px
+
+
+    .row.active
+      opacity: 1
+
 
   button
     margin-top: 24px

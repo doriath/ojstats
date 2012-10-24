@@ -2,8 +2,6 @@ $ ->
   $form = $(".custom_filter_form")
   customFilter = new CustomFilter($form) unless $form.length == 0
 
-  $('.placek').dropkick()
-
 
 
 
@@ -14,11 +12,11 @@ class CustomFilter
     @bindEvents()
 
   buildForm: ->
-    @startDateSelect = new DateSelect(el: @el.find(".start_date"), label: "Start date")
+    @startDateSelect = new DateSelect(el: @el.find(".start_date"), label: "Start date", prefix: "start_date")
     @startDateSelect.render()
     @startDateSelect.setDate(initialStartDate)
 
-    @endDateSelect = new DateSelect(el:  @el.find(".end_date"), label: "End date")
+    @endDateSelect = new DateSelect(el:  @el.find(".end_date"), label: "End date", prefix: "end_date")
     @endDateSelect.render()
     @endDateSelect.setDate(initialEndDate)
 
@@ -49,27 +47,63 @@ class DateSelect
   constructor: (options) ->
     @el = options.el
     @label = options.label
+    @prefix = options.prefix
 
   render: =>
-    @fixedDate = $("<input>").attr("type", "text")
+    @fixedDate = new FixedDateSelect(prefix: @prefix)
+    @relativeDate = new RelativeDateSelect(prefix: @prefix)
+
     $label = $("<label>").html(@label)
+    @el.append($label)
 
-    @fixedDate.datepicker(format: "yyyy-mm-dd").on('change', @validate)
+    @fixedDate.render(@el)
+    @relativeDate.render(@el)
 
-    @el.append($label).append(@fixedDate)
+    @fixedDate.on("selected", @selectFixed)
+    @relativeDate.on("selected", @selectRelative)
 
   setDate: (date) =>
-    @fixedDate.val(date)
+    @fixedDate.setDate(date)
 
   getUrlFor: (paramName) ->
     date = @fixedDate.val()
     return "&#{paramName}=#{date}"
 
+  selectFixed: =>
+    @relativeDate.deselect()
+    @selectedType = "fixed"
+
+  selectRelative: =>
+    @fixedDate.deselect()
+    @selectedType = "relative"
+
+
+
+
+
+class FixedDateSelect extends Backbone.Model
+  constructor: ->
+    @buildForm()
+
+  render: ($el) ->
+    $el.append(@row)
+
+  setDate: (date) =>
+    @input.val(date)
+
+  select: =>
+    @trigger("selected")
+    @row.addClass("active")
+
+  deselect: =>
+    @row.removeClass("active")
+
+  # Validation
   validate: =>
-    dateValue = @fixedDate.val()
+    dateValue = @input.val()
 
     #TODO date validation
-    if @fixedDate.val().length == 0
+    if @input.val().length == 0
       @showErrors()
       return false
     else
@@ -78,10 +112,92 @@ class DateSelect
 
   showErrors: ->
     @hideErrors()
-    @el.addClass("error")
+    @row.addClass("error")
     hint = $("<div>").addClass("help-block error_description").html("Please specify the date")
-    @el.append(hint)
+    @row.append(hint)
 
   hideErrors: ->
-    @el.removeClass("error")
-    @el.find(".error_description").remove()
+    @row.removeClass("error")
+    @row.find(".error_description").remove()
+
+
+  # Form building
+  buildForm: ->
+    @row = @createDiv("row active control-group")
+
+    $legend = @createDiv("legend")
+    $label = @createDiv("label inline").html("Fixed date")
+    $legend.append($label)
+
+    @input = @createInput()
+    @input.datepicker(format: "yyyy-mm-dd")
+          .on('change', @validate)
+
+    @row.append($legend).append(@input)
+    @row.click(@select)
+
+  createInput: ->
+    return $("<input>").attr("type", "text").addClass("inline")
+
+  createDiv: (classNames) ->
+    return $("<div>").addClass(classNames)
+
+
+class RelativeDateSelect extends Backbone.Model
+  constructor: (options) ->
+    @prefix = options.prefix
+    @setSelectsData()
+    @buildForm()
+
+  setSelectsData: ->
+    @possibleUnits = ["days", "weeks", "months", "years"]
+    @possibleDirections = ["before", "after"]
+    @possibleRelations = ["today", "week_begin", "month_begin", "year_begin", "start_date"]
+
+  render: ($el)->
+    $el.append(@row)
+    @unit.dropkick()
+    @direction.dropkick()
+    @relation.dropkick()
+
+  select: =>
+    @trigger("selected")
+    @row.addClass("active")
+
+  deselect: =>
+    @row.removeClass("active")
+
+  # Form building
+  buildForm: ->
+    @amount = @createInput("amount")
+    @unit = @createSelect("unit", @possibleUnits, 20)
+    @direction = @createSelect("direction", @possibleDirections, 20)
+    @relation = @createSelect("relation", @possibleRelations, 50)
+
+    $legend = @createDiv("legend")
+    $label = @createDiv("label inline").html("Relative date")
+    $legend.append($label)
+
+    @row = @createDiv("row control-group").click(@activateRelative)
+    @row.click(@select)
+
+    @row.append($legend)
+    @row.append(@amount)
+    @row.append(@unit)
+    @row.append(@direction)
+    @row.append(@relation)
+
+  createInput: ->
+    return $("<input>").attr("type", "text").addClass("inline stacked")
+
+  createSelect: (name, values, width) ->
+    $select =  $("<select>").addClass(@prefix + name).addClass("inline").attr("name", @prefix + name).attr("tabindex", "2").css("width", width + "px")
+    for value in values
+      $select.append @createOption value
+    $select
+
+  createOption: (value) ->
+    return $("<option>").html(value)
+
+  createDiv: (classNames) ->
+    return $("<div>").addClass(classNames)

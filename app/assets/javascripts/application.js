@@ -14,5 +14,10 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap-datepicker
-//= require jquery.dropkick-1.0.0
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/ojstats
 //= require_tree .
+//= require jquery.dropkick-1.0.0
