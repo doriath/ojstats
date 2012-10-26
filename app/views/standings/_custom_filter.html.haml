@@ -1,11 +1,12 @@
 .well.custom_filter_form
   :javascript
-    var initialStartDate = "#{@start_date}"
-    var initialEndDate = "#{@end_date}"
+    var filter = #{@filter.to_json.html_safe}
 
-  .inline.control-group.start_date
+  .inline.start_date
 
-  .inline.control-group.end_date
+  .inline.end_date
 
   .inline
     %button.btn.apply_filter Apply filter
+
+%h5.not_bold Displaying standings from <b> #{l @start_date} </b> to <b> #{l @end_date} </b>

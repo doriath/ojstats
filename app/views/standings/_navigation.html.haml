@@ -3,4 +3,5 @@
   %li.pull-right{class: ('active' if controller.action_name == 'year')}= link_to 'Year', year_standings_path(date: Date.today)
   %li.pull-right{class: ('active' if controller.action_name == 'month')}= link_to 'Month', month_standings_path(date: Date.today)
   %li.pull-right{class: ('active' if controller.action_name == 'week')}= link_to 'Week', week_standings_path(date: Date.today)
-  %li.pull-right{class: ('active' if controller.action_name == 'custom')}= link_to 'Custom', custom_standings_path(start_date: Date.today, end_date: Date.today)
+  %li.pull-right{class: ('active' if controller.action_name == 'custom')}
+    = link_to 'Custom', custom_standings_path(start_date: {type: :fixed, date: Date.today}, end_date: {type: :fixed, date: Date.today})

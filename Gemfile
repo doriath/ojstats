@@ -7,6 +7,7 @@ gem 'rails', '3.2.8'
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
+  gem 'rails-backbone'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
