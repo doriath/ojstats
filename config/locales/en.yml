@@ -5,3 +5,6 @@ en:
   time:
     formats:
       default: "%d.%m.%y, %H:%M"
+  date:
+    formats:
+      default: "%d %B %Y"
