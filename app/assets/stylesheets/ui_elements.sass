@@ -1,10 +1,61 @@
+h5.not_bold
+  font-weight: normal
+
+ul
+  margin: 0px
+
 .custom_filter_form.well
-  overflow: hidden
+  height: 135px
   padding: 13px 19px 10px 19px
 
+  position: relative
+
   .inline
+    label
+      margin-left: 98px
+      font-size: 15px
+      font-weight: bold
     float: left
     margin: 0px 10px 0px 0px
+    .row
+      opacity: 0.3
+      margin-left: 0px
+      width: 440px
+      height: 30px
+      padding: 10px 0px
+      .legend
+        width: 95px
+        float: left
+        padding: 6px 0px
+        &:hover
+          cursor: pointer
+        overflow: hidden
+
+        .label
+          float: right
+      .inline
+        float: left
+
+      input
+        border-radius: 0px
+        -moz-border-radius: 0px
+        -webkit-border-radius: 0px
+        margin-right: 0px
+        width: 310px
+        &.stacked
+          width: 30px
+
+      .help-block
+        margin-left: 95px
+
+
+    .row.active
+      opacity: 1
+
 
   button
     margin-top: 24px
+    position: absolute
+    right: 0px
+    bottom: 0px
+    margin: 20px

@@ -24,8 +24,9 @@ class StandingsController < ApplicationController
   end
 
   def custom
-    @start_date = start_date_param
-    @end_date = end_date_param
+    @filter = CustomFilter.new(params[:start_date], params[:end_date])
+    @start_date = @filter.start_date
+    @end_date = @filter.end_date
     generate_ranking
   end
 
@@ -37,13 +38,5 @@ class StandingsController < ApplicationController
 
   def date_param
     (params[:date] || Date.today).to_date
-  end
-
-  def start_date_param
-    (params[:start_date] || Date.today).to_date
-  end
-
-  def end_date_param
-    (params[:end_date] || Date.today).to_date
   end
 end
