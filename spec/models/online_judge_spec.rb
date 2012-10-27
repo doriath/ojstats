@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe OnlineJudge do
   describe '#refresh' do
-    let!(:user) { Fabricate(:user) }
+    let!(:user) { Fabricate(:user, online_judges: online_judges) }
     let(:online_judges) { [OnlineJudge.new(name: 'plspoj', login: 'doriath')] }
 
     it "should fetch accepted problems" do
