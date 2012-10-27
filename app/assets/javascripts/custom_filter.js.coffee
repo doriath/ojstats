@@ -77,6 +77,7 @@ class DateSelect
 
   initializeData: (filter) ->
     if filter["type"] == "fixed"
+      @selectFixed()
       @fixedDate.setDate(filter["date"])
     else
       @selectRelative()
