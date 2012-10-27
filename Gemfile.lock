@@ -75,6 +75,7 @@ GEM
     eventmachine (1.0.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fabrication (2.5.0)
     ffi (1.1.5)
     gherkin (2.11.4)
       json (>= 1.4.6)
@@ -250,6 +251,7 @@ DEPENDENCIES
   capistrano_colors
   coffee-rails
   devise
+  fabrication
   gravatar_image_tag
   guard
   guard-rspec

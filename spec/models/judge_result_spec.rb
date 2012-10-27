@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe JudgeResult do
-  let(:user) { User.create!(email: 'test@example.com', password: 'secret', display_name: 'Display Name') }
+  let(:user) { Fabricate(:user) }
   let(:start_date) { Date.parse('2012/10/21') }
   let(:end_date) { Date.parse('2012/10/27') }
   subject(:judge_result) { JudgeResult.new('spoj', user, start_date, end_date) }
