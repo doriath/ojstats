@@ -42,13 +42,19 @@ group :development do
   gem 'yard-cucumber'
   gem 'yard-rails'
   gem 'awesome_print'
+
   gem 'guard'
   gem 'guard-rspec'
+  gem 'rb-fsevent', require: false
+  gem 'growl'
+
   gem 'capistrano'
   gem 'capistrano_colors'
 end
 
 group :test, :development do
+  gem 'simplecov', require: false
   gem 'rspec-rails'
   gem 'fabrication'
+  gem 'timecop'
 end

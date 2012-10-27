@@ -1,5 +1,4 @@
 class DateSelector
-
   def initialize params
     @type = params[:type]
     @fixed_date = params[:date]
@@ -12,6 +11,8 @@ class DateSelector
   def date
     @date ||= compute_date
   end
+
+  private
 
   def compute_date
     return @fixed_date.to_date if @type == "fixed"
