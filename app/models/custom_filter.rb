@@ -5,10 +5,10 @@ class CustomFilter
   end
 
   def start_date
-    @start_date ||= @start.date()
+    @start_date ||= @start.date
   end
 
   def end_date
-    @end_date ||= @end.date()
+    @end_date ||= @end.date
   end
 end
