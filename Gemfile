@@ -45,8 +45,10 @@ group :development do
 
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-jasmine'
   gem 'rb-fsevent', require: false
   gem 'growl'
+  gem 'rb-readline'
 
   gem 'capistrano'
   gem 'capistrano_colors'
@@ -57,4 +59,5 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'fabrication'
   gem 'timecop'
+  gem "jasminerice"
 end
