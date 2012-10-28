@@ -39,7 +39,7 @@ module OnlineJudges
 
     def parse_line line
       fields = line.split('|').map(&:strip)
-      if fields.size == 8 && fields[1].to_i.to_s == fields[1]
+      if problem_description_line? fields
         {
           id: fields[1].to_i,
           submitted_at: Time.zone.parse(fields[2]),
@@ -50,6 +50,10 @@ module OnlineJudges
           language: fields[7]
         }
       end
+    end
+
+    def problem_description_line? fields
+      fields.size == 8 && fields[1].match(/^\d+$/)
     end
   end
 end
