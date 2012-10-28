@@ -17,6 +17,10 @@ class RankingPosition
     @score ||= compute_score
   end
 
+  def num_problems
+    @num_problems ||= compute_num_problems
+  end
+
   def judges
     @judges ||= compute_judges
   end
@@ -24,7 +28,11 @@ class RankingPosition
   private
 
   def compute_score
-    @user.accepted_problems.where(accepted_at: @start_date..(@end_date + 1)).size
+    judges.map { |j| j.score }.sum
+  end
+
+  def compute_num_problems
+    judges.map { |j| j.num_problems }.sum
   end
 
   def compute_judges
