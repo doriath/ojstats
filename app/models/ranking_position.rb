@@ -1,10 +1,12 @@
 class RankingPosition
-  def initialize user, start_date, end_date
+  # @params [User] user
+  # @params [Array<JudgeResult>] judge_results
+  def initialize user, judge_results
     @user = user
-    @start_date = start_date
-    @end_date = end_date
+    @judge_results = judge_results
   end
 
+  # @return [String]
   def user_name
     @user.display_name
   end
@@ -13,29 +15,28 @@ class RankingPosition
     @user.id
   end
 
+  # @return [Float]
   def score
     @score ||= compute_score
   end
 
+  # @return [Integer]
   def num_problems
     @num_problems ||= compute_num_problems
   end
 
-  def judges
-    @judges ||= compute_judges
+  # @return [Array<JudgeResult>]
+  def judge_results
+    @judge_results
   end
 
   private
 
   def compute_score
-    judges.map { |j| j.score }.sum
+    judge_results.map { |j| j.score }.sum
   end
 
   def compute_num_problems
-    judges.map { |j| j.num_problems }.sum
-  end
-
-  def compute_judges
-    ['spoj', 'plspoj'].map{ |online_judge| JudgeResult.new online_judge, @user, @start_date, @end_date }.sort_by!{|judge| judge.name}
+    judge_results.map { |j| j.num_problems }.sum
   end
 end

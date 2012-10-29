@@ -1,7 +1,7 @@
 development:
   sessions:
     default:
-      database: ojstats_development
+      database: ojstats
       hosts:
         - localhost:27017
 
