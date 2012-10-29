@@ -1,4 +1,6 @@
 class OnlineJudgesController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
     @online_judges_by_name = current_user.online_judges.group_by { |x| x.name }
   end
