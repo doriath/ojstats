@@ -1,4 +1,6 @@
 .well.custom_filter_form
+  .save_filter
+    %a save filter
   :javascript
     var filter = #{@filter.to_json.html_safe}
 
@@ -8,5 +10,3 @@
 
   .inline
     %button.btn.apply_filter Apply filter
-
-%h5.not_bold Displaying standings from <b> #{l @start_date} </b> to <b> #{l @end_date} </b>

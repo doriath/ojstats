@@ -5,3 +5,7 @@
   %li.pull-right{class: ('active' if controller.action_name == 'week')}= link_to 'Week', week_standings_path(date: Date.today)
   %li.pull-right{class: ('active' if controller.action_name == 'custom')}
     = link_to 'Custom', custom_standings_path(start_date: {type: :fixed, date: Date.today}, end_date: {type: :fixed, date: Date.today})
+
+  - @user_filters.each do |filter|
+    %li.pull-left{class: ('active' if controller.action_name == 'user_filter' and @user_filter.id.to_s == filter.id.to_s)}
+      = link_to filter.name, user_filter_standings_path(id: filter.id)

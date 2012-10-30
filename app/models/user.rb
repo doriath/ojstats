@@ -17,6 +17,7 @@ class User
 
   field :display_name, type: String
   has_many :accepted_problems
+  has_many :ranking_filters
   embeds_many :online_judges, class_name: 'OnlineJudge', inverse_of: :user
 
   validates_presence_of :display_name, :email, :encrypted_password
