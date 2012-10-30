@@ -55,6 +55,6 @@ class StandingsController < ApplicationController
   end
 
   def fetch_user_filters
-    @user_filters = current_user.ranking_filters.all
+    @user_filters = current_user ? current_user.ranking_filters.all : []
   end
 end
