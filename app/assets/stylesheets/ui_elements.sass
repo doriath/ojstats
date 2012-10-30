@@ -4,11 +4,22 @@ h5.not_bold
 ul
   margin: 0px
 
+a.remove_filter
+  float: right
+
 .custom_filter_form.well
   height: 135px
   padding: 13px 19px 10px 19px
 
   position: relative
+
+  .save_filter
+    position: absolute
+    right: 0px
+    top: 0px
+    margin: 12px 18px
+    &:hover
+      cursor: pointer
 
   .inline
     label
@@ -59,3 +70,14 @@ ul
     right: 0px
     bottom: 0px
     margin: 20px
+
+.filter_name_form
+  overflow: hidden
+  width: 280px
+  input
+    float: left
+    width: 165px
+
+  button
+    margin-left: 10px
+    float: left
