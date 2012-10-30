@@ -1,3 +1,5 @@
+- show_filter ||= false
+- remove_filter ||= false
 %h1 Ranking
 %table.table.table-striped
   %thead
@@ -8,7 +10,10 @@
       %th Score
   %tbody
     = render 'navigation'
-    = render 'custom_filter' if show_filter == true
+    = render 'custom_filter' if show_filter
+    = link_to "remove this filter", filter_path(@user_filter), method: :delete, class: 'remove_filter', confirm: "Are you sure you want to delete filter: '#{@user_filter.name}'?" if remove_filter
+
+    %h5.not_bold Displaying standings from <b> #{l @start_date} </b> to <b> #{l @end_date} </b>
 
     - @ranking.positions.each_with_index do |position, index|
       %tr

@@ -16,6 +16,7 @@ class CustomFilter
     @el = $el
     @renderForm()
     @bindEvents()
+    @initializeFilterSaving()
     @initializeData()
 
   renderForm: ->
@@ -33,12 +34,14 @@ class CustomFilter
     @endDateSelect.initializeData(@filter["end"])
 
   applyFilter: =>
-    data =
-      start_date: @startDateSelect.getValuesHash()
-      end_date:   @endDateSelect.getValuesHash()
+    data = @getFilterData()
 
     url = @createUrl(data)
     window.location = url if @validate()
+
+  getFilterData: ->
+    start_date: @startDateSelect.getValuesHash()
+    end_date:   @endDateSelect.getValuesHash()
 
   createUrl: (data) ->
     url = "/standings/custom"
@@ -50,6 +53,80 @@ class CustomFilter
     isValid = false unless @startDateSelect.validate()
     isValid = false unless @endDateSelect.validate()
     return isValid
+
+  initializeFilterSaving: ->
+    $saveTrigger =  @el.find(".save_filter a")
+    @saveFilter = new SaveFilter $saveTrigger
+
+    @saveFilter.on "save", =>
+      @saveFilter.save @getFilterData() if @validate()
+
+
+
+
+class SaveFilter extends Backbone.Model
+  constructor: ($el) ->
+    @el = $el
+    @bindSaveQtip()
+
+  bindSaveQtip: =>
+    form = @buildFilterNameForm()
+    @el.qtip
+      content:
+        title: "Filter name"
+        text: form
+      position:
+        at: 'bottom right'
+        my: 'top right'
+      show: 'click'
+      hide: 'unfocus'
+      style:
+        classes: 'ui-tooltip-bootstrap'
+
+  buildFilterNameForm: ->
+    @form = $("<div>").addClass("filter_name_form control-group")
+    @filterName = $("<input>").attr('type', 'text')
+    $button = $("<button>").addClass("btn").html("Save")
+    $button.click => @triggerSave()
+    @form.append(@filterName).append($button)
+
+  triggerSave: ->
+    @trigger("save") if @validate()
+
+  save: (data) ->
+    url = "/filters/save"
+    url += HashCreator.build(data)
+    url += "&filter_name=#{@filterName.val()}"
+
+    $.post(url, (data) => @showFilter(data.id))
+
+  validate: ->
+    name = @trimWhitespace @filterName.val()
+
+    if name == ""
+      @showError "Filter name cannot be empty."
+    else if name.length > 20
+      @showError "Filter name cannot be longer than 20 characters."
+    else return true
+
+    return false
+
+  showFilter: (id) ->
+    url = "/standings/user_filter?id=#{id}"
+    window.location = url
+
+  trimWhitespace: (string) ->
+    string.replace /^\s+|\s+$/g, ""
+
+  showError: (msg) ->
+    @hideErrors()
+    @form.addClass("error")
+    hint = $("<div>").addClass("help-block").html(msg).css("float", "left")
+    @form.append(hint)
+
+  hideErrors: ->
+    @form.removeClass("error")
+    @form.find(".help-block").remove()
 
 
 

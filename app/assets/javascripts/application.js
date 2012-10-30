@@ -19,5 +19,6 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/ojstats
+//= require jquery.qtip.js
 //= require_tree .
 //= require jquery.dropkick-1.0.0

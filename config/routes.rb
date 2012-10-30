@@ -10,6 +10,12 @@ Ojstats::Application.routes.draw do
       get :year
       get :all_time
       get :custom
+      get :user_filter
+    end
+  end
+  resources :filters do
+    collection do
+      post :save
     end
   end
 
