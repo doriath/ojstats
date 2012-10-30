@@ -1,8 +1,10 @@
 .well.custom_filter_form
-  .save_filter
-    %a save filter
   :javascript
     var filter = #{@filter.to_json.html_safe}
+
+  - if current_user
+    .save_filter
+      %a save filter
 
   .inline.start_date
 
