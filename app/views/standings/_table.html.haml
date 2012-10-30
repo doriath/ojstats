@@ -20,11 +20,14 @@
         %td= index + 1
         %td= link_to position.user_name, user_path(position.user_id)
         %td
-          - position.judge_results.each do |judge_result|
-            %span{class: ['badge', judge_result.judge_name], title: judge_result.judge_name, style: "margin-right: 5px;"}
-              = judge_result.score.floor
-              - if judge_result.score != 0
-                %span{style: "font-size: 9px; margin-left: -2px;"}= '.' + judge_result.score.to_s.split(".").last
-              %div{style: "margin-left: 3px; width: 3px; height: 18px; border-left: 1px solid black; display: inline; position: absolute; margin-top: 2px; opacity: 0.1"}
-              %span{style: "font-size: 11px; margin-left: 2px; opacity: 0.35; color: #000; margin-right: -2px; padding-left: 6px; text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25)"}= judge_result.num_problems.to_i
+          - position.judge_results.each do |result|
+            - if result.num_problems == 0
+              %span{class: ['badge', result.judge_name], title: result.judge_name}= 0
+
+            - else
+              %span{class: ['badge', 'left', result.judge_name], title: result.judge_name}
+                = result.score.floor
+                %span.decimal= decimal_part result.score
+              %span{class: ['badge', 'right', 'problems_solved']}= result.num_problems.to_i
+
         %td= position.score

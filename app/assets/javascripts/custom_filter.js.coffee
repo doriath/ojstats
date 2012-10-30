@@ -7,7 +7,6 @@ $ ->
 
 
 
-
 class CustomFilter
   constructor: (filter) ->
     @filter = filter
@@ -333,7 +332,6 @@ class RelativeDateSelect extends Backbone.Model
   createOption: (value) ->
     label = value.split("_").join(" ")
     return $("<option>").val(value).html(label)
-
 
 
 
