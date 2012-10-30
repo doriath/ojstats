@@ -20,6 +20,14 @@
         %td= index + 1
         %td= link_to position.user_name, user_path(position.user_id)
         %td
-          - position.judge_results.each do |judge_result|
-            %span{class: ['badge', judge_result.judge_name], title: judge_result.judge_name}= judge_result.score
+          - position.judge_results.each do |result|
+            - if result.num_problems == 0
+              %span{class: ['badge', result.judge_name], title: result.judge_name}= 0
+
+            - else
+              %span{class: ['badge', 'left', result.judge_name], title: result.judge_name}
+                = result.score.floor
+                %span.decimal= decimal_part result.score
+              %span{class: ['badge', 'right', 'problems_solved']}= result.num_problems.to_i
+
         %td= position.score
