@@ -1,0 +1,829 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+<title>POLSKI SPOJ  - Problems: test your programming skills on-line</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" id="metatag">
+<META NAME="Keywords" CONTENT="programming, language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+
+<link href="http://spoj.pl/gfx/favicon.png" rel="shortcut icon" type="image/x-icon">
+<link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+<link href="/themes/common.css" rel="stylesheet" type="text/css" id="theme">
+<link href="/style.css" rel="stylesheet" type="text/css" id="theme">
+<link href="/themes/tooltips.css" rel="stylesheet" type="text/css" id="theme">
+<script type='text/javascript' src='http://spoj.pl/gfx/jquery.js'></script>
+<script type="text/javascript" src="http://spoj.pl/gfx/jquery.timers.js"></script>
+<script type="text/javascript" src="http://spoj.pl/gfx/jquery.cookie.js"></script> 
+<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+<style type="text/css">
+<!--
+.maintable {width: 855px;} 
+-->
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+function UnCryptMailto(s) {
+	var n=0;
+	var r="";
+	for(var i=0;i<s.length;i++) {		
+		n=s.charCodeAt(i); 
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n+(2));	
+	}
+	return r;
+}
+function linkTo_UnCryptMailto(s)	{
+	location.href=UnCryptMailto(s);
+}
+// -->
+</script>
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+    <script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushCSharp.js"></script>
+    <script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+	<link type="text/css" rel="stylesheet" href="http://spoj.pl/gfx/SyntaxHighlighter/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="http://spoj.pl/gfx/SyntaxHighlighter/styles/shThemeDefault.css"/>
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	
+
+		<meta property="og:site_name" content="Spoj.pl"/>
+    <meta property="og:image" content="http://www.spoj.pl/gfx/spoj-fb.jpg"/>
+
+</head>
+<body>
+<center>
+<table cellpadding="10" cellspacing="0" class="maintable" id="maintable">
+<tr>
+    <td colspan="2" class="header">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+		<td class="headerleft"/>
+		<td class="headercenter">
+<h1>POLSKI SPOJ</h1>
+
+		<div style="position: relative; width: 807px;">
+					
+			<script type="text/javascript">
+			function ad_left_place(){
+				$('#ad_left').css({'left': (($(window).width()-30)/2)-$("#maintable").width()/2-160, 'top': $(window).height()/2-300, 'display': 'block'});
+			}
+			$(window).resize(function() {
+				ad_left_place();
+			});
+			$(document).ready(function(){
+				ad_left_place();
+			})
+			</script>
+			
+		</div>
+		</td>
+		<td class="headerright"/>
+	</tr>
+	</table>
+    </td>
+</tr>
+<tr><td class="menu" width="92" valign="top">
+
+	
+
+<div class="section">
+	
+<form name="login"  action="http://pl.spoj.pl/problems/latwe/" method="post" 
+onsubmit="if(document.login.ssl.checked) document.login.action='https://pl.spoj.pl/problems/latwe/'" style="margin-bottom: 18px"> 
+Login: <input name="login_user" type="text" style="width: 85px;" class="form"><BR>
+Has&#322;o: <input name="password" type="password" style="width: 85px;" class="form"><BR>
+<div style="font-size: 10px; ">
+<script language="javascript" type="text/javascript">
+<!--
+    document.write('<input type="checkbox" name="ssl" id="ssl" /><label for="ssl">secure</label><br/>');
+//-->
+</script>
+<div title="Zaloguj mnie na jeden dzie&#324;.">
+<input type="checkbox" name="autologin" value="1" id="autologin" /><label for="autologin">zapami&#281;taj</label>
+</div>
+<!--Keep me signed in for today-->
+</div>
+<input name="submit" type="submit" value="Zaloguj" class="button" style="width: 85px; margin-bottom: 10px;">
+
+</form>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	if( $.cookie('ssl') == '1' ){
+		$("#ssl").attr('checked', true);
+	}
+	$("#ssl").change(function(){
+		if($(this).is(':checked')){
+			$.cookie('ssl', '1');
+		} else {
+			$.cookie('ssl', '0');
+		}
+	});
+});
+</script>
+
+</div>
+<div class="menucmd"><a href="/register">rejestracja</a><br><a href="/tutorials">tutoriale</a><br><br><a href="/status">status</a><br><a href="/submit">zg&#322;aszanie</a><br><a href="/problems/latwe/">zadania</a><br><div class="submenucmd"><a href="/problems/challenge">challenge</a><br><a href="/problems/latwe">&#322;atwe</a><br><a href="/problems/srednie">&#347;rednie</a><br><a href="/problems/trudne">trudne</a><br></div><a href="/search">szukaj</a><br><br><a href="/ranks">ranking</a><br><br><a href="/news">wiadomo&#347;ci</a><br><a href="/embed/info/">materia&#322;y</a><br><a href="/embed/rules/">zasady</a><br><a href="/forum/">forum</a><br><a href="/embed/links/">linki</a><br><hr></div><a href="/problems/latwe/"></a><br>
+
+
+	
+<div class="time">
+<a href="https://www.spoj.pl">SPOJ </a> time:</div>
+<div class="time">
+2012-11-03
+<br>
+<b>04 : 06 : 29</b>
+</div>
+
+</td><td style="width: 748px; padding:0px;" valign="top" class="content0">
+        <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+                <td style="padding:0px;" colspan="2"><center>
+                                
+                </center></td>
+        </tr>
+        <tr>
+                <td class="content" width="99%" style="padding: 10px">
+
+<!-- google_ad_section_start -->
+<table class="navigation" width="100%">
+<tr><td class="navigationcenter">
+<small>
+All<a href="/problems/latwe/all/lang=ADA" title="ADA 95">ADA</a>
+<a href="/problems/latwe/all/lang=DOC" title="Any document">DOC</a>
+<a href="/problems/latwe/all/lang=ASM" title="Assembler">ASM</a>
+<a href="/problems/latwe/all/lang=AWK" title="Awk">AWK</a>
+<a href="/problems/latwe/all/lang=BASH" title="Bash">BASH</a>
+<a href="/problems/latwe/all/lang=BF" title="Brainf**k">BF</a>
+<a href="/problems/latwe/all/lang=C" title="C">C</a>
+<a href="/problems/latwe/all/lang=CS" title="C#">C#</a>
+<a href="/problems/latwe/all/lang=CPP%204.3.2" title="C++">C++ 4.3.2</a>
+<a href="/problems/latwe/all/lang=CPP%204.0.0-8" title="C++">C++ 4.0.0-8</a>
+<a href="/problems/latwe/all/lang=C99%20strict" title="C99 strict">C99 strict</a>
+<a href="/problems/latwe/all/lang=CLPS" title="Clips">CLPS</a>
+<a href="/problems/latwe/all/lang=CLOJ" title="Clojure">CLOJ</a>
+<a href="/problems/latwe/all/lang=LISP%20sbcl" title="Common Lisp">LISP sbcl</a>
+<a href="/problems/latwe/all/lang=LISP%20clisp" title="Common Lisp">LISP clisp</a>
+<a href="/problems/latwe/all/lang=D" title="D">D</a>
+<a href="/problems/latwe/all/lang=ERL" title="Erlang">ERL</a>
+<a href="/problems/latwe/all/lang=FS" title="F#">F#</a>
+<a href="/problems/latwe/all/lang=FORT" title="Fortran 95">FORT</a>
+<a href="/problems/latwe/all/lang=GO" title="Go">GO</a>
+<a href="/problems/latwe/all/lang=HASK" title="Haskell">HASK</a>
+<a href="/problems/latwe/all/lang=ICON" title="Icon">ICON</a>
+<a href="/problems/latwe/all/lang=ICK" title="Intercal">ICK</a>
+<a href="/problems/latwe/all/lang=JAR" title="JAR">JAR</a>
+<a href="/problems/latwe/all/lang=JAVA" title="Java">JAVA</a>
+<a href="/problems/latwe/all/lang=JS" title="JavaScript">JS</a>
+<a href="/problems/latwe/all/lang=LUA" title="Lua">LUA</a>
+<a href="/problems/latwe/all/lang=NEM" title="Nemerle">NEM</a>
+<a href="/problems/latwe/all/lang=NICE" title="Nice">NICE</a>
+<a href="/problems/latwe/all/lang=NODEJS" title="Node.js">NODEJS</a>
+<a href="/problems/latwe/all/lang=CAML" title="Ocaml">CAML</a>
+<a href="/problems/latwe/all/lang=PAS%20fpc" title="Pascal">PAS fpc</a>
+<a href="/problems/latwe/all/lang=PAS%20gpc" title="Pascal">PAS gpc</a>
+<a href="/problems/latwe/all/lang=PDF" title="PDF">PDF</a>
+<a href="/problems/latwe/all/lang=PERL" title="Perl">PERL</a>
+<a href="/problems/latwe/all/lang=PERL%206" title="Perl 6">PERL 6</a>
+<a href="/problems/latwe/all/lang=PHP" title="PHP">PHP</a>
+<a href="/problems/latwe/all/lang=PIKE" title="Pike">PIKE</a>
+<a href="/problems/latwe/all/lang=PS" title="PostScript">PS</a>
+<a href="/problems/latwe/all/lang=PRLG" title="Prolog">PRLG</a>
+<a href="/problems/latwe/all/lang=PYTH%202.7" title="Python">PYTH 2.7</a>
+<a href="/problems/latwe/all/lang=PYTH%203.2.3" title="Python 3">PYTH 3.2.3</a>
+<a href="/problems/latwe/all/lang=PYTH%203.2.3%20n" title="Python 3 nbc">PYTH 3.2.3 n</a>
+<a href="/problems/latwe/all/lang=RUBY" title="Ruby">RUBY</a>
+<a href="/problems/latwe/all/lang=SCALA" title="Scala">SCALA</a>
+<a href="/problems/latwe/all/lang=SCM%20guile" title="Scheme">SCM guile</a>
+<a href="/problems/latwe/all/lang=SCM%20qobi" title="Scheme">SCM qobi</a>
+<a href="/problems/latwe/all/lang=SED" title="Sed">SED</a>
+<a href="/problems/latwe/all/lang=ST" title="Smalltalk">ST</a>
+<a href="/problems/latwe/all/lang=TCL" title="Tcl">TCL</a>
+TECS
+<a href="/problems/latwe/all/lang=TEXT" title="Text">TEXT</a>
+<a href="/problems/latwe/all/lang=WSPC" title="Whitespace">WSPC</a>
+</small>
+</td></tr>
+</table>
+<!-- google_ad_section_end -->
+
+<H3>lista zada&#324; &#322;atwe   </H3>
+
+
+<table class="navigation" width="99%">
+<tr><td align="left" width="27%">
+<i>Wstecz</i></td><td class="navigationcenter" width="16%">&nbsp;1</td> 
+<td class="navigationcenter" width="16%"><a href="/problems/latwe/sort=0,start=50" class="pager_link">&nbsp;2</a></td> 
+<td class="navigationcenter" width="16%"><a href="/problems/latwe/sort=0,start=100" class="pager_link">&nbsp;3</a></td> 
+<td align="right" width="25%">
+<a href="/problems/latwe/sort=0,start=50" class="pager_link">Dalej</a> <a href="/problems/latwe/sort=0,start=100" class="pager_link">&gt;</a></td></table>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4453360425583535";
+/* Spoj - baner gĂłrny */
+google_ad_slot = "5796055248";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<table class="problems" width="100%">
+<tr class="headerrow">
+<th width="6%" class="headerrowleft"><a href="?sort=5" title="ID zadania. Kliknij aby sortowa&#263;.">ID</a></th>
+<th width="60%"><a href="?sort=2" title="Nazwa zadania.">NAZWA</a></th>
+<th width="11%"><a href="?sort=1" title="Kod zadania.">KOD</a></th>
+<th width="9%"><a href="?sort=6" title="Liczba os&#243;b, kt&#243;re rozwi&#261;za&#322;y zadanie.">ROZW</a></th>
+<th width="5%" class="headerrowright"><a href="?sort=7" title="Procent rozwi&#261;za&#324; zaakceptowanych.">AKC&nbsp;%</a></th>
+</tr>
+
+<tr class="problemrow">
+<td>438</td>
+<td align="left">&nbsp;
+<a href="/problems/PRIME_T/">&nbsp;<b>Liczby Pierwsze</b></a></td>
+<td><a href="/submit/PRIME_T" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PRIME_T</a></td>
+<td><a href="/ranks/PRIME_T" title="Zobacz najlepsze rozwi&#261;zania.">4510</a></td>
+<td><a href="/status/PRIME_T" title="Zobacz wszystkie nades&#322;ane programy.">26.77</a></td>
+</tr>
+<tr class="problemrow">
+<td>496</td>
+<td align="left">&nbsp;
+<a href="/problems/FCTRL3/">&nbsp;<b>Dwie cyfry silnii</b></a></td>
+<td><a href="/submit/FCTRL3" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+FCTRL3</a></td>
+<td><a href="/ranks/FCTRL3" title="Zobacz najlepsze rozwi&#261;zania.">5711</a></td>
+<td><a href="/status/FCTRL3" title="Zobacz wszystkie nades&#322;ane programy.">25.36</a></td>
+</tr>
+<tr class="problemrow">
+<td>499</td>
+<td align="left">&nbsp;
+<a href="/problems/PA05_POT/">&nbsp;<b>Czy umiesz potęgować</b></a></td>
+<td><a href="/submit/PA05_POT" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PA05_POT</a></td>
+<td><a href="/ranks/PA05_POT" title="Zobacz najlepsze rozwi&#261;zania.">1818</a></td>
+<td><a href="/status/PA05_POT" title="Zobacz wszystkie nades&#322;ane programy.">22.96</a></td>
+</tr>
+<tr class="problemrow">
+<td>522</td>
+<td align="left">&nbsp;
+<a href="/problems/PRZEDSZK/">&nbsp;<b>Przedszkolanka</b></a></td>
+<td><a href="/submit/PRZEDSZK" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PRZEDSZK</a></td>
+<td><a href="/ranks/PRZEDSZK" title="Zobacz najlepsze rozwi&#261;zania.">4043</a></td>
+<td><a href="/status/PRZEDSZK" title="Zobacz wszystkie nades&#322;ane programy.">60.50</a></td>
+</tr>
+<tr class="problemrow">
+<td>549</td>
+<td align="left">&nbsp;
+<a href="/problems/RNO_DOD/">&nbsp;<b>Proste dodawanie</b></a></td>
+<td><a href="/submit/RNO_DOD" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+RNO_DOD</a></td>
+<td><a href="/ranks/RNO_DOD" title="Zobacz najlepsze rozwi&#261;zania.">7165</a></td>
+<td><a href="/status/RNO_DOD" title="Zobacz wszystkie nades&#322;ane programy.">44.15</a></td>
+</tr>
+<tr class="problemrow">
+<td>601</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0501A/">&nbsp;<b>NWD</b></a></td>
+<td><a href="/submit/PP0501A" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0501A</a></td>
+<td><a href="/ranks/PP0501A" title="Zobacz najlepsze rozwi&#261;zania.">6281</a></td>
+<td><a href="/status/PP0501A" title="Zobacz wszystkie nades&#322;ane programy.">44.33</a></td>
+</tr>
+<tr class="problemrow">
+<td>606</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0502B/">&nbsp;<b>Tablice</b></a></td>
+<td><a href="/submit/PP0502B" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0502B</a></td>
+<td><a href="/ranks/PP0502B" title="Zobacz najlepsze rozwi&#261;zania.">5604</a></td>
+<td><a href="/status/PP0502B" title="Zobacz wszystkie nades&#322;ane programy.">50.98</a></td>
+</tr>
+<tr class="problemrow">
+<td>609</td>
+<td align="left">&nbsp;
+<a href="/problems/ETI06F1/">&nbsp;<b>Pole pewnego koła</b></a></td>
+<td><a href="/submit/ETI06F1" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+ETI06F1</a></td>
+<td><a href="/ranks/ETI06F1" title="Zobacz najlepsze rozwi&#261;zania.">4035</a></td>
+<td><a href="/status/ETI06F1" title="Zobacz wszystkie nades&#322;ane programy.">47.27</a></td>
+</tr>
+<tr class="problemrow">
+<td>617</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0504B/">&nbsp;<b>StringMerge</b></a></td>
+<td><a href="/submit/PP0504B" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0504B</a></td>
+<td><a href="/ranks/PP0504B" title="Zobacz najlepsze rozwi&#261;zania.">2545</a></td>
+<td><a href="/status/PP0504B" title="Zobacz wszystkie nades&#322;ane programy.">45.66</a></td>
+</tr>
+<tr class="problemrow">
+<td>619</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0504D/">&nbsp;<b>Reprezentacja liczb typu float</b></a></td>
+<td><a href="/submit/PP0504D" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0504D</a></td>
+<td><a href="/ranks/PP0504D" title="Zobacz najlepsze rozwi&#261;zania.">1143</a></td>
+<td><a href="/status/PP0504D" title="Zobacz wszystkie nades&#322;ane programy.">44.04</a></td>
+</tr>
+<tr class="problemrow">
+<td>626</td>
+<td align="left">&nbsp;
+<a href="/problems/GLUTTON/">&nbsp;<b>Obżartuchy</b></a></td>
+<td><a href="/submit/GLUTTON" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+GLUTTON</a></td>
+<td><a href="/ranks/GLUTTON" title="Zobacz najlepsze rozwi&#261;zania.">2246</a></td>
+<td><a href="/status/GLUTTON" title="Zobacz wszystkie nades&#322;ane programy.">51.82</a></td>
+</tr>
+<tr class="problemrow">
+<td>663</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0506A/">&nbsp;<b>Sort 1</b></a></td>
+<td><a href="/submit/PP0506A" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0506A</a></td>
+<td><a href="/ranks/PP0506A" title="Zobacz najlepsze rozwi&#261;zania.">1984</a></td>
+<td><a href="/status/PP0506A" title="Zobacz wszystkie nades&#322;ane programy.">33.53</a></td>
+</tr>
+<tr class="problemrow">
+<td>675</td>
+<td align="left">&nbsp;
+<a href="/problems/SKARBFI/">&nbsp;<b>SkarbFinder</b></a></td>
+<td><a href="/submit/SKARBFI" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+SKARBFI</a></td>
+<td><a href="/ranks/SKARBFI" title="Zobacz najlepsze rozwi&#261;zania.">1529</a></td>
+<td><a href="/status/SKARBFI" title="Zobacz wszystkie nades&#322;ane programy.">55.01</a></td>
+</tr>
+<tr class="problemrow">
+<td>708</td>
+<td align="left">&nbsp;
+<a href="/problems/PTCLTZ/">&nbsp;<b>Problem Collatza </b></a></td>
+<td><a href="/submit/PTCLTZ" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PTCLTZ</a></td>
+<td><a href="/ranks/PTCLTZ" title="Zobacz najlepsze rozwi&#261;zania.">2838</a></td>
+<td><a href="/status/PTCLTZ" title="Zobacz wszystkie nades&#322;ane programy.">66.25</a></td>
+</tr>
+<tr class="problemrow">
+<td>723</td>
+<td align="left">&nbsp;
+<a href="/problems/PTROL/">&nbsp;<b>ROL</b></a></td>
+<td><a href="/submit/PTROL" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PTROL</a></td>
+<td><a href="/ranks/PTROL" title="Zobacz najlepsze rozwi&#261;zania.">4627</a></td>
+<td><a href="/status/PTROL" title="Zobacz wszystkie nades&#322;ane programy.">61.44</a></td>
+</tr>
+<tr class="problemrow">
+<td>769</td>
+<td align="left">&nbsp;
+<a href="/problems/PTEST/">&nbsp;<b>Zadanie próbne</b></a></td>
+<td><a href="/submit/PTEST" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PTEST</a></td>
+<td><a href="/ranks/PTEST" title="Zobacz najlepsze rozwi&#261;zania.">7913</a></td>
+<td><a href="/status/PTEST" title="Zobacz wszystkie nades&#322;ane programy.">57.04</a></td>
+</tr>
+<tr class="problemrow">
+<td>804</td>
+<td align="left">&nbsp;
+<a href="/problems/EUCGAME/">&nbsp;<b>Gra Euklidesa</b></a></td>
+<td><a href="/submit/EUCGAME" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+EUCGAME</a></td>
+<td><a href="/ranks/EUCGAME" title="Zobacz najlepsze rozwi&#261;zania.">2768</a></td>
+<td><a href="/status/EUCGAME" title="Zobacz wszystkie nades&#322;ane programy.">73.60</a></td>
+</tr>
+<tr class="problemrow">
+<td>806</td>
+<td align="left">&nbsp;
+<a href="/problems/FANGEN/">&nbsp;<b>Wiatraczki</b></a></td>
+<td><a href="/submit/FANGEN" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+FANGEN</a></td>
+<td><a href="/ranks/FANGEN" title="Zobacz najlepsze rozwi&#261;zania.">707</a></td>
+<td><a href="/status/FANGEN" title="Zobacz wszystkie nades&#322;ane programy.">74.86</a></td>
+</tr>
+<tr class="problemrow">
+<td>833</td>
+<td align="left">&nbsp;
+<a href="/problems/BINOMS/">&nbsp;<b>Dwumiany</b></a></td>
+<td><a href="/submit/BINOMS" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+BINOMS</a></td>
+<td><a href="/ranks/BINOMS" title="Zobacz najlepsze rozwi&#261;zania.">1500</a></td>
+<td><a href="/status/BINOMS" title="Zobacz wszystkie nades&#322;ane programy.">19.33</a></td>
+</tr>
+<tr class="problemrow">
+<td>968</td>
+<td align="left">&nbsp;
+<a href="/problems/SUMA/">&nbsp;<b>Suma</b></a></td>
+<td><a href="/submit/SUMA" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+SUMA</a></td>
+<td><a href="/ranks/SUMA" title="Zobacz najlepsze rozwi&#261;zania.">4550</a></td>
+<td><a href="/status/SUMA" title="Zobacz wszystkie nades&#322;ane programy.">36.17</a></td>
+</tr>
+<tr class="problemrow">
+<td>969</td>
+<td align="left">&nbsp;
+<a href="/problems/ROWNANIE/">&nbsp;<b>Równanie kwadratowe</b></a></td>
+<td><a href="/submit/ROWNANIE" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+ROWNANIE</a></td>
+<td><a href="/ranks/ROWNANIE" title="Zobacz najlepsze rozwi&#261;zania.">3215</a></td>
+<td><a href="/status/ROWNANIE" title="Zobacz wszystkie nades&#322;ane programy.">36.33</a></td>
+</tr>
+<tr class="problemrow">
+<td>977</td>
+<td align="left">&nbsp;
+<a href="/problems/TABLICA/">&nbsp;<b>Tablica</b></a></td>
+<td><a href="/submit/TABLICA" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+TABLICA</a></td>
+<td><a href="/ranks/TABLICA" title="Zobacz najlepsze rozwi&#261;zania.">3181</a></td>
+<td><a href="/status/TABLICA" title="Zobacz wszystkie nades&#322;ane programy.">36.08</a></td>
+</tr>
+<tr class="problemrow">
+<td>978</td>
+<td align="left">&nbsp;
+<a href="/problems/STOS/">&nbsp;<b>Stos</b></a></td>
+<td><a href="/submit/STOS" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+STOS</a></td>
+<td><a href="/ranks/STOS" title="Zobacz najlepsze rozwi&#261;zania.">2164</a></td>
+<td><a href="/status/STOS" title="Zobacz wszystkie nades&#322;ane programy.">42.41</a></td>
+</tr>
+<tr class="problemrow">
+<td>997</td>
+<td align="left">&nbsp;
+<a href="/problems/CALC/">&nbsp;<b>Kalkulator</b></a></td>
+<td><a href="/submit/CALC" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+CALC</a></td>
+<td><a href="/ranks/CALC" title="Zobacz najlepsze rozwi&#261;zania.">4223</a></td>
+<td><a href="/status/CALC" title="Zobacz wszystkie nades&#322;ane programy.">34.12</a></td>
+</tr>
+<tr class="problemrow">
+<td>998</td>
+<td align="left">&nbsp;
+<a href="/problems/CALC2/">&nbsp;<b>Kalkulator 2</b></a></td>
+<td><a href="/submit/CALC2" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+CALC2</a></td>
+<td><a href="/ranks/CALC2" title="Zobacz najlepsze rozwi&#261;zania.">2586</a></td>
+<td><a href="/status/CALC2" title="Zobacz wszystkie nades&#322;ane programy.">52.93</a></td>
+</tr>
+<tr class="problemrow">
+<td>1011</td>
+<td align="left">&nbsp;
+<a href="/problems/POL/">&nbsp;<b>Połowa</b></a></td>
+<td><a href="/submit/POL" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+POL</a></td>
+<td><a href="/ranks/POL" title="Zobacz najlepsze rozwi&#261;zania.">3643</a></td>
+<td><a href="/status/POL" title="Zobacz wszystkie nades&#322;ane programy.">45.83</a></td>
+</tr>
+<tr class="problemrow">
+<td>1016</td>
+<td align="left">&nbsp;
+<a href="/problems/VSR/">&nbsp;<b>Predkość średnia</b></a></td>
+<td><a href="/submit/VSR" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+VSR</a></td>
+<td><a href="/ranks/VSR" title="Zobacz najlepsze rozwi&#261;zania.">3301</a></td>
+<td><a href="/status/VSR" title="Zobacz wszystkie nades&#322;ane programy.">50.04</a></td>
+</tr>
+<tr class="problemrow">
+<td>1032</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0601B/">&nbsp;<b>Podzielność</b></a></td>
+<td><a href="/submit/PP0601B" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0601B</a></td>
+<td><a href="/ranks/PP0601B" title="Zobacz najlepsze rozwi&#261;zania.">3945</a></td>
+<td><a href="/status/PP0601B" title="Zobacz wszystkie nades&#322;ane programy.">67.15</a></td>
+</tr>
+<tr class="problemrow">
+<td>1035</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0601A2/">&nbsp;<b>Test 3</b></a></td>
+<td><a href="/submit/PP0601A2" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0601A2</a></td>
+<td><a href="/ranks/PP0601A2" title="Zobacz najlepsze rozwi&#261;zania.">2666</a></td>
+<td><a href="/status/PP0601A2" title="Zobacz wszystkie nades&#322;ane programy.">30.89</a></td>
+</tr>
+<tr class="problemrow">
+<td>1042</td>
+<td align="left">&nbsp;
+<a href="/problems/TRN/">&nbsp;<b>Transponowanie macierzy</b></a></td>
+<td><a href="/submit/TRN" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+TRN</a></td>
+<td><a href="/ranks/TRN" title="Zobacz najlepsze rozwi&#261;zania.">2583</a></td>
+<td><a href="/status/TRN" title="Zobacz wszystkie nades&#322;ane programy.">58.60</a></td>
+</tr>
+<tr class="problemrow">
+<td>1055</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0602A/">&nbsp;<b>Parzyste nieparzyste</b></a></td>
+<td><a href="/submit/PP0602A" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0602A</a></td>
+<td><a href="/ranks/PP0602A" title="Zobacz najlepsze rozwi&#261;zania.">3752</a></td>
+<td><a href="/status/PP0602A" title="Zobacz wszystkie nades&#322;ane programy.">63.18</a></td>
+</tr>
+<tr class="problemrow">
+<td>1102</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0604A/">&nbsp;<b>Średnia arytmetyczna</b></a></td>
+<td><a href="/submit/PP0604A" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0604A</a></td>
+<td><a href="/ranks/PP0604A" title="Zobacz najlepsze rozwi&#261;zania.">1784</a></td>
+<td><a href="/status/PP0604A" title="Zobacz wszystkie nades&#322;ane programy.">27.35</a></td>
+</tr>
+<tr class="problemrow">
+<td>1139</td>
+<td align="left">&nbsp;
+<a href="/problems/MWPZ06X/">&nbsp;<b>Nowa działka</b></a></td>
+<td><a href="/submit/MWPZ06X" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+MWPZ06X</a></td>
+<td><a href="/ranks/MWPZ06X" title="Zobacz najlepsze rozwi&#261;zania.">4561</a></td>
+<td><a href="/status/MWPZ06X" title="Zobacz wszystkie nades&#322;ane programy.">64.59</a></td>
+</tr>
+<tr class="problemrow">
+<td>1145</td>
+<td align="left">&nbsp;
+<a href="/problems/MWPZ06D/">&nbsp;<b>Imieniny</b></a></td>
+<td><a href="/submit/MWPZ06D" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+MWPZ06D</a></td>
+<td><a href="/ranks/MWPZ06D" title="Zobacz najlepsze rozwi&#261;zania.">2035</a></td>
+<td><a href="/status/MWPZ06D" title="Zobacz wszystkie nades&#322;ane programy.">19.16</a></td>
+</tr>
+<tr class="problemrow">
+<td>1211</td>
+<td align="left">&nbsp;
+<a href="/problems/NIEKOLEJ/">&nbsp;<b>Niekolejne</b></a></td>
+<td><a href="/submit/NIEKOLEJ" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+NIEKOLEJ</a></td>
+<td><a href="/ranks/NIEKOLEJ" title="Zobacz najlepsze rozwi&#261;zania.">957</a></td>
+<td><a href="/status/NIEKOLEJ" title="Zobacz wszystkie nades&#322;ane programy.">31.57</a></td>
+</tr>
+<tr class="problemrow">
+<td>1228</td>
+<td align="left">&nbsp;
+<a href="/problems/JROWLIN/">&nbsp;<b>Równanie liniowe</b></a></td>
+<td><a href="/submit/JROWLIN" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+JROWLIN</a></td>
+<td><a href="/ranks/JROWLIN" title="Zobacz najlepsze rozwi&#261;zania.">3058</a></td>
+<td><a href="/status/JROWLIN" title="Zobacz wszystkie nades&#322;ane programy.">42.10</a></td>
+</tr>
+<tr class="problemrow">
+<td>1240</td>
+<td align="left">&nbsp;
+<a href="/problems/JWSPLIN/">&nbsp;<b>Współliniowość punktów</b></a></td>
+<td><a href="/submit/JWSPLIN" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+JWSPLIN</a></td>
+<td><a href="/ranks/JWSPLIN" title="Zobacz najlepsze rozwi&#261;zania.">2515</a></td>
+<td><a href="/status/JWSPLIN" title="Zobacz wszystkie nades&#322;ane programy.">65.64</a></td>
+</tr>
+<tr class="problemrow">
+<td>1242</td>
+<td align="left">&nbsp;
+<a href="/problems/JZLICZ/">&nbsp;<b>Zliczacz liter</b></a></td>
+<td><a href="/submit/JZLICZ" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+JZLICZ</a></td>
+<td><a href="/ranks/JZLICZ" title="Zobacz najlepsze rozwi&#261;zania.">2304</a></td>
+<td><a href="/status/JZLICZ" title="Zobacz wszystkie nades&#322;ane programy.">46.57</a></td>
+</tr>
+<tr class="problemrow">
+<td>1261</td>
+<td align="left">&nbsp;
+<a href="/problems/JPESEL/">&nbsp;<b>Pesel</b></a></td>
+<td><a href="/submit/JPESEL" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+JPESEL</a></td>
+<td><a href="/ranks/JPESEL" title="Zobacz najlepsze rozwi&#261;zania.">3217</a></td>
+<td><a href="/status/JPESEL" title="Zobacz wszystkie nades&#322;ane programy.">37.95</a></td>
+</tr>
+<tr class="problemrow">
+<td>1262</td>
+<td align="left">&nbsp;
+<a href="/problems/PP0602D/">&nbsp;<b>ROL (k)</b></a></td>
+<td><a href="/submit/PP0602D" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+PP0602D</a></td>
+<td><a href="/ranks/PP0602D" title="Zobacz najlepsze rozwi&#261;zania.">3009</a></td>
+<td><a href="/status/PP0602D" title="Zobacz wszystkie nades&#322;ane programy.">59.91</a></td>
+</tr>
+<tr class="problemrow">
+<td>1276</td>
+<td align="left">&nbsp;
+<a href="/problems/JSPACE/">&nbsp;<b>Spacje</b></a></td>
+<td><a href="/submit/JSPACE" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+JSPACE</a></td>
+<td><a href="/ranks/JSPACE" title="Zobacz najlepsze rozwi&#261;zania.">2030</a></td>
+<td><a href="/status/JSPACE" title="Zobacz wszystkie nades&#322;ane programy.">23.50</a></td>
+</tr>
+<tr class="problemrow">
+<td>1289</td>
+<td align="left">&nbsp;
+<a href="/problems/JHTMLLET/">&nbsp;<b>Tagi HTML</b></a></td>
+<td><a href="/submit/JHTMLLET" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+JHTMLLET</a></td>
+<td><a href="/ranks/JHTMLLET" title="Zobacz najlepsze rozwi&#261;zania.">1979</a></td>
+<td><a href="/status/JHTMLLET" title="Zobacz wszystkie nades&#322;ane programy.">56.50</a></td>
+</tr>
+<tr class="problemrow">
+<td>1299</td>
+<td align="left">&nbsp;
+<a href="/problems/FZI_STEF/">&nbsp;<b>Stefan</b></a></td>
+<td><a href="/submit/FZI_STEF" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+FZI_STEF</a></td>
+<td><a href="/ranks/FZI_STEF" title="Zobacz najlepsze rozwi&#261;zania.">682</a></td>
+<td><a href="/status/FZI_STEF" title="Zobacz wszystkie nades&#322;ane programy.">24.41</a></td>
+</tr>
+<tr class="problemrow">
+<td>1300</td>
+<td align="left">&nbsp;
+<a href="/problems/JSZYCER/">&nbsp;<b>Szyfr Cezara</b></a></td>
+<td><a href="/submit/JSZYCER" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+JSZYCER</a></td>
+<td><a href="/ranks/JSZYCER" title="Zobacz najlepsze rozwi&#261;zania.">2595</a></td>
+<td><a href="/status/JSZYCER" title="Zobacz wszystkie nades&#322;ane programy.">31.68</a></td>
+</tr>
+<tr class="problemrow">
+<td>1310</td>
+<td align="left">&nbsp;
+<a href="/problems/JLITOSL/">&nbsp;<b>Liczba na słowo</b></a></td>
+<td><a href="/submit/JLITOSL" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+JLITOSL</a></td>
+<td><a href="/ranks/JLITOSL" title="Zobacz najlepsze rozwi&#261;zania.">946</a></td>
+<td><a href="/status/JLITOSL" title="Zobacz wszystkie nades&#322;ane programy.">23.91</a></td>
+</tr>
+<tr class="problemrow">
+<td>1502</td>
+<td align="left">&nbsp;
+<a href="/problems/POTSAM/">&nbsp;<b>Samolot</b></a></td>
+<td><a href="/submit/POTSAM" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+POTSAM</a></td>
+<td><a href="/ranks/POTSAM" title="Zobacz najlepsze rozwi&#261;zania.">6337</a></td>
+<td><a href="/status/POTSAM" title="Zobacz wszystkie nades&#322;ane programy.">66.65</a></td>
+</tr>
+<tr class="problemrow">
+<td>1596</td>
+<td align="left">&nbsp;
+<a href="/problems/WSEGA/">&nbsp;<b>Wiek segmentolka</b></a></td>
+<td><a href="/submit/WSEGA" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+WSEGA</a></td>
+<td><a href="/ranks/WSEGA" title="Zobacz najlepsze rozwi&#261;zania.">1919</a></td>
+<td><a href="/status/WSEGA" title="Zobacz wszystkie nades&#322;ane programy.">64.82</a></td>
+</tr>
+<tr class="problemrow">
+<td>1828</td>
+<td align="left">&nbsp;
+<a href="/problems/KC001/">&nbsp;<b>Dodawanie liczb całkowitych</b></a></td>
+<td><a href="/submit/KC001" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+KC001</a></td>
+<td><a href="/ranks/KC001" title="Zobacz najlepsze rozwi&#261;zania.">6178</a></td>
+<td><a href="/status/KC001" title="Zobacz wszystkie nades&#322;ane programy.">68.45</a></td>
+</tr>
+<tr class="problemrow">
+<td>1830</td>
+<td align="left">&nbsp;
+<a href="/problems/KC003/">&nbsp;<b>Nierówność trójkąta</b></a></td>
+<td><a href="/submit/KC003" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+KC003</a></td>
+<td><a href="/ranks/KC003" title="Zobacz najlepsze rozwi&#261;zania.">2959</a></td>
+<td><a href="/status/KC003" title="Zobacz wszystkie nades&#322;ane programy.">39.47</a></td>
+</tr>
+<tr class="problemrow">
+<td>1844</td>
+<td align="left">&nbsp;
+<a href="/problems/KC004/">&nbsp;<b>Zliczanie wystąpień</b></a></td>
+<td><a href="/submit/KC004" title="Nade&#347;lij kod &#378;rod&#322;owy programu.">
+KC004</a></td>
+<td><a href="/ranks/KC004" title="Zobacz najlepsze rozwi&#261;zania.">2527</a></td>
+<td><a href="/status/KC004" title="Zobacz wszystkie nades&#322;ane programy.">48.76</a></td>
+</tr>
+</table>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4453360425583535";
+/* Spoj - baner gĂłrny */
+google_ad_slot = "5796055248";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<form name="fch" class="form" style="margin-top:12px; margin-bottom:8px" action="" method="post">
+<table width="100%">
+<tr>
+    <td align=left>
+	<b>Typ dokumentu:</b>
+	<input type="radio" name="pspdf" value="/" onClick="appendLink(this.value)"  checked >html
+	<input type="radio" name="pspdf" value=".ps" onClick="appendLink(this.value)"  >ps
+	<input type="radio" name="pspdf" value=".pdf" onClick="appendLink(this.value)"  >pdf
+	<noscript><input class="button" value="change" type="submit"></noscript>
+    </td>
+    <td align="right">
+	<b><a href="/problems/latwe" id="booklet">ksi&#261;&#380;eczka</a></b>
+    </td>
+</tr>
+</table>
+</form>
+
+
+
+ <script language="javascript" type="text/javascript">
+<!--  
+function appendLink(target)
+{
+    for(a = 0; a < document.links.length; a++)
+	if (document.links[a].href.match(/^.*\/problems(\/[A-Z0-9_]+\/?)(\.[a-z]+)?$/) || document.links[a].id=='booklet')
+	{
+	    document.links[a].href = document.links[a].href.replace(/\.[a-z]+$/, "").replace(/\/$/, "")+target;
+	    if (target.match(/^\/$/) && document.links[a].id=='booklet')
+		document.links[a].style.visibility = 'hidden';
+	    else document.links[a].style.visibility = 'visible';
+	}
+    document.cookie='pspdf='+target+'; path=/;';
+}
+
+appendLink('/');
+
+//--></script>         </td>
+<tr>
+        <td style="padding:0px" colspan="2"><center>
+                
+</center></td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="footer">
+<div class="a-footer"></div>
+<script language="javascript" type="text/javascript">
+<!--
+function swapSheet(sheet, caller) {
+    document.getElementById('theme').href=sheet;
+    document.cookie="css_79="+sheet+"; path=/;";
+    caller.href="#bottom";
+}
+
+function setWidth(w, caller) {
+    document.getElementById('maintable').style.width=w;
+    document.cookie="res="+w+"; path=/;";
+    caller.href="#bottom";
+}
+
+
+
+//-->
+
+</script>
+    <div style="font-size:10px; color:#aaaaaa;">
+    ISO C99,  C/C++, C++0x, kurs programowania w C++, zbiór algorytmów, algorytmy i struktury danych, sortowanie, kolejki priorytetowe, algorytmy grafowe, otoczka wypukła, odwrócona notacja polska, drzewo spinające, drzewo wyszukiwań binarnych, algorytm Euklidesa, NWD, ONP, haszowanie, stos, kolejka, kopiec, drzewa BST, AVL, RB, B-drzewa, diagram Voronoi, triangulacja, algorytm Karatsuby, kopiec Fibbonaciego
+</div></tr></table>
+</center>
+<div class="a-header"></div>
+<div style="position: fixed; width: 160px; height: 600px; display: none;" id="ad_left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-4453360425583535";
+/* Spoj - wiezowiec */
+google_ad_slot = "2703472077";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+
+
+<div style="font-size:10px; margin-top:4px; color: rgb(85,80,95);"><center>
+<a href="http://www.spoj.pl" style="color:black">SPOJ</a>
+System &copy; 2012
+<a href="http://sphere-research.com" style="color:black">Sphere Research Labs | Projekty informatyczne i aplikacje na zamówienie</a>. 
+All Rights Reserved.</center></div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10507872-1']);
+      _gaq.push(['_trackPageview']);
+        (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		      })();
+		      </script>
+		      
+</body>
+</html>

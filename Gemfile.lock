@@ -146,6 +146,7 @@ GEM
       net-ssh (>= 1.99.1)
     newrelic_moped (0.0.3)
     newrelic_rpm (3.5.0)
+    nokogiri (1.5.5)
     origin (1.0.9)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
@@ -284,6 +285,7 @@ DEPENDENCIES
   mongoid (~> 3.0)
   newrelic_moped
   newrelic_rpm
+  nokogiri
   pry-doc
   pry-rails
   quiet_assets

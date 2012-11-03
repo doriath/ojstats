@@ -27,6 +27,7 @@ gem 'simple_form'
 gem 'jquery-rails'
 
 gem 'typhoeus'
+gem 'nokogiri'
 gem 'gravatar_image_tag'
 
 gem 'thin'
@@ -35,6 +36,7 @@ gem 'whenever', require: false
 gem 'airbrake'
 gem 'newrelic_rpm'
 gem 'newrelic_moped'
+
 
 group :development do
   gem 'quiet_assets'
