@@ -10,7 +10,7 @@ class OnlineJudge
   validates_inclusion_of :name, in: %w(plspoj spoj)
 
   def refresh
-    fetched_problems = fetcher.fetch_accepted_problems(login)
+    fetched_problems = fetcher.fetch_accepts(login)
 
     fetched_problems.each do |fetched_problem|
       update_problem fetched_problem
@@ -32,9 +32,9 @@ class OnlineJudge
 
   def fetcher
     if name == 'plspoj'
-      OnlineJudges::Plspoj.new
+      OnlineJudges::PolishSpoj.new
     elsif name == 'spoj'
-      OnlineJudges::Spoj.new
+      OnlineJudges::EnglishSpoj.new
     else
       raise 'Unknown online judge'
     end
