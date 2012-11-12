@@ -55,6 +55,8 @@ group :development do
 
   gem 'capistrano'
   gem 'capistrano_colors'
+
+  gem 'rails_best_practices'
 end
 
 group :test, :development do
