@@ -22,12 +22,12 @@
         %td
           - position.judge_results.each do |result|
             - if result.num_problems == 0
-              %span{class: ['badge', result.judge_name], title: result.judge_name}= 0
+              %div{class: ['badge', result.judge_name], title: result.judge_name}= 0
 
             - else
-              %span{class: ['badge', 'left', result.judge_name], title: result.judge_name}
-                = result.score.floor
-                %span.decimal= decimal_part result.score
-              %span{class: ['badge', 'right', 'problems_solved']}= result.num_problems.to_i
+              %div{class: ['badge', 'left', result.judge_name], title: result.judge_name}
+                = result.score
+              %div{class: ['badge', 'right', result.judge_name]}
+                %div= "(#{result.num_problems.to_i})"
 
         %td= position.score
