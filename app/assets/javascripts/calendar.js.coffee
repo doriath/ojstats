@@ -34,9 +34,7 @@ class Calendar
     @cells.append cell
 
   renderCell: (accepts, dayNumber) ->
-    if dayNumber == 0
-      #@renderEmptyCell()
-      return
+    return if dayNumber == 0
 
     cell = @createCell()
     cell.addClass("none") if accepts == 0
