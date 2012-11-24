@@ -1,0 +1,96 @@
+$cell: 35px
+$padding: 2px
+$cell-background: #147fbf
+
+$total-width: 7 * ($cell + $padding)
+
+
+.ui-calendar
+  width: $total-width
+  float: right
+
+  .header
+    width: 10px
+    color: #222
+
+    .month-selector
+      position: relative
+      width: $total-width - 30px
+      padding: 5px 0px
+      margin: 0px 15px
+
+      .month
+        text-align: center
+
+      .arrow
+        width: 4px
+        height: 7px
+        padding: 5px
+        position: absolute
+        top: 6px
+        &:hover
+          cursor: pointer
+
+      .arrow.right
+        right: 0px
+        background: url('arrow_right_jquery.gif') 5px 5px no-repeat
+
+      .arrow.left
+        left: 0px
+        background: url('arrow_left_jquery.gif') 5px 5px no-repeat
+
+
+    .day-names
+      overflow: hidden
+      width: $total-width
+      padding: 8px 0px 8px 0px
+      .day
+        font-size: 12px
+        text-align: center
+        float: left
+        width: $cell
+        margin-right: $padding
+
+  .days
+    font-family: Helvetica, Arial, sans-serif !important
+    overflow: hidden
+    width: $total-width
+    .day
+      float: left
+      width: $cell
+      height: $cell
+      overflow: hidden
+      position: relative
+      margin: 0px $padding $padding 0px
+      background: $cell-background
+      .number, .score
+        color: white
+        position: absolute
+
+      .number
+        //font-weight: bold
+        //opacity: 0.8
+        top: -2px
+        right: 3px
+        font-size: 10px
+
+      .score
+        line-height: 22px
+        left: -1px
+        bottom: -2px
+        font-size: 27px
+        font-weight: 400
+
+      .score.double
+        font-size: 24px
+        bottom: -3px
+
+      &.none
+        opacity: 0.3
+
+        .score
+          opacity: 0.2
+
+      &.empty
+        background: white
+

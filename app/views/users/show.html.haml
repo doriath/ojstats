@@ -1,8 +1,15 @@
+:javascript
+  var calendarData = #{@calendar.to_json.html_safe}
+
 .row
-  .span6
+  .span4
     = gravatar_image_tag(@user.email, alt: @user.display_name, gravatar: {size: 200})
-  .span6
+  .span4
     %h2= @user.display_name
+
+  .span4
+    = render 'calendar', day_accepts: @day_accepts
+
 
 
 %h1 Solved problems

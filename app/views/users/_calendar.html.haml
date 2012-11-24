@@ -1,0 +1,35 @@
+.ui-calendar
+  .header
+    .month-selector
+      .arrow.left
+      .arrow.right
+      .month February 2012
+
+    .day-names
+      - ["Pn", "Wt", "Śr", "Cz", "Pt", "So", "Ni"].each do |day_name|
+        .day= day_name
+
+  .days
+  -#
+    - empty = Date.today.beginning_of_month.wday
+    - month_length = Date.today.end_of_month.day
+
+    - empty.times do
+      .day.empty
+
+    - month_length.times do |day|
+      - accepted_problems = day_accepts[day]
+
+      - if not accepted_problems or accepted_problems == 0
+        .day.none{title: 'Number of accepted problems'}
+          .number= day
+          .score 0
+
+      - else
+        .day{title: 'Number of accepted problems'}
+          .number= day
+
+          - if accepted_problems and accepted_problems < 10
+            .score= accepted_problems
+          -else
+            .score.double= accepted_problems
