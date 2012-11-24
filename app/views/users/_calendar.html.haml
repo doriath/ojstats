@@ -1,0 +1,12 @@
+.ui-calendar
+  .header
+    .month-selector
+      .arrow.left
+      .arrow.right
+      .month
+
+    .day-names
+      - t('date.abbr_day_names').each do |day_name|
+        .day= day_name
+
+  .days
