@@ -78,7 +78,7 @@ class Ranking
         var result = { score: 0, num_problems: 0 };
         values.forEach(function(value) {
           result.score += value.score;
-          result.num_problems += 1;
+          result.num_problems += value.num_problems;
         });
         return result;
       }
