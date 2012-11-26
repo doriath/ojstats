@@ -29,4 +29,28 @@ describe OnlineJudges::PolishSpoj do
       polish_spoj.fetch_problem('PRIME').should == problem
     end
   end
+
+  describe '#fetch_all_problems' do
+    let(:problem_easy) { OnlineJudges::Problem.new('EASY', 1234) }
+    let(:problem_medium) { OnlineJudges::Problem.new('MEDIUM', 1234) }
+    let(:problem_hard) { OnlineJudges::Problem.new('HARD', 1234) }
+
+    it 'fetches accepts using signedlist parser' do
+      OnlineJudges::Spoj::ProblemsPage.
+        should_receive(:problems_starting_from).
+        with('http://pl.spoj.pl/problems/latwe/').
+        and_return([problem_easy])
+      OnlineJudges::Spoj::ProblemsPage.
+        should_receive(:problems_starting_from).
+        with('http://pl.spoj.pl/problems/srednie/').
+        and_return([problem_medium])
+      OnlineJudges::Spoj::ProblemsPage.
+        should_receive(:problems_starting_from).
+        with('http://pl.spoj.pl/problems/trudne/').
+        and_return([problem_hard])
+
+      polish_spoj.fetch_all_problems.should =~
+        [problem_easy, problem_medium, problem_hard]
+    end
+  end
 end

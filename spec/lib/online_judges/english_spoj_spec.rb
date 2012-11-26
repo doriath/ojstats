@@ -29,4 +29,17 @@ describe OnlineJudges::EnglishSpoj do
       english_spoj.fetch_problem('PRIME').should == problem
     end
   end
+
+  describe '#fetch_all_problems' do
+    let(:problem) { [OnlineJudges::Problem.new('PRIME', 1234)] }
+
+    it 'fetches accepts using signedlist parser' do
+      OnlineJudges::Spoj::ProblemsPage.
+        should_receive(:problems_starting_from).
+        with('http://www.spoj.pl/problems/classical/').
+        and_return([problem])
+
+      english_spoj.fetch_all_problems.should == [problem]
+    end
+  end
 end
