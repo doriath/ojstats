@@ -66,6 +66,8 @@ class Ranking
   #
   # @return [Array<Hash>]
   def raw_map_reduce
+    p AcceptedProblem.count
+
     map = %Q{
       function() {
         emit({user_id: this.user_id, online_judge: this.online_judge},
@@ -84,10 +86,14 @@ class Ranking
       }
     }
 
-    raw_documents = AcceptedProblem.
-      where(accepted_at: start_time..end_time).
-      map_reduce(map, reduce).
-      out(inline: true)
+    raw_documents = []
+    begin
+      raw_documents = AcceptedProblem.
+        where(accepted_at: start_time..end_time).
+        map_reduce(map, reduce).
+        out(inline: true).to_a
+    rescue
+    end
 
     raw_documents.map do |document|
       {
