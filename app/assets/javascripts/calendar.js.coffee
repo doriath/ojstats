@@ -1,5 +1,5 @@
 $ ->
-  return unless calendarData
+  return if typeof calendarData == 'undefined'
   $cal = $(".ui-calendar")
   calendar = new Calendar(calendarData.history, $cal)
   calendar.render()
