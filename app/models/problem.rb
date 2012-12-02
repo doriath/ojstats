@@ -16,4 +16,26 @@ class Problem
       Problem.create!(name: attributes[:name], online_judge: attributes[:online_judge], score: 1)
     end
   end
+
+  # @param [OnlineJudges::Problem] data
+  # @param [String] online_judge_name
+  def self.create_from_scraper!(data, online_judge_name)
+    score = 1
+    if data.num_accepts
+      score = case online_judge_name
+              when 'spoj'
+                80.0 / (40.0 + data.num_accepts)
+              when 'plspoj'
+                20.0 / (10.0 + data.num_accepts)
+              else
+                1
+              end
+      score = [score, 0.1].max
+    end
+
+    Problem.create!(
+      name: data.name,
+      online_judge: online_judge_name,
+      score: score)
+  end
 end

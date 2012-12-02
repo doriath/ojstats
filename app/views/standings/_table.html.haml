@@ -26,8 +26,8 @@
 
             - else
               %div{class: ['badge', 'left', result.judge_name], title: result.judge_name}
-                = result.score
+                = result.score.round(2)
               %div{class: ['badge', 'right', result.judge_name]}
                 %div= "(#{result.num_problems.to_i})"
 
-        %td= position.score
+        %td= position.score.round(2)

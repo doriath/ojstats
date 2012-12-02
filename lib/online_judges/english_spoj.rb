@@ -1,5 +1,9 @@
 module OnlineJudges
   class EnglishSpoj
+    def name
+      'spoj'
+    end
+
     # @param [String] user_name
     # @return [Array<Accept>]
     def fetch_accepts(user_name)
