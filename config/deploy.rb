@@ -41,15 +41,13 @@ namespace :deploy do
   end
 end
 
-namespace :rake do
-  namespace :ranking do
-    task :refresh do
-      run_rake 'ranking:refresh'
-    end
+namespace :ranking do
+  task :refresh do
+    run_rake 'ranking:refresh'
+  end
 
-    task :refresh_all do
-      run_rake 'ranking:refresh_all'
-    end
+  task :refresh_all do
+    run_rake 'ranking:refresh_all'
   end
 end
 
