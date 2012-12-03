@@ -20,6 +20,10 @@ set :stage, :production
 set :user, 'ojstats'
 set :use_sudo, false
 
+def run_rake(rake_task)
+  run "cd '#{current_path}' && bundle exec rake RAILS_ENV=production #{rake_task}"
+end
+
 namespace :deploy do
   task :start do ; end
   task :stop do ; end
@@ -33,12 +37,19 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
   end
 
-  desc "Run the super-awesome rake task"
   task :rake do
-    rake = fetch(:rake, 'rake')
-    rails_env = fetch(:rails_env, 'production')
+  end
+end
 
-    run "cd '#{current_path}' && #{rake} super_awesome RAILS_ENV=#{rails_env}"
+namespace :rake do
+  namespace :ranking do
+    task :refresh do
+      run_rake 'ranking:refresh'
+    end
+
+    task :refresh_all do
+      run_rake 'ranking:refresh_all'
+    end
   end
 end
 
