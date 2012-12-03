@@ -13,7 +13,9 @@ class Problem
     if (problem.first)
       problem.first
     else
-      Problem.create!(name: attributes[:name], online_judge: attributes[:online_judge], score: 1)
+      fetched_problem = scraper(attributes[:online_judge]).fetch_problem(attributes[:name])
+      create_from_scraper!(fetched_problem, attributes[:online_judge])
+      #Problem.create!(name: attributes[:name], online_judge: attributes[:online_judge], score: 1)
     end
   end
 
@@ -24,18 +26,25 @@ class Problem
     if data.num_accepts
       score = case online_judge_name
               when 'spoj'
-                80.0 / (40.0 + data.num_accepts)
+                360.0 / (120.0 + data.num_accepts)
               when 'plspoj'
-                20.0 / (10.0 + data.num_accepts)
+                90.0 / (30.0 + data.num_accepts)
               else
                 1
               end
       score = [score, 0.1].max
     end
 
-    Problem.create!(
-      name: data.name,
-      online_judge: online_judge_name,
-      score: score)
+    Problem.create!(name: data.name, online_judge: online_judge_name, score: score)
+  end
+
+  def self.scraper(name)
+    if name == 'plspoj'
+      OnlineJudges::PolishSpoj.new
+    elsif name == 'spoj'
+      OnlineJudges::EnglishSpoj.new
+    else
+      raise 'Unknown online judge'
+    end
   end
 end

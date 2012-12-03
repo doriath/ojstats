@@ -1,0 +1,1245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+<title>POLSKI SPOJ: test your programming skills on-line</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" id="metatag">
+<META NAME="Keywords" CONTENT="programming, language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+
+<link href="http://spoj.pl/gfx/favicon.png" rel="shortcut icon" type="image/x-icon">
+<link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+<link href="/themes/common.css" rel="stylesheet" type="text/css" id="theme">
+<link href="/style.css" rel="stylesheet" type="text/css" id="theme">
+<link href="/themes/tooltips.css" rel="stylesheet" type="text/css" id="theme">
+<script type='text/javascript' src='http://spoj.pl/gfx/jquery.js'></script>
+<script type="text/javascript" src="http://spoj.pl/gfx/jquery.timers.js"></script>
+<script type="text/javascript" src="http://spoj.pl/gfx/jquery.cookie.js"></script> 
+<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+<style type="text/css">
+<!--
+.maintable {width: 855px;} 
+-->
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+function UnCryptMailto(s) {
+	var n=0;
+	var r="";
+	for(var i=0;i<s.length;i++) {		
+		n=s.charCodeAt(i); 
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n+(2));	
+	}
+	return r;
+}
+function linkTo_UnCryptMailto(s)	{
+	location.href=UnCryptMailto(s);
+}
+// -->
+</script>
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+    <script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushCSharp.js"></script>
+    <script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="http://spoj.pl/gfx/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+	<link type="text/css" rel="stylesheet" href="http://spoj.pl/gfx/SyntaxHighlighter/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="http://spoj.pl/gfx/SyntaxHighlighter/styles/shThemeDefault.css"/>
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	
+
+		<meta property="og:site_name" content="Spoj.pl"/>
+    <meta property="og:image" content="http://www.spoj.pl/gfx/spoj-fb.jpg"/>
+
+</head>
+<body>
+<center>
+<table cellpadding="10" cellspacing="0" class="maintable" id="maintable">
+<tr>
+    <td colspan="2" class="header">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+		<td class="headerleft"/>
+		<td class="headercenter">
+<h1>POLSKI SPOJ</h1>
+
+		<div style="position: relative; width: 807px;">
+					
+			<script type="text/javascript">
+			function ad_left_place(){
+				$('#ad_left').css({'left': (($(window).width()-30)/2)-$("#maintable").width()/2-160, 'top': $(window).height()/2-300, 'display': 'block'});
+			}
+			$(window).resize(function() {
+				ad_left_place();
+			});
+			$(document).ready(function(){
+				ad_left_place();
+			})
+			</script>
+			
+		</div>
+		</td>
+		<td class="headerright"/>
+	</tr>
+	</table>
+    </td>
+</tr>
+<tr><td class="menu" width="92" valign="top">
+
+	
+
+<div class="section">
+	
+<form name="login"  action="http://pl.spoj.pl/ranks/JSORTBIZ/" method="post" 
+onsubmit="if(document.login.ssl.checked) document.login.action='https://pl.spoj.pl/ranks/JSORTBIZ/'" style="margin-bottom: 18px"> 
+Login: <input name="login_user" type="text" style="width: 85px;" class="form"><BR>
+Has&#322;o: <input name="password" type="password" style="width: 85px;" class="form"><BR>
+<div style="font-size: 10px; ">
+<script language="javascript" type="text/javascript">
+<!--
+    document.write('<input type="checkbox" name="ssl" id="ssl" /><label for="ssl">secure</label><br/>');
+//-->
+</script>
+<div title="Zaloguj mnie na jeden dzie&#324;.">
+<input type="checkbox" name="autologin" value="1" id="autologin" /><label for="autologin">zapami&#281;taj</label>
+</div>
+<!--Keep me signed in for today-->
+</div>
+<input name="submit" type="submit" value="Zaloguj" class="button" style="width: 85px; margin-bottom: 10px;">
+
+</form>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	if( $.cookie('ssl') == '1' ){
+		$("#ssl").attr('checked', true);
+	}
+	$("#ssl").change(function(){
+		if($(this).is(':checked')){
+			$.cookie('ssl', '1');
+		} else {
+			$.cookie('ssl', '0');
+		}
+	});
+});
+</script>
+
+</div>
+<div class="menucmd"><a href="/register">rejestracja</a><br><a href="/tutorials">tutoriale</a><br><br><a href="/status">status</a><br><a href="/submit">zg&#322;aszanie</a><br><a href="/problems/latwe/">zadania</a><br><a href="/search">szukaj</a><br><br><a href="/ranks">ranking</a><br><br><a href="/news">wiadomo&#347;ci</a><br><a href="/embed/info/">materia&#322;y</a><br><a href="/embed/rules/">zasady</a><br><a href="/forum/">forum</a><br><a href="/embed/links/">linki</a><br><hr></div><a href="/problems/latwe/"></a><br>
+
+
+	
+<div class="time">
+<a href="https://www.spoj.pl">SPOJ </a> time:</div>
+<div class="time">
+2012-12-03
+<br>
+<b>06 : 04 : 16</b>
+</div>
+
+</td><td style="width: 748px; padding:0px;" valign="top" class="content0">
+        <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+                <td style="padding:0px;" colspan="2"><center>
+                                
+                </center></td>
+        </tr>
+        <tr>
+                <td class="content" width="99%" style="padding: 10px">
+
+<script type="text/javascript" src="/gfx/jquery-ui-1.7.1.custom.min.js"></script>
+<script type="text/javascript" src="//ideone.com/api/1.1/service.js"></script>
+
+
+<script type='text/javascript' src='/gfx/jquery.bgiframe.js'></script>
+<script type='text/javascript' src='/gfx/jquery.tooltip.js'></script>
+<script type='text/javascript' src='/gfx/jquery.cxhelp.js'></script>
+
+
+<div class="cxitem" id="h_private">
+<div class="cxtitle">Private submission</div>
+<div>Private submission won't be visible to other users and <br/>won't be taken into consideration in ranks.</div>
+</div>
+
+<div class="cxitem" id="h_disqualified">
+<div class="cxtitle">Disqualify submission</div>
+<div>Your submission will be disqualified. Operation <br/>is not reversible.</div>
+</div>
+
+<div class="cxitem" id="h_hidden">
+<div class="cxtitle">Zg&#322;oszenie ukryte</div>
+<div> </div>
+</div>
+
+<div class="cxitem" id="h_public">
+<div class="cxtitle">Public submission</div>
+<div>
+<i>Click here to view source code.</i><br/></br>
+Source code of every submission to this problem <br/> in this contest is public.</div>
+</div>
+
+<div class="cxitem" id="h_execute">
+<div class="cxtitle">Pomoc</div>
+<div>
+</div>
+</div>
+
+<h3><a href="/problems/JSORTBIZ">Sortowanie biżuterii</a> statystyki i najlepsze rozwi&#261;zania</h3>
+<!-- google_ad_section_start(weight=ignore) -->
+<table class="problems" width="100%" border="1">
+<tr class="headerrow">
+<td class="headerrowleft">Rozwi&#261;za&#322;o os&#243;b</td>
+<td>Zg&#322;osze&#324;</td>
+<td>Zaakceptowano</td>
+<td>B&#322;&#281;dna odpowied&#378;</td>
+<td>B&#322;&#261;d kompilacji</td>
+<td>B&#322;&#261;d wykonania</td>
+<td class="headerrowright">Przekroczono limit czasu</td>
+</tr>
+<tr class="lightrow">
+<td></td>
+<td>1542</td>
+<td>918</td>
+<td>441</td>
+<td>97</td>
+<td>64</td>
+<td>22</td>
+</tr>
+</table>
+<!-- google_ad_section_end -->
+
+<br>
+
+<!-- google_ad_section_start -->
+<table class="navigation" width="99%">
+<tr><td class="navigationcenter">
+<small>
+Wszystkie 
+<a href="/ranks/JSORTBIZ/lang=ADA" title="ADA 95">ADA</a>
+<a href="/ranks/JSORTBIZ/lang=ASM" title="Assembler">ASM</a>
+<a href="/ranks/JSORTBIZ/lang=BASH" title="Bash">BASH</a>
+<a href="/ranks/JSORTBIZ/lang=BF" title="Brainf**k">BF</a>
+<a href="/ranks/JSORTBIZ/lang=C" title="C">C</a>
+<a href="/ranks/JSORTBIZ/lang=CS" title="C#">C#</a>
+<a href="/ranks/JSORTBIZ/lang=CPP%204.0.0-8" title="C++">C++ 4.0.0-8</a>
+<a href="/ranks/JSORTBIZ/lang=C99%20strict" title="C99 strict">C99 strict</a>
+<a href="/ranks/JSORTBIZ/lang=CLPS" title="Clips">CLPS</a>
+<a href="/ranks/JSORTBIZ/lang=LISP%20sbcl" title="Common Lisp">LISP sbcl</a>
+<a href="/ranks/JSORTBIZ/lang=LISP%20clisp" title="Common Lisp">LISP clisp</a>
+<a href="/ranks/JSORTBIZ/lang=D" title="D">D</a>
+<a href="/ranks/JSORTBIZ/lang=FORT" title="Fortran 95">FORT</a>
+<a href="/ranks/JSORTBIZ/lang=HASK" title="Haskell">HASK</a>
+<a href="/ranks/JSORTBIZ/lang=ICON" title="Icon">ICON</a>
+<a href="/ranks/JSORTBIZ/lang=ICK" title="Intercal">ICK</a>
+<a href="/ranks/JSORTBIZ/lang=JAR" title="JAR">JAR</a>
+<a href="/ranks/JSORTBIZ/lang=JAVA" title="Java">JAVA</a>
+<a href="/ranks/JSORTBIZ/lang=LUA" title="Lua">LUA</a>
+<a href="/ranks/JSORTBIZ/lang=NEM" title="Nemerle">NEM</a>
+<a href="/ranks/JSORTBIZ/lang=NICE" title="Nice">NICE</a>
+<a href="/ranks/JSORTBIZ/lang=CAML" title="Ocaml">CAML</a>
+<a href="/ranks/JSORTBIZ/lang=PAS%20fpc" title="Pascal">PAS fpc</a>
+<a href="/ranks/JSORTBIZ/lang=PAS%20gpc" title="Pascal">PAS gpc</a>
+<a href="/ranks/JSORTBIZ/lang=PERL" title="Perl">PERL</a>
+<a href="/ranks/JSORTBIZ/lang=PHP" title="PHP">PHP</a>
+<a href="/ranks/JSORTBIZ/lang=PIKE" title="Pike">PIKE</a>
+<a href="/ranks/JSORTBIZ/lang=PRLG" title="Prolog">PRLG</a>
+<a href="/ranks/JSORTBIZ/lang=PYTH%202.7" title="Python">PYTH 2.7</a>
+<a href="/ranks/JSORTBIZ/lang=RUBY" title="Ruby">RUBY</a>
+<a href="/ranks/JSORTBIZ/lang=SCM%20guile" title="Scheme">SCM guile</a>
+<a href="/ranks/JSORTBIZ/lang=SCM%20qobi" title="Scheme">SCM qobi</a>
+<a href="/ranks/JSORTBIZ/lang=ST" title="Smalltalk">ST</a>
+<a href="/ranks/JSORTBIZ/lang=WSPC" title="Whitespace">WSPC</a>
+</small>
+</td></tr>
+</table>
+<!-- google_ad_section_end -->
+
+
+
+<table class="navigation" width="99%">
+<tr><td align="left" width="27%">
+<i>Wstecz</i></td><td class="navigationcenter" width="4%">&nbsp;1</td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=20" class="pager_link">&nbsp;2</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=40" class="pager_link">&nbsp;3</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=60" class="pager_link">&nbsp;4</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=80" class="pager_link">&nbsp;5</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=100" class="pager_link">&nbsp;6</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=120" class="pager_link">&nbsp;7</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=140" class="pager_link">&nbsp;8</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=160" class="pager_link">&nbsp;9</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=180" class="pager_link">&nbsp;10</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/JSORTBIZ/start=200" class="pager_link">&nbsp;11</a></td> 
+<td align="right" width="25%">
+<a href="/ranks/JSORTBIZ/start=20" class="pager_link">Dalej</a> <a href="/ranks/JSORTBIZ/start=820" class="pager_link">&gt;</a></td></table>
+<script language="JavaScript">
+<!--
+$(document).ready(function(){
+        $('.pager_link__fake').bind('click', function(me){
+		var href=$(this).attr('href');
+                $('.content').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        //cache: false,
+                        //dataType: 'json',
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('.content').html(data);
+                                $('.content').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                $('.content').animate({opacity: 0.75},1);
+                        }
+                });
+                return false;
+        });
+});
+-->
+</script>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4453360425583535";
+/* Spoj - baner gĂłrny */
+google_ad_slot = "5796055248";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<form method="post">
+<table class="problems" width="100%">
+<tr class="headerrow">
+<th width="7%" class="headerrowleft">POZYCJA</th>
+<th width="12%">
+DATA</th>
+<th width="20%">U&#379;YTKOWNIK</th><th width="16%">REZULTAT</th>
+<th width="6%">CZAS</th>
+<th width="6%">MEM</th>
+<th width="8%" class="headerrowright">J&#280;ZYK</th>
+</tr>
+<input type="hidden" id="max_id" value="747187" />
+<tr class="kol1"><td class="statustext">
+1</td>
+
+
+<td class="status_sm">
+
+2007-03-29 12:41:12
+</td>
+
+<td><a href="/users/jakub256/" title="jakub256">Gabi</a></td><td class="statusres" id="statusres_747187" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_747187"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_747187">
+		    	1.7M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+2</td>
+
+
+<td class="status_sm">
+
+2007-03-29 17:42:29
+</td>
+
+<td><a href="/users/krzykwas/" title="krzykwas">Krzysztof Kwaśniewski</a></td><td class="statusres" id="statusres_747780" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_747780"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_747780">
+		    	1.7M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+3</td>
+
+
+<td class="status_sm">
+
+2007-03-29 20:12:00
+</td>
+
+<td><a href="/users/ilona/" title="ilona">Ilona Koda</a></td><td class="statusres" id="statusres_748192" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_748192"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_748192">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+4</td>
+
+
+<td class="status_sm">
+
+2007-04-05 23:16:10
+</td>
+
+<td><a href="/users/jwoyke/" title="jwoyke">Jakub Woyke</a></td><td class="statusres" id="statusres_767814" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_767814"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_767814">
+		    	2.6M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+5</td>
+
+
+<td class="status_sm">
+
+2007-04-06 08:55:50
+</td>
+
+<td><a href="/users/wojtekk/" title="wojtekk">Wojtek Kruczkowski</a></td><td class="statusres" id="statusres_768440" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_768440"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_768440">
+		    	2.5M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+6</td>
+
+
+<td class="status_sm">
+
+2007-04-07 14:42:19
+</td>
+
+<td><a href="/users/dfr/" title="dfr">Przemysław Horban</a></td><td class="statusres" id="statusres_771069" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_771069"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_771069">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+7</td>
+
+
+<td class="status_sm">
+
+2007-04-07 15:20:19
+</td>
+
+<td><a href="/users/master66/" title="master66">master66</a></td><td class="statusres" id="statusres_771173" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_771173"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_771173">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+8</td>
+
+
+<td class="status_sm">
+
+2007-04-19 17:36:44
+</td>
+
+<td><a href="/users/mariusz193/" title="mariusz193">Mariusz Jakubowski</a></td><td class="statusres" id="statusres_806551" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_806551"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_806551">
+		    	1.8M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+9</td>
+
+
+<td class="status_sm">
+
+2007-04-21 16:39:29
+</td>
+
+<td><a href="/users/marok18/" title="marok18">Mariusz Okrój</a></td><td class="statusres" id="statusres_811421" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_811421"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_811421">
+		    576k
+	</td>
+<td class="slang">
+	<p>PAS</p><p class="small">fpc</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+10</td>
+
+
+<td class="status_sm">
+
+2007-05-03 23:14:01
+</td>
+
+<td><a href="/users/ada3/" title="ada3">AJ</a></td><td class="statusres" id="statusres_834329" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_834329"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_834329">
+		    	1.7M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+11</td>
+
+
+<td class="status_sm">
+
+2007-05-04 15:35:10
+</td>
+
+<td><a href="/users/generator/" title="generator">:)</a></td><td class="statusres" id="statusres_835366" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_835366"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_835366">
+		    	1.7M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+12</td>
+
+
+<td class="status_sm">
+
+2007-05-17 22:05:05
+</td>
+
+<td><a href="/users/eonx/" title="eonx">Damian Karasiński</a></td><td class="statusres" id="statusres_856749" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_856749"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_856749">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+13</td>
+
+
+<td class="status_sm">
+
+2007-05-27 23:37:42
+</td>
+
+<td><a href="/users/kunolek/" title="kunolek">Robert Lewoń</a></td><td class="statusres" id="statusres_873162" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_873162"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_873162">
+		    	1.7M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+14</td>
+
+
+<td class="status_sm">
+
+2007-06-04 18:50:59
+</td>
+
+<td><a href="/users/mateusz/" title="mateusz">Mateusz Klimek</a></td><td class="statusres" id="statusres_891512" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_891512"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_891512">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+15</td>
+
+
+<td class="status_sm">
+
+2007-06-15 13:16:07
+</td>
+
+<td><a href="/users/rogerhanney/" title="rogerhanney">Bartosz Górski</a></td><td class="statusres" id="statusres_914897" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_914897"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_914897">
+		    	2.6M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+16</td>
+
+
+<td class="status_sm">
+
+2007-06-15 22:33:12
+</td>
+
+<td><a href="/users/mgt/" title="mgt">Tomasz Kubale</a></td><td class="statusres" id="statusres_915831" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_915831"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_915831">
+		    	1.7M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+17</td>
+
+
+<td class="status_sm">
+
+2007-07-12 12:53:02
+</td>
+
+<td><a href="/users/piow/" title="piow">Piotrek Wałaszek</a></td><td class="statusres" id="statusres_946843" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_946843"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_946843">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+18</td>
+
+
+<td class="status_sm">
+
+2007-07-16 00:20:56
+</td>
+
+<td><a href="/users/tur_turczyn/" title="tur_turczyn">Krzysztof Turowski</a></td><td class="statusres" id="statusres_949935" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_949935"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_949935">
+		    	1.6M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+19</td>
+
+
+<td class="status_sm">
+
+2007-09-10 16:00:51
+</td>
+
+<td><a href="/users/piotrg/" title="piotrg">Piotr Grota </a></td><td class="statusres" id="statusres_994021" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_994021"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_994021">
+		    	1.8M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+20</td>
+
+
+<td class="status_sm">
+
+2007-09-19 21:14:30
+</td>
+
+<td><a href="/users/bart7id/" title="bart7id">bartek</a></td><td class="statusres" id="statusres_1001864" status="15" manual="0">
+
+
+
+
+			zaakceptowano	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_1001864"><!-- google_ad_section_start(weight=ignore) -->
+		0.00	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_1001864">
+		    	1.7M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+</table>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4453360425583535";
+/* Spoj - baner gĂłrny */
+google_ad_slot = "5796055248";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</form>
+
+<input type="hidden" id="debug" value="0"/>
+
+<script language="JavaScript">
+<!--
+		var loader = "<img src='/gfx/loader.gif'/>";
+        var screen_width = 1;
+        var screen_height = 1;
+        var win_width = 1;
+        var win_height = 1;
+        var win_left = 1;
+        var win_top = 1;
+        var tmp = "";
+		function load(){
+                a = new Array();
+                for(var i = 0; i<9; i++){
+                        var results = $('.statusres[status='+i+'][manual=0]').each(function(i, el){
+                                var zz = $(el).attr('id').substring(10);
+                                a.push( zz );
+                                $('#statustime_'+zz).html(loader);
+                        });
+                };
+                if( a.length > 0 ){
+                $.ajax({
+                        type: "POST",
+                        url: "/status/ajax=1,ajaxdiff=1",
+                        data: "ids="+a.join(','),
+                        dataType: 'json',
+                        success: function(data){
+                                for(var i = 0; i<data.length; i++){
+                                        $("#statusres_" + data[i].id).attr('status', data[i].status);
+                                        $("#statusres_" + data[i].id).html(data[i].status_description);
+                                        $("#statustime_" + data[i].id).html(data[i].time);
+                                        $("#statusch_" + data[i].id).html(data[i].chk_id);
+                                        if( data[i].status >= 9 ){
+                                                $("#statusres_" + data[i].id).parent('tr').attr('class', 'kol');
+                                                $("#statusmem_" + data[i].id).html(data[i].mem);
+                                        }
+                                        if( data[i].status == 15 ){
+                                                $("#statusres_" + data[i].id).parent('tr').attr('class', 'kol3');
+                                        }
+                                        if( data[i].status < 9 ){
+                                                $("#statusres_" + data[i].id).html( $("#statusres_" + data[i].id).html());
+                                                $("#statustime_" + data[i].id).html( loader );
+                                        }
+                                        $("#statusres_" + data[i].id).parent().attr('class', data[i].color);
+                                }
+								setTimeout(load, 4000);
+                        },
+                        error: function(err,a,b){
+							if( $("#debug").attr("value") == 1 ){
+								alert(err);
+								alert(a);
+								alert(b);
+								tmp = err;
+							};
+                        }
+                });
+                }
+        }
+
+$(document).ready(function(){
+        function reload_window_dim(){
+			screen_width = $(window).width() - 10;
+			screen_height = $(window).height() - 10;
+			win_width = screen_width * 4 / 5;
+			win_height = screen_height * 4 / 5;
+			win_left = screen_width / 10;
+			win_top = screen_height / 10;
+		}
+		reload_window_dim();
+
+        load();
+    
+        $.ui.dialog.defaults.bgiframe = true;
+	
+		function source_code_execute(){
+			$("#op_window_sourcecode_link").unbind("click");
+			$("#op_window_sourcecode_link").bind("click", function(){
+				$('#op_window_mjudge').hide();
+				$('#op_window_sourcecode').show();
+				var url = $('#url').attr('value');
+				loadCode(url, "op_window_sourcecode", false);
+				return false;
+			});
+		}
+		function plain_text_execute(){
+			$("#op_window_plaintext_link").unbind("click");
+			$("#op_window_plaintext_link").bind("click", function(){
+				$('#op_window_mjudge').hide();
+				$('#op_window_sourcecode').show();
+				var url = $('#url').attr('value');
+				url = url.replace('src', 'src\/plain');
+				loadCode(url, "op_window_sourcecode", true);
+				return false;
+			});
+		}
+		function copy_to_submit_execute(){
+			$("#op_window_copy_to_submit_link").unbind("click");
+			$("#op_window_copy_to_submit_link").bind("click", function(){
+				var id = $('#solutionid').attr('value');
+				var pcode = $('#pcode').attr('value');
+				window.location.href = "/submit/"+pcode+"/?id="+id;
+			});
+		}
+		function manual_rejudge_execute(){
+			$("#op_window_mjudge_link").unbind("click");
+			$("#op_window_mjudge_link").bind("click", function(){
+				$('#op_window_mjudge').show();
+				$('#op_window_sourcecode').hide();
+				return false;
+			});
+		}
+		
+		function createWindow(){
+			reload_window_dim();
+			$("#op_window").dialog({
+				//bgiframe: true,
+				autoOpen: false,
+				height: win_height,
+				width: win_width,
+				modal: true,
+				buttons: {
+					Close: function() {
+						$(this).dialog('close');
+						//$(this).dialog('destroy');
+					}
+				}
+			});
+			$(".ui-dialog .ui-dialog-titlebar").append("<a class=\"ui-dialog-titlebar-resize ui-corner-all\" href=\"\"><span class=\"ui-icon ui-icon-newwin\" unselectable=\"on\" style=\"-moz-user-select: none;\">resize</span></a>");
+			$(".ui-dialog .ui-dialog-titlebar .ui-icon-newwin").bind("click", function(){
+				reload_window_dim();
+				if( ! $(".ui-dialog").attr("max") ){
+					$('#op_window').parents('.ui-dialog:first').animate({ width: screen_width, height: screen_height, left: 0, top: 0 });
+					$('#op_window').animate({ width: screen_width, height: screen_height-100 });
+					$(".ui-dialog").attr("max", "1");
+				} else {
+					$('#op_window').parents('.ui-dialog:first').animate({ width: win_width, height: win_height, left: win_left, top: win_top });
+					$("#op_window").animate({ width: win_width, height: (win_height - 100) });
+					$(".ui-dialog").attr("max", "");
+				}
+				return false;
+			});
+			source_code_execute();
+			plain_text_execute();
+			manual_rejudge_execute();
+			copy_to_submit_execute();
+		};
+		
+		createWindow(); 
+		
+		
+		function loadCode(url,objectid,pre){
+			$("#"+objectid).html(loader);
+			if( ! url ) return;
+			$.ajax({
+				type: "POST",
+				url: url,
+				cache: false,
+				data: "post=1",
+				success: function(data){
+					if( ! pre ){
+						$("#"+objectid).html(data);
+					} else {
+						$("#"+objectid).html("<pre>" + data + "</pre>");
+					}
+				},
+				error: function(){
+					$("#"+objectid).html("error ;(");	
+				}
+			});
+		}
+		
+		
+					
+			$(".op_window").bind("click", function(){
+				reload_window_dim();
+				$('#solutionid').attr('value', ( $(this).attr('sid') ) );
+				$('#pcode').attr('value', ( $(this).attr('pcode') ) );
+				$('#op_window').dialog('open');
+				$('#op_window').dialog('enable');
+				//$('.ui-dialog').css('display', 'block');
+				$(".ui-dialog").attr("max", "");
+				var url = "/files/src/" + $(this).attr('sid') + "/";
+				$('#url').attr('value', url);
+				loadCode(url, "op_window_sourcecode", false);
+				$("#op_window_sourcecode_link").click();
+				return false;
+			});
+			
+				
+		
+		
+		$(".ideone-run").click(function(){
+			var $this = $(this);
+			$.ajax({
+                	type: "post",
+                	url: "/files/src/plain/"+$(this).attr('sid')+"/",
+                	cache: false,
+                	dataType: 'html',
+                	success: function(data){
+                		ideone_submit(data, $this.attr('lang'), '', $this.attr('note'), true, true);
+                	}
+                });
+            return false;
+		});
+		
+	});
+-->
+</script>
+
+
+	<div id="op_window" title="<a href='#' id='op_window_sourcecode_link'>Source code</a> | <a href='#' id='op_window_plaintext_link'>Plain text</a> | <a href='#' id='op_window_copy_to_submit_link'><b>Copy to submit</b></a>">
+		<input type="hidden" class="url" value="" id="url"/>
+		<div id="op_window_sourcecode">
+		code...
+		</div>
+		<input type="hidden" class="solutionid" id="solutionid"/>
+		<input type="hidden" class="pcode" id="pcode"/>
+	</div>
+        </td>
+<tr>
+        <td style="padding:0px" colspan="2"><center>
+                
+</center></td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="footer">
+<div class="a-footer"></div>
+<script language="javascript" type="text/javascript">
+<!--
+function swapSheet(sheet, caller) {
+    document.getElementById('theme').href=sheet;
+    document.cookie="css_79="+sheet+"; path=/;";
+    caller.href="#bottom";
+}
+
+function setWidth(w, caller) {
+    document.getElementById('maintable').style.width=w;
+    document.cookie="res="+w+"; path=/;";
+    caller.href="#bottom";
+}
+
+
+
+//-->
+
+</script>
+    <div style="font-size:10px; color:#aaaaaa;">
+    ISO C99,  C/C++, C++0x, kurs programowania w C++, zbiór algorytmów, algorytmy i struktury danych, sortowanie, kolejki priorytetowe, algorytmy grafowe, otoczka wypukła, odwrócona notacja polska, drzewo spinające, drzewo wyszukiwań binarnych, algorytm Euklidesa, NWD, ONP, haszowanie, stos, kolejka, kopiec, drzewa BST, AVL, RB, B-drzewa, diagram Voronoi, triangulacja, algorytm Karatsuby, kopiec Fibbonaciego
+</div></tr></table>
+</center>
+<div class="a-header"></div>
+<div style="position: fixed; width: 160px; height: 600px; display: none;" id="ad_left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-4453360425583535";
+/* Spoj - wiezowiec */
+google_ad_slot = "2703472077";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+
+
+<div style="font-size:10px; margin-top:4px; color: rgb(85,80,95);"><center>
+<a href="http://www.spoj.pl" style="color:black">SPOJ</a>
+System &copy; 2012
+<a href="http://sphere-research.com" style="color:black">Sphere Research Labs</a>. 
+All Rights Reserved.</center></div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10507872-1']);
+    _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+        (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		      })();
+		      </script>
+		      
+</body>
+</html>

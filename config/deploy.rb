@@ -32,6 +32,14 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
   end
+
+  desc "Run the super-awesome rake task"
+  task :rake do
+    rake = fetch(:rake, 'rake')
+    rails_env = fetch(:rails_env, 'production')
+
+    run "cd '#{current_path}' && #{rake} super_awesome RAILS_ENV=#{rails_env}"
+  end
 end
 
 after 'deploy:update_code', 'deploy:symlink_shared'

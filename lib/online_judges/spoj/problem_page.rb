@@ -15,11 +15,15 @@ module OnlineJudges::Spoj
     def problem
       problem = OnlineJudges::Problem.new(problem_name, num_accepts)
 
+      unless problem.num_accepts
+        positions = last_page.css('.statustext:nth-child(1)')
+        problem.num_accepts = positions.last.text.strip.to_i
+      end
+
       best_status = page.css('.statusres').first.text.strip
       if is_integer? best_status
         problem.best_points = best_status.to_i
 
-        last_page = get_html_page(@url + "start=100000")
         worst_status = last_page.css('.statusres').last.text.strip
 
         problem.worst_points = worst_status.to_i
@@ -42,6 +46,10 @@ module OnlineJudges::Spoj
 
     def page
       @page ||= get_html_page(@url)
+    end
+
+    def last_page
+      @last_page ||= get_html_page(@url + "start=100000")
     end
 
     def get_html_page(url)
