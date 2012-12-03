@@ -51,9 +51,13 @@ module OnlineJudges::Spoj
     def last_page
       @last_page ||= begin
         last = get_html_page(@url + "start=100000")
-        uri = URI(@url)
-        last_url = uri.scheme + "://" + uri.host + last.css('.pager_link').last['href']
-        get_html_page(last_url)
+        if page.css('.statusres').empty?
+          uri = URI(@url)
+          last_url = uri.scheme + "://" + uri.host + last.css('.pager_link').last['href']
+          get_html_page(last_url)
+        else
+          last
+        end
       end
     end
 
