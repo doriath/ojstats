@@ -36,9 +36,6 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
   end
-
-  task :rake do
-  end
 end
 
 namespace :ranking do
