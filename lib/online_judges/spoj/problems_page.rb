@@ -65,7 +65,7 @@ module OnlineJudges::Spoj
     # @return [String]
     def  problem_description_url name
       url = @url
-      url.sub(/problems.*/, "problems/#{name}")
+      url.sub(/problems.*/, "problems/#{name}/")
     end
   end
 end
