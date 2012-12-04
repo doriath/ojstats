@@ -3,7 +3,7 @@
 
 .row
   .span4
-    = gravatar_image_tag(@user.email, alt: @user.display_name, gravatar: {size: 200})
+    = gravatar_image_link(@user.email, alt: @user.display_name, gravatar: {size: 200, default: :identicon})
   .span4
     %h2= @user.display_name
 
