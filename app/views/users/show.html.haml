@@ -26,7 +26,10 @@
       %tr
         %td= index + 1
         %td= l(accepted_problem.accepted_at)
-        %td= accepted_problem.problem.name
+        %td= link_to accepted_problem.problem.name, accepted_problem.problem.url
         %td
           %span{class: ['badge', accepted_problem.online_judge]}= accepted_problem.online_judge
-        %td= accepted_problem.score.round(2)
+        %td
+          %span.help{ title: t("score_help.#{accepted_problem.online_judge}")}
+            = accepted_problem.score.round(2)
+          %span.lighter (#{accepted_problem.problem.num_accepts})
