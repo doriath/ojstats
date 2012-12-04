@@ -30,4 +30,6 @@
               %div{class: ['badge', 'right', result.judge_name]}
                 %div= "(#{result.num_problems.to_i})"
 
-        %td= position.score.round(2)
+        %td
+          = position.score.round(2)
+          %span.lighter (#{position.num_problems.to_i})

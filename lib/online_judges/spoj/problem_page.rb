@@ -29,6 +29,8 @@ module OnlineJudges::Spoj
         problem.worst_points = worst_status.to_i
       end
 
+      problem.url = problem_description_url
+
       problem
     end
 
@@ -42,6 +44,13 @@ module OnlineJudges::Spoj
     def problem_name
       match_data = %r{ranks/(.*)/}.match(@url)
       match_data[1]
+    end
+
+    # Returns url to problem page on judge website
+    # @return [String]
+    def  problem_description_url
+      url = @url
+      url.sub('ranks', 'problems')
     end
 
     def page

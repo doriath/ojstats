@@ -3,6 +3,7 @@ require 'spec_helper'
 module OnlineJudges::Spoj
   describe OnlineJudges::Spoj::ProblemsPage do
     let(:url) { 'http://pl.spoj.pl/problems/latwe/' }
+
     subject(:problems_page) { ProblemsPage.new(url) }
 
     context 'first page of polish spoj easy problems' do
@@ -13,7 +14,7 @@ module OnlineJudges::Spoj
       its(:next_url) { should == 'http://pl.spoj.pl/problems/latwe/sort=0,start=50' }
       it 'returns correct first problem' do
         problem = problems_page.problems.first
-        problem.should == OnlineJudges::Problem.new('PRIME_T', 4510)
+        problem.should == OnlineJudges::Problem.new('PRIME_T', 4510, 'http://pl.spoj.pl/problems/PRIME_T/')
       end
     end
 
@@ -25,7 +26,7 @@ module OnlineJudges::Spoj
       its(:next_url) { should be_nil }
       it 'returns correct first problem' do
         problem = problems_page.problems.first
-        problem.should == OnlineJudges::Problem.new('TAXIMAN3', 199)
+        problem.should == OnlineJudges::Problem.new('TAXIMAN3', 199, 'http://pl.spoj.pl/problems/TAXIMAN3/')
       end
     end
 

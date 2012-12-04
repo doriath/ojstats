@@ -5,6 +5,7 @@ class Problem
   field :name, type: String
   field :url, type: String
   field :score, type: Float
+  field :num_accepts, type: Integer
 
   has_many :accepted_problems
 
@@ -35,7 +36,7 @@ class Problem
       score = [score, 0.1].max
     end
 
-    Problem.create!(name: data.name, online_judge: online_judge_name, score: score)
+    Problem.create!(name: data.name, url: data.url, online_judge: online_judge_name, score: score, num_accepts: data.num_accepts)
   end
 
   def self.scraper(name)

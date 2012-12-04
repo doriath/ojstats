@@ -29,7 +29,7 @@ module OnlineJudges::Spoj
       names = page.css('.problemrow td:nth-child(3) a')
       accepts = page.css('.problemrow td:nth-child(4) a')
       names.zip(accepts).map do |name, num_accepts|
-        OnlineJudges::Problem.new(name.text.strip, num_accepts.text.strip.to_i)
+        OnlineJudges::Problem.new(name.text.strip, num_accepts.text.strip.to_i, problem_description_url(name.text.strip))
       end
     end
 
@@ -59,6 +59,13 @@ module OnlineJudges::Spoj
 
     def get_page(url)
       Typhoeus::Request.get(url).body
+    end
+
+    # Returns url to problem page on judge website
+    # @return [String]
+    def  problem_description_url name
+      url = @url
+      url.sub(/problems.*/, "problems/#{name}/")
     end
   end
 end
