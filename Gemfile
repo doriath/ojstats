@@ -62,6 +62,8 @@ end
 group :test, :development do
   gem 'simplecov', require: false
   gem 'rspec-rails'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
   gem 'fabrication'
   gem 'timecop'
   gem "jasminerice"
