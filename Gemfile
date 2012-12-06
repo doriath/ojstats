@@ -60,11 +60,19 @@ group :development do
 end
 
 group :test, :development do
-  gem 'simplecov', require: false
+  # Unit tests
   gem 'rspec-rails'
+
+  # Acceptance tests
   gem 'cucumber-rails', require: false
+  gem 'capybara'
   gem 'database_cleaner'
+
+  # Javascript tests
+  gem "jasminerice"
+
+  # Common
+  gem 'simplecov', require: false
   gem 'fabrication'
   gem 'timecop'
-  gem "jasminerice"
 end

@@ -311,6 +311,7 @@ DEPENDENCIES
   bson_ext
   capistrano
   capistrano_colors
+  capybara
   coffee-rails
   cucumber-rails
   database_cleaner
