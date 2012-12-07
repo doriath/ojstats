@@ -7,7 +7,7 @@ describe OnlineJudge do
     let!(:problem) { Problem.create!(name: 'MWP3_2B1', online_judge: 'plspoj', score: 1) }
 
     it "should fetch accepted problems" do
-      mock_request 'http://pl.spoj.pl/status/doriath/signedlist/', 'doriath.spoj.signedlist'
+      mock_request 'http://pl.spoj.com/status/doriath/signedlist/', 'doriath.spoj.signedlist'
 
       user.online_judges.first.refresh
 
@@ -15,7 +15,7 @@ describe OnlineJudge do
     end
 
     it "should be idempotent" do
-      mock_request 'http://pl.spoj.pl/status/doriath/signedlist/', 'doriath.spoj.signedlist'
+      mock_request 'http://pl.spoj.com/status/doriath/signedlist/', 'doriath.spoj.signedlist'
 
       user.online_judges.first.refresh
       user.online_judges.first.refresh

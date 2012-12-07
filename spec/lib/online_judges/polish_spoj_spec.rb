@@ -10,7 +10,7 @@ describe OnlineJudges::PolishSpoj do
     it 'fetches accepts using signedlist parser' do
       OnlineJudges::Spoj::SignedlistParser.
         should_receive(:new).
-        with('http://pl.spoj.pl/status/doriath/signedlist/').
+        with('http://pl.spoj.com/status/doriath/signedlist/').
         and_return(stub(accepts: accepts))
 
       polish_spoj.fetch_accepts('doriath').should == accepts
@@ -23,7 +23,7 @@ describe OnlineJudges::PolishSpoj do
     it 'fetches accepts using signedlist parser' do
       OnlineJudges::Spoj::ProblemPage.
         should_receive(:new).
-        with('http://pl.spoj.pl/ranks/PRIME/').
+        with('http://pl.spoj.com/ranks/PRIME/').
         and_return(stub(problem: problem))
 
       polish_spoj.fetch_problem('PRIME').should == problem
@@ -38,15 +38,15 @@ describe OnlineJudges::PolishSpoj do
     it 'fetches accepts using signedlist parser' do
       OnlineJudges::Spoj::ProblemsPage.
         should_receive(:problems_starting_from).
-        with('http://pl.spoj.pl/problems/latwe/').
+        with('http://pl.spoj.com/problems/latwe/').
         and_return([problem_easy])
       OnlineJudges::Spoj::ProblemsPage.
         should_receive(:problems_starting_from).
-        with('http://pl.spoj.pl/problems/srednie/').
+        with('http://pl.spoj.com/problems/srednie/').
         and_return([problem_medium])
       OnlineJudges::Spoj::ProblemsPage.
         should_receive(:problems_starting_from).
-        with('http://pl.spoj.pl/problems/trudne/').
+        with('http://pl.spoj.com/problems/trudne/').
         and_return([problem_hard])
 
       polish_spoj.fetch_all_problems.should =~
