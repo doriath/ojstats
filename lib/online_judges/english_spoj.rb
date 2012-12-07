@@ -7,14 +7,14 @@ module OnlineJudges
     # @param [String] user_name
     # @return [Array<Accept>]
     def fetch_accepts(user_name)
-      url = "http://www.spoj.pl/status/#{user_name}/signedlist/"
+      url = "http://www.spoj.com/status/#{user_name}/signedlist/"
       OnlineJudges::Spoj::SignedlistParser.new(url).accepts
     end
 
     # @param [String] problem_name
     # @return [Problem]
     def fetch_problem(problem_name)
-      url = "http://www.spoj.pl/ranks/#{problem_name}/"
+      url = "http://www.spoj.com/ranks/#{problem_name}/"
       OnlineJudges::Spoj::ProblemPage.new(url).problem
     end
 
@@ -25,7 +25,7 @@ module OnlineJudges
     #
     # @return [Array<Problem>]
     def fetch_all_problems
-      url = 'http://www.spoj.pl/problems/classical/'
+      url = 'http://www.spoj.com/problems/classical/'
       OnlineJudges::Spoj::ProblemsPage.problems_starting_from(url)
     end
   end

@@ -10,7 +10,7 @@ describe OnlineJudges::EnglishSpoj do
     it 'fetches accepts using signedlist parser' do
       OnlineJudges::Spoj::SignedlistParser.
         should_receive(:new).
-        with('http://www.spoj.pl/status/doriath/signedlist/').
+        with('http://www.spoj.com/status/doriath/signedlist/').
         and_return(stub(accepts: accepts))
 
       english_spoj.fetch_accepts('doriath').should == accepts
@@ -23,7 +23,7 @@ describe OnlineJudges::EnglishSpoj do
     it 'fetches accepts using signedlist parser' do
       OnlineJudges::Spoj::ProblemPage.
         should_receive(:new).
-        with('http://www.spoj.pl/ranks/PRIME/').
+        with('http://www.spoj.com/ranks/PRIME/').
         and_return(stub(problem: problem))
 
       english_spoj.fetch_problem('PRIME').should == problem
@@ -36,7 +36,7 @@ describe OnlineJudges::EnglishSpoj do
     it 'fetches accepts using signedlist parser' do
       OnlineJudges::Spoj::ProblemsPage.
         should_receive(:problems_starting_from).
-        with('http://www.spoj.pl/problems/classical/').
+        with('http://www.spoj.com/problems/classical/').
         and_return([problem])
 
       english_spoj.fetch_all_problems.should == [problem]
