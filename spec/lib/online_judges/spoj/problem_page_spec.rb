@@ -22,4 +22,18 @@ describe OnlineJudges::Spoj::ProblemPage do
     before { mock_request url + "start=100000", 'spoj/JSORTBIZ_last_page.html' }
     its(:problem) { should == OnlineJudges::Problem.new('JSORTBIZ', 830, 'http://pl.spoj.pl/problems/JSORTBIZ/') }
   end
+
+  context 'for problem with float points' do
+    let(:url) { 'http://pl.spoj.pl/ranks/PZPI06_X/' }
+    before { mock_request url, 'spoj/PZPI06_X.html' }
+    before { mock_request url + "start=100000", 'spoj/PZPI06_X_last_page.html' }
+    its(:problem) { should == OnlineJudges::Problem.new('PZPI06_X', 191, 'http://pl.spoj.pl/problems/PZPI06_X/', 0.445999, 1) }
+  end
+
+  context 'for problem with points with text' do
+    let(:url) { 'http://pl.spoj.pl/ranks/TCONNUM/' }
+    before { mock_request url, 'spoj/TCONNUM.html' }
+    before { mock_request url + "start=100000", 'spoj/TCONNUM_last_page.html' }
+    its(:problem) { should == OnlineJudges::Problem.new('TCONNUM', 213, 'http://pl.spoj.pl/problems/TCONNUM/', 10, 3) }
+  end
 end

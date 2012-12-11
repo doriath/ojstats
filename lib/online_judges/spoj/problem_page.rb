@@ -21,12 +21,12 @@ module OnlineJudges::Spoj
       end
 
       best_status = page.css('.statusres').first.text.strip
-      if is_integer? best_status
-        problem.best_points = best_status.to_i
+      if contains_number? best_status
+        problem.best_points = convert_to_float best_status
 
         worst_status = last_page.css('.statusres').last.text.strip
 
-        problem.worst_points = worst_status.to_i
+        problem.worst_points = convert_to_float worst_status
       end
 
       problem.url = problem_description_url
@@ -35,6 +35,14 @@ module OnlineJudges::Spoj
     end
 
     private
+
+    def convert_to_float str
+      if str.match(/(\d+(\.\d+)?)/)
+        $1.to_f
+      else
+        0.0
+      end
+    end
 
     # @return [Integer,nil]
     def num_accepts
@@ -76,6 +84,10 @@ module OnlineJudges::Spoj
 
     def is_integer?(str)
       str.match(/^\d+$/)
+    end
+
+    def contains_number?(str)
+      str.match(/(\d+(\.\d+)?)/)
     end
 
     def convert_to_integer(str)

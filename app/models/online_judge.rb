@@ -10,19 +10,30 @@ class OnlineJudge
   validates_inclusion_of :name, in: %w(plspoj spoj)
 
   def refresh
-    fetched_problems = fetcher.fetch_accepts(login)
+    accepts = fetcher.fetch_accepts(login)
 
-    fetched_problems.each do |fetched_problem|
-      update_problem fetched_problem
+    accepts.each do |accept|
+      update_problem accept
     end
   end
 
   private
 
-  def update_problem fetched_problem
-    problem = Problem.find_or_fetch_by(name: fetched_problem[:problem], online_judge: name)
-    unless user_solved_problem? problem
-      user.accepted_problems.create!(problem: problem, online_judge: name, accepted_at: fetched_problem[:accepted_at], score: problem.score)
+  def update_problem accept
+    problem = Problem.find_or_fetch_by(name: accept.problem, online_judge: name)
+
+    return if user_solved_problem? problem
+
+    user.accepted_problems.create! do |accepted_problem|
+      accepted_problem.problem = problem
+      accepted_problem.online_judge = name
+      accepted_problem.accepted_at = accept.accepted_at
+      accepted_problem.score = problem.score
+      if accept.points && accept.points != problem.fetch_max_points
+        p accept
+        p problem
+        accepted_problem.score = 0.0
+      end
     end
   end
 

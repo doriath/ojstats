@@ -6,8 +6,19 @@ class Problem
   field :url, type: String
   field :score, type: Float
   field :num_accepts, type: Integer
+  field :max_points, type: Float
 
   has_many :accepted_problems
+
+  def fetch_max_points
+    unless max_points
+      fetched_problem = Problem.scraper(online_judge).fetch_problem(name)
+      puts "Fetching max points for #{fetched_problem}"
+      self.max_points = [fetched_problem.best_points, fetched_problem.worst_points].max
+      save!
+    end
+    max_points
+  end
 
   def self.find_or_fetch_by(attributes)
     problem = Problem.where(attributes)
@@ -16,7 +27,6 @@ class Problem
     else
       fetched_problem = scraper(attributes[:online_judge]).fetch_problem(attributes[:name])
       create_from_scraper!(fetched_problem, attributes[:online_judge])
-      #Problem.create!(name: attributes[:name], online_judge: attributes[:online_judge], score: 1)
     end
   end
 
@@ -36,7 +46,14 @@ class Problem
       score = [score, 0.1].max
     end
 
-    Problem.create!(name: data.name, url: data.url, online_judge: online_judge_name, score: score, num_accepts: data.num_accepts)
+    Problem.create! do |problem|
+      problem.name = data.name
+      problem.url = data.url
+      problem.online_judge = online_judge_name
+      problem.score = score
+      problem.num_accepts = data.num_accepts
+      problem.max_points = [data.best_points, data.worst_points].max
+    end
   end
 
   def self.scraper(name)

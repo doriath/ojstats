@@ -1,0 +1,980 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+<title>POLSKI SPOJ: test your programming skills on-line</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" id="metatag">
+<META NAME="Keywords" CONTENT="programming, language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+
+<link href="http://spoj.com/gfx/favicon.png" rel="shortcut icon" type="image/x-icon">
+<link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+<link href="/themes/common.css" rel="stylesheet" type="text/css" id="theme">
+<link href="/style.css" rel="stylesheet" type="text/css" id="theme">
+<link href="/themes/tooltips.css" rel="stylesheet" type="text/css" id="theme">
+<script type='text/javascript' src='http://spoj.com/gfx/jquery.js'></script>
+<script type="text/javascript" src="http://spoj.com/gfx/jquery.timers.js"></script>
+<script type="text/javascript" src="http://spoj.com/gfx/jquery.cookie.js"></script> 
+<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+<style type="text/css">
+<!--
+.maintable {width: 855px;} 
+-->
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+function UnCryptMailto(s) {
+	var n=0;
+	var r="";
+	for(var i=0;i<s.length;i++) {		
+		n=s.charCodeAt(i); 
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n+(2));	
+	}
+	return r;
+}
+function linkTo_UnCryptMailto(s)	{
+	location.href=UnCryptMailto(s);
+}
+// -->
+</script>
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+    <script type="text/javascript" src="http://spoj.com/gfx/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="http://spoj.com/gfx/SyntaxHighlighter/scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="http://spoj.com/gfx/SyntaxHighlighter/scripts/shBrushCSharp.js"></script>
+    <script type="text/javascript" src="http://spoj.com/gfx/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="http://spoj.com/gfx/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="http://spoj.com/gfx/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+	<link type="text/css" rel="stylesheet" href="http://spoj.com/gfx/SyntaxHighlighter/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="http://spoj.com/gfx/SyntaxHighlighter/styles/shThemeDefault.css"/>
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	
+
+		<meta property="og:site_name" content="spoj.com"/>
+    <meta property="og:image" content="http://www.spoj.com/gfx/spoj-fb.jpg"/>
+
+</head>
+<body>
+<center>
+<table cellpadding="10" cellspacing="0" class="maintable" id="maintable">
+<tr>
+    <td colspan="2" class="header">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+		<td class="headerleft"/>
+		<td class="headercenter">
+<h1>POLSKI SPOJ</h1>
+
+		<div style="position: relative; width: 807px;">
+					
+			<script type="text/javascript">
+			function ad_left_place(){
+				$('#ad_left').css({'left': (($(window).width()-30)/2)-$("#maintable").width()/2-160, 'top': $(window).height()/2-300, 'display': 'block'});
+			}
+			$(window).resize(function() {
+				ad_left_place();
+			});
+			$(document).ready(function(){
+				ad_left_place();
+			})
+			</script>
+			
+		</div>
+		</td>
+		<td class="headerright"/>
+	</tr>
+	</table>
+    </td>
+</tr>
+<tr><td class="menu" width="92" valign="top">
+
+	
+
+<div class="section">
+	
+<form name="login"  action="http://pl.spoj.com/ranks/TCONNUM/start=200" method="post" 
+onsubmit="if(document.login.ssl.checked) document.login.action='https://pl.spoj.com/ranks/TCONNUM/start=200'" style="margin-bottom: 18px"> 
+Login: <input name="login_user" type="text" style="width: 85px;" class="form"><BR>
+Has&#322;o: <input name="password" type="password" style="width: 85px;" class="form"><BR>
+<div style="font-size: 10px; ">
+<script language="javascript" type="text/javascript">
+<!--
+    document.write('<input type="checkbox" name="ssl" id="ssl" /><label for="ssl">secure</label><br/>');
+//-->
+</script>
+<div title="Zaloguj mnie na jeden dzie&#324;.">
+<input type="checkbox" name="autologin" value="1" id="autologin" /><label for="autologin">zapami&#281;taj</label>
+</div>
+<!--Keep me signed in for today-->
+</div>
+<input name="submit" type="submit" value="Zaloguj" class="button" style="width: 85px; margin-bottom: 10px;">
+
+</form>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	if( $.cookie('ssl') == '1' ){
+		$("#ssl").attr('checked', true);
+	}
+	$("#ssl").change(function(){
+		if($(this).is(':checked')){
+			$.cookie('ssl', '1');
+		} else {
+			$.cookie('ssl', '0');
+		}
+	});
+});
+</script>
+
+</div>
+<div class="menucmd"><a href="/register">rejestracja</a><br><a href="/tutorials">tutoriale</a><br><br><a href="/status">status</a><br><a href="/submit">zg&#322;aszanie</a><br><a href="/problems/latwe/">zadania</a><br><a href="/search">szukaj</a><br><br><a href="/ranks">ranking</a><br><br><a href="/news">wiadomo&#347;ci</a><br><a href="/embed/info/">materia&#322;y</a><br><a href="/embed/rules/">zasady</a><br><a href="/forum/">forum</a><br><a href="/embed/links/">linki</a><br><hr></div><a href="/problems/latwe/"></a><br>
+
+
+	
+<div class="time">
+<a href="https://www.spoj.com">SPOJ </a> time:</div>
+<div class="time">
+2012-12-11
+<br>
+<b>05 : 16 : 58</b>
+</div>
+
+</td><td style="width: 748px; padding:0px;" valign="top" class="content0">
+        <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+                <td style="padding:0px;" colspan="2"><center>
+                                
+                </center></td>
+        </tr>
+        <tr>
+                <td class="content" width="99%" style="padding: 10px">
+
+<script type="text/javascript" src="/gfx/jquery-ui-1.7.1.custom.min.js"></script>
+<script type="text/javascript" src="//ideone.com/api/1.1/service.js"></script>
+
+
+<script type='text/javascript' src='/gfx/jquery.bgiframe.js'></script>
+<script type='text/javascript' src='/gfx/jquery.tooltip.js'></script>
+<script type='text/javascript' src='/gfx/jquery.cxhelp.js'></script>
+
+
+<div class="cxitem" id="h_private">
+<div class="cxtitle">Private submission</div>
+<div>Private submission won't be visible to other users and <br/>won't be taken into consideration in ranks.</div>
+</div>
+
+<div class="cxitem" id="h_disqualified">
+<div class="cxtitle">Disqualify submission</div>
+<div>Your submission will be disqualified. Operation <br/>is not reversible.</div>
+</div>
+
+<div class="cxitem" id="h_hidden">
+<div class="cxtitle">Zg&#322;oszenie ukryte</div>
+<div> </div>
+</div>
+
+<div class="cxitem" id="h_public">
+<div class="cxtitle">Public submission</div>
+<div>
+<i>Click here to view source code.</i><br/></br>
+Source code of every submission to this problem <br/> in this contest is public.</div>
+</div>
+
+<div class="cxitem" id="h_execute">
+<div class="cxtitle">Pomoc</div>
+<div>
+</div>
+</div>
+
+<h3><a href="/problems/TCONNUM">Simple Numbers Conversion</a> statystyki i najlepsze rozwi&#261;zania</h3>
+<!-- google_ad_section_start(weight=ignore) -->
+<table class="problems" width="100%" border="1">
+<tr class="headerrow">
+<td class="headerrowleft">Rozwi&#261;za&#322;o os&#243;b</td>
+<td>Zg&#322;osze&#324;</td>
+<td>Zaakceptowano</td>
+<td>B&#322;&#281;dna odpowied&#378;</td>
+<td>B&#322;&#261;d kompilacji</td>
+<td>B&#322;&#261;d wykonania</td>
+<td class="headerrowright">Przekroczono limit czasu</td>
+</tr>
+<tr class="lightrow">
+<td>213</td>
+<td>1449</td>
+<td>787</td>
+<td>0</td>
+<td>117</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</table>
+<!-- google_ad_section_end -->
+
+<br>
+
+<!-- google_ad_section_start -->
+<table class="navigation" width="99%">
+<tr><td class="navigationcenter">
+<small>
+Wszystkie 
+<a href="/ranks/TCONNUM/lang=C" title="C">C</a>
+<a href="/ranks/TCONNUM/lang=CPP%204.0.0-8" title="C++">C++ 4.0.0-8</a>
+<a href="/ranks/TCONNUM/lang=PAS%20fpc" title="Pascal">PAS fpc</a>
+<a href="/ranks/TCONNUM/lang=PAS%20gpc" title="Pascal">PAS gpc</a>
+</small>
+</td></tr>
+</table>
+<!-- google_ad_section_end -->
+
+
+
+<table class="navigation" width="99%">
+<tr><td align="left" width="27%">
+<a href="/ranks/TCONNUM/start=0" class="pager_link">&lt;</a> <a href="/ranks/TCONNUM/start=180" class="pager_link"> Wstecz</a></td><td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=0" class="pager_link">&nbsp;1</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=20" class="pager_link">&nbsp;2</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=40" class="pager_link">&nbsp;3</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=60" class="pager_link">&nbsp;4</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=80" class="pager_link">&nbsp;5</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=100" class="pager_link">&nbsp;6</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=120" class="pager_link">&nbsp;7</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=140" class="pager_link">&nbsp;8</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=160" class="pager_link">&nbsp;9</a></td> 
+<td class="navigationcenter" width="4%"><a href="/ranks/TCONNUM/start=180" class="pager_link">&nbsp;10</a></td> 
+<td class="navigationcenter" width="4%">&nbsp;11</td> 
+<td align="right" width="25%">
+<i>Dalej</i></td></table>
+<script language="JavaScript">
+<!--
+$(document).ready(function(){
+        $('.pager_link__fake').bind('click', function(me){
+		var href=$(this).attr('href');
+                $('.content').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        //cache: false,
+                        //dataType: 'json',
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('.content').html(data);
+                                $('.content').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                $('.content').animate({opacity: 0.75},1);
+                        }
+                });
+                return false;
+        });
+});
+-->
+</script>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4453360425583535";
+/* Spoj - baner gĂłrny */
+google_ad_slot = "5796055248";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<form method="post">
+<table class="problems" width="100%">
+<tr class="headerrow">
+<th width="7%" class="headerrowleft">POZYCJA</th>
+<th width="12%">
+DATA</th>
+<th width="20%">U&#379;YTKOWNIK</th><th width="16%">REZULTAT</th>
+<th width="6%">CZAS</th>
+<th width="6%">MEM</th>
+<th width="8%" class="headerrowright">J&#280;ZYK</th>
+</tr>
+<input type="hidden" id="max_id" value="5251396" />
+<tr class="kol1"><td class="statustext">
+201</td>
+
+
+<td class="status_sm">
+
+2011-06-15 19:46:40
+</td>
+
+<td><a href="/users/box/" title="box">Piotr Bielak</a></td><td class="statusres" id="statusres_5251396" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_5251396"><!-- google_ad_section_start(weight=ignore) -->
+		0.06	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_5251396">
+		    	2.6M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+202</td>
+
+
+<td class="status_sm">
+
+2011-08-19 23:18:45
+</td>
+
+<td><a href="/users/piotrek628/" title="piotrek628">Piotr Kruczek</a></td><td class="statusres" id="statusres_5536986" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_5536986"><!-- google_ad_section_start(weight=ignore) -->
+		0.08	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_5536986">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+203</td>
+
+
+<td class="status_sm">
+
+2011-09-11 11:46:47
+</td>
+
+<td><a href="/users/janisz/" title="janisz">Tomasz Janiszewski</a></td><td class="statusres" id="statusres_5640022" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_5640022"><!-- google_ad_section_start(weight=ignore) -->
+		0.07	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_5640022">
+		    	2.8M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+204</td>
+
+
+<td class="status_sm">
+
+2012-01-02 20:39:05
+</td>
+
+<td><a href="/users/dudad/" title="dudad">Damian Dudzinski</a></td><td class="statusres" id="statusres_6285430" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_6285430"><!-- google_ad_section_start(weight=ignore) -->
+		0.01	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_6285430">
+		    	1.6M
+    	</td>
+<td class="slang">
+	<p>C</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+205</td>
+
+
+<td class="status_sm">
+
+2012-04-22 17:58:37
+</td>
+
+<td><a href="/users/cnnzx/" title="cnnzx">rphal nrfk</a></td><td class="statusres" id="statusres_6889103" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_6889103"><!-- google_ad_section_start(weight=ignore) -->
+		0.10	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_6889103">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+206</td>
+
+
+<td class="status_sm">
+
+2012-07-03 23:40:13
+</td>
+
+<td><a href="/users/tybur/" title="tybur">A. Tyburek</a></td><td class="statusres" id="statusres_7256147" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_7256147"><!-- google_ad_section_start(weight=ignore) -->
+		0.06	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_7256147">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+207</td>
+
+
+<td class="status_sm">
+
+2012-07-25 00:34:06
+</td>
+
+<td><a href="/users/yula/" title="yula">Julia Ostrowska</a></td><td class="statusres" id="statusres_7368755" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_7368755"><!-- google_ad_section_start(weight=ignore) -->
+		0.10	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_7368755">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+208</td>
+
+
+<td class="status_sm">
+
+2012-10-12 16:14:41
+</td>
+
+<td><a href="/users/kkapitan/" title="kkapitan">Krzysztof Kapitan</a></td><td class="statusres" id="statusres_7838454" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_7838454"><!-- google_ad_section_start(weight=ignore) -->
+		0.13	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_7838454">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+209</td>
+
+
+<td class="status_sm">
+
+2012-10-13 10:39:25
+</td>
+
+<td><a href="/users/mateuszptr/" title="mateuszptr">Mateusz Peter</a></td><td class="statusres" id="statusres_7842210" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_7842210"><!-- google_ad_section_start(weight=ignore) -->
+		0.09	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_7842210">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+210</td>
+
+
+<td class="status_sm">
+
+2012-10-13 17:06:17
+</td>
+
+<td><a href="/users/imrihil/" title="imrihil">Mateusz Ledzianowski</a></td><td class="statusres" id="statusres_7845166" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_7845166"><!-- google_ad_section_start(weight=ignore) -->
+		0.07	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_7845166">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+211</td>
+
+
+<td class="status_sm">
+
+2012-10-14 02:38:57
+</td>
+
+<td><a href="/users/pic/" title="pic">Pic</a></td><td class="statusres" id="statusres_7848635" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_7848635"><!-- google_ad_section_start(weight=ignore) -->
+		0.10	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_7848635">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+212</td>
+
+
+<td class="status_sm">
+
+2012-10-14 11:12:12
+</td>
+
+<td><a href="/users/znirzejskwarka/" title="znirzejskwarka">Maciej Hołubowicz</a></td><td class="statusres" id="statusres_7850366" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_7850366"><!-- google_ad_section_start(weight=ignore) -->
+		0.08	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_7850366">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+<tr class="kol1"><td class="statustext">
+213</td>
+
+
+<td class="status_sm">
+
+2012-10-15 16:13:40
+</td>
+
+<td><a href="/users/buyuk/" title="buyuk">Michał Michalski</a></td><td class="statusres" id="statusres_7859256" status="15" manual="0">
+
+
+
+
+			3	
+
+
+
+	 (min)
+
+</td>
+<td class="statustext" id="statustime_7859256"><!-- google_ad_section_start(weight=ignore) -->
+		0.07	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_7859256">
+		    	2.7M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">4.0.0-8</p></td>
+</tr>
+
+</table>
+
+</form>
+
+<input type="hidden" id="debug" value="0"/>
+
+<script language="JavaScript">
+<!--
+		var loader = "<img src='/gfx/loader.gif'/>";
+        var screen_width = 1;
+        var screen_height = 1;
+        var win_width = 1;
+        var win_height = 1;
+        var win_left = 1;
+        var win_top = 1;
+        var tmp = "";
+		function load(){
+                a = new Array();
+                for(var i = 0; i<9; i++){
+                        var results = $('.statusres[status='+i+'][manual=0]').each(function(i, el){
+                                var zz = $(el).attr('id').substring(10);
+                                a.push( zz );
+                                $('#statustime_'+zz).html(loader);
+                        });
+                };
+                if( a.length > 0 ){
+                $.ajax({
+                        type: "POST",
+                        url: "/status/ajax=1,ajaxdiff=1",
+                        data: "ids="+a.join(','),
+                        dataType: 'json',
+                        success: function(data){
+                                for(var i = 0; i<data.length; i++){
+                                        $("#statusres_" + data[i].id).attr('status', data[i].status);
+                                        $("#statusres_" + data[i].id).html(data[i].status_description);
+                                        $("#statustime_" + data[i].id).html(data[i].time);
+                                        $("#statusch_" + data[i].id).html(data[i].chk_id);
+                                        if( data[i].status >= 9 ){
+                                                $("#statusres_" + data[i].id).parent('tr').attr('class', 'kol');
+                                                $("#statusmem_" + data[i].id).html(data[i].mem);
+                                        }
+                                        if( data[i].status == 15 ){
+                                                $("#statusres_" + data[i].id).parent('tr').attr('class', 'kol3');
+                                        }
+                                        if( data[i].status < 9 ){
+                                                $("#statusres_" + data[i].id).html( $("#statusres_" + data[i].id).html());
+                                                $("#statustime_" + data[i].id).html( loader );
+                                        }
+                                        $("#statusres_" + data[i].id).parent().attr('class', data[i].color);
+                                }
+								setTimeout(load, 4000);
+                        },
+                        error: function(err,a,b){
+							if( $("#debug").attr("value") == 1 ){
+								alert(err);
+								alert(a);
+								alert(b);
+								tmp = err;
+							};
+                        }
+                });
+                }
+        }
+
+$(document).ready(function(){
+        function reload_window_dim(){
+			screen_width = $(window).width() - 10;
+			screen_height = $(window).height() - 10;
+			win_width = screen_width * 4 / 5;
+			win_height = screen_height * 4 / 5;
+			win_left = screen_width / 10;
+			win_top = screen_height / 10;
+		}
+		reload_window_dim();
+
+        load();
+    
+        $.ui.dialog.defaults.bgiframe = true;
+	
+		function source_code_execute(){
+			$("#op_window_sourcecode_link").unbind("click");
+			$("#op_window_sourcecode_link").bind("click", function(){
+				$('#op_window_mjudge').hide();
+				$('#op_window_sourcecode').show();
+				var url = $('#url').attr('value');
+				loadCode(url, "op_window_sourcecode", false);
+				return false;
+			});
+		}
+		function plain_text_execute(){
+			$("#op_window_plaintext_link").unbind("click");
+			$("#op_window_plaintext_link").bind("click", function(){
+				$('#op_window_mjudge').hide();
+				$('#op_window_sourcecode').show();
+				var url = $('#url').attr('value');
+				url = url.replace('src', 'src\/plain');
+				loadCode(url, "op_window_sourcecode", true);
+				return false;
+			});
+		}
+		function copy_to_submit_execute(){
+			$("#op_window_copy_to_submit_link").unbind("click");
+			$("#op_window_copy_to_submit_link").bind("click", function(){
+				var id = $('#solutionid').attr('value');
+				var pcode = $('#pcode').attr('value');
+				window.location.href = "/submit/"+pcode+"/?id="+id;
+			});
+		}
+		function manual_rejudge_execute(){
+			$("#op_window_mjudge_link").unbind("click");
+			$("#op_window_mjudge_link").bind("click", function(){
+				$('#op_window_mjudge').show();
+				$('#op_window_sourcecode').hide();
+				return false;
+			});
+		}
+		
+		function createWindow(){
+			reload_window_dim();
+			$("#op_window").dialog({
+				//bgiframe: true,
+				autoOpen: false,
+				height: win_height,
+				width: win_width,
+				modal: true,
+				buttons: {
+					Close: function() {
+						$(this).dialog('close');
+						//$(this).dialog('destroy');
+					}
+				}
+			});
+			$(".ui-dialog .ui-dialog-titlebar").append("<a class=\"ui-dialog-titlebar-resize ui-corner-all\" href=\"\"><span class=\"ui-icon ui-icon-newwin\" unselectable=\"on\" style=\"-moz-user-select: none;\">resize</span></a>");
+			$(".ui-dialog .ui-dialog-titlebar .ui-icon-newwin").bind("click", function(){
+				reload_window_dim();
+				if( ! $(".ui-dialog").attr("max") ){
+					$('#op_window').parents('.ui-dialog:first').animate({ width: screen_width, height: screen_height, left: 0, top: 0 });
+					$('#op_window').animate({ width: screen_width, height: screen_height-100 });
+					$(".ui-dialog").attr("max", "1");
+				} else {
+					$('#op_window').parents('.ui-dialog:first').animate({ width: win_width, height: win_height, left: win_left, top: win_top });
+					$("#op_window").animate({ width: win_width, height: (win_height - 100) });
+					$(".ui-dialog").attr("max", "");
+				}
+				return false;
+			});
+			source_code_execute();
+			plain_text_execute();
+			manual_rejudge_execute();
+			copy_to_submit_execute();
+		};
+		
+		createWindow(); 
+		
+		
+		function loadCode(url,objectid,pre){
+			$("#"+objectid).html(loader);
+			if( ! url ) return;
+			$.ajax({
+				type: "POST",
+				url: url,
+				cache: false,
+				data: "post=1",
+				success: function(data){
+					if( ! pre ){
+						$("#"+objectid).html(data);
+					} else {
+						$("#"+objectid).html("<pre>" + data + "</pre>");
+					}
+				},
+				error: function(){
+					$("#"+objectid).html("error ;(");	
+				}
+			});
+		}
+		
+		
+					
+			$(".op_window").bind("click", function(){
+				reload_window_dim();
+				$('#solutionid').attr('value', ( $(this).attr('sid') ) );
+				$('#pcode').attr('value', ( $(this).attr('pcode') ) );
+				$('#op_window').dialog('open');
+				$('#op_window').dialog('enable');
+				//$('.ui-dialog').css('display', 'block');
+				$(".ui-dialog").attr("max", "");
+				var url = "/files/src/" + $(this).attr('sid') + "/";
+				$('#url').attr('value', url);
+				loadCode(url, "op_window_sourcecode", false);
+				$("#op_window_sourcecode_link").click();
+				return false;
+			});
+			
+				
+		
+		
+		$(".ideone-run").click(function(){
+			var $this = $(this);
+			$.ajax({
+                	type: "post",
+                	url: "/files/src/plain/"+$(this).attr('sid')+"/",
+                	cache: false,
+                	dataType: 'html',
+                	success: function(data){
+                		ideone_submit(data, $this.attr('lang'), '', $this.attr('note'), true, true);
+                	}
+                });
+            return false;
+		});
+		
+	});
+-->
+</script>
+
+
+	<div id="op_window" title="<a href='#' id='op_window_sourcecode_link'>Source code</a> | <a href='#' id='op_window_plaintext_link'>Plain text</a> | <a href='#' id='op_window_copy_to_submit_link'><b>Copy to submit</b></a>">
+		<input type="hidden" class="url" value="" id="url"/>
+		<div id="op_window_sourcecode">
+		code...
+		</div>
+		<input type="hidden" class="solutionid" id="solutionid"/>
+		<input type="hidden" class="pcode" id="pcode"/>
+	</div>
+        </td>
+<tr>
+        <td style="padding:0px" colspan="2"><center>
+                
+</center></td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="footer">
+<div class="a-footer"></div>
+<script language="javascript" type="text/javascript">
+<!--
+function swapSheet(sheet, caller) {
+    document.getElementById('theme').href=sheet;
+    document.cookie="css_79="+sheet+"; path=/;";
+    caller.href="#bottom";
+}
+
+function setWidth(w, caller) {
+    document.getElementById('maintable').style.width=w;
+    document.cookie="res="+w+"; path=/;";
+    caller.href="#bottom";
+}
+
+
+
+//-->
+
+</script>
+    <div style="font-size:10px; color:#aaaaaa;">
+    ISO C99,  C/C++, C++0x, kurs programowania w C++, zbiór algorytmów, algorytmy i struktury danych, sortowanie, kolejki priorytetowe, algorytmy grafowe, otoczka wypukła, odwrócona notacja polska, drzewo spinające, drzewo wyszukiwań binarnych, algorytm Euklidesa, NWD, ONP, haszowanie, stos, kolejka, kopiec, drzewa BST, AVL, RB, B-drzewa, diagram Voronoi, triangulacja, algorytm Karatsuby, kopiec Fibbonaciego
+</div></tr></table>
+</center>
+<div class="a-header"></div>
+<div style="position: fixed; width: 160px; height: 600px; display: none;" id="ad_left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-4453360425583535";
+/* Spoj - wiezowiec */
+google_ad_slot = "2703472077";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+
+
+<div style="font-size:10px; margin-top:4px; color: rgb(85,80,95); text-align: center">
+		SPOJ &copy; 2012 <a href="http://sphere-research.com" style="color:black">Sphere Research Labs</a>. All Rights Reserved.
+</div>
+
+</body>
+</html>

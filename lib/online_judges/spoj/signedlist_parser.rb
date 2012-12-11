@@ -18,7 +18,11 @@ module OnlineJudges::Spoj
       accepted = {}
       submissions.each do |s|
         if s.result == "AC" or s.points
-          accepted[s.problem] = Accept.new(s.submitted_at, s.problem, s.points)
+          points = s.points
+          if accepted[s.problem]
+            points = [points, accepted[s.problem].points].max
+          end
+          accepted[s.problem] = Accept.new(s.submitted_at, s.problem, points)
         end
       end
       accepted.values
@@ -55,7 +59,7 @@ module OnlineJudges::Spoj
       end
 
       def points
-        result.to_i if result.match(/^\d+$/)
+        result.to_f if result.match(/^\d+(\.\d+)?$/)
       end
 
       private
