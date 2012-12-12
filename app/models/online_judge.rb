@@ -37,7 +37,12 @@ class OnlineJudge
 
   def user_solved_problem? problem
     accept = user.accepted_problems.select { |p| p.problem_id == problem.id && p.online_judge == name }.first
-    return accept && accept.score > 0.0
+    if accept && accept.score > 0.0
+      accept.destroy
+      return true
+    else
+      return false
+    end
   end
 
   def fetcher
