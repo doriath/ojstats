@@ -30,15 +30,14 @@ class OnlineJudge
       accepted_problem.accepted_at = accept.accepted_at
       accepted_problem.score = problem.score
       if accept.points && accept.points != problem.fetch_max_points
-        p accept
-        p problem
         accepted_problem.score = 0.0
       end
     end
   end
 
   def user_solved_problem? problem
-    not user.accepted_problems.select { |p| p.problem_id == problem.id && p.online_judge == name }.empty?
+    accept = user.accepted_problems.select { |p| p.problem_id == problem.id && p.online_judge == name }.first
+    return accept && accept.score > 0.0
   end
 
   def fetcher
