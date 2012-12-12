@@ -13,7 +13,6 @@ class Problem
   def fetch_max_points
     unless max_points
       fetched_problem = Problem.scraper(online_judge).fetch_problem(name)
-      puts "Fetching max points for #{fetched_problem}"
       self.max_points = [fetched_problem.best_points, fetched_problem.worst_points].max
       save!
     end
