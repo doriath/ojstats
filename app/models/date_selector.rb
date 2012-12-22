@@ -1,5 +1,6 @@
 class DateSelector
   def initialize params
+    params = {} unless params.is_a? Hash
     @type = params[:type]
     @fixed_date = params[:date]
     @unit = params[:unit]
@@ -25,6 +26,7 @@ class DateSelector
 
     return @relation_date + @span if @direction == "after"
     return @relation_date - @span if @direction == "before"
+    return @relation_date
   end
 
   def compute_span

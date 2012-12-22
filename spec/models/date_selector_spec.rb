@@ -60,5 +60,10 @@ describe DateSelector do
       let(:params) { {amount: '5', unit: 'days', direction: 'before', relation: 'year_end'} }
       its(:date) { should == Date.new(2010, 12, 26) }
     end
+
+    context 'when params is not a Hash' do
+      let(:params) { "2012-10-27" }
+      its(:date) { should == Date.new(2010, 10, 21) }
+    end
   end
 end
