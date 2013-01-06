@@ -1,0 +1,23 @@
+%h1 Problems
+%table.table.table-striped
+  %thead
+    %tr
+      %th #
+      %th Problem name
+      %th Judge
+      %th Score
+  %tbody
+    - @problems.each_with_index do |problem, index|
+      %tr
+        %td= index + 1
+        %td= link_to problem.name, problem.url
+        %td
+          %span{class: ['badge', problem.online_judge]}= problem.online_judge
+        %td
+          - if problem.banned?
+            %span.help{title: problem.ban_reason, style: 'color: red'}
+              = 0.0
+          - else
+            %span.help{title: t("score_help.#{problem.online_judge}")}
+              = problem.score.round(2)
+            %span.lighter (#{problem.num_accepts})

@@ -19,6 +19,8 @@ Ojstats::Application.routes.draw do
     end
   end
 
+  resources :problems, only: :index
+
   resources :users, only: :show
 
   resources :online_judges do
