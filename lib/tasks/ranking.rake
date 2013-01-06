@@ -26,6 +26,33 @@ namespace :ranking do
     end
   end
 
-  task :refresh_all => [:clean, :problem_scores, :refresh] do
+  # TODO move problem banning to separate class
+  def ban_problem problem, reason
+    problem.update_attributes!(score: 0, banned: true, ban_reason: reason)
+  end
+
+  task :ban_problems => :environment do
+    logger.info "Banning problems"
+
+    # Ban tutorial problems from english spoj
+    url = 'http://www.spoj.com/problems/tutorial/'
+    OnlineJudges::Spoj::ProblemsPage.problems_starting_from(url).each do |problem_data|
+      ban_problem Problem.create_from_scraper!(problem_data, 'spoj'), "Tutorial problem"
+    end
+
+    # Ban challenge problems from english spoj
+    url = 'http://www.spoj.com/problems/challenge/'
+    OnlineJudges::Spoj::ProblemsPage.problems_starting_from(url).each do |problem_data|
+      ban_problem Problem.create_from_scraper!(problem_data, 'spoj'), "Challenge problem"
+    end
+
+    # Ban challenge problems from polish spoj
+    url = 'http://pl.spoj.com/problems/challenge/'
+    OnlineJudges::Spoj::ProblemsPage.problems_starting_from(url).each do |problem_data|
+      ban_problem Problem.create_from_scraper!(problem_data, 'plspoj'), "Challenge problem"
+    end
+  end
+
+  task :refresh_all => [:clean, :problem_scores, :ban_problems, :refresh] do
   end
 end

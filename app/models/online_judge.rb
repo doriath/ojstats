@@ -31,6 +31,10 @@ class OnlineJudge
       accepted_problem.score = problem.score
       if accept.points && accept.points != problem.fetch_max_points
         accepted_problem.score = 0.0
+        accepted_problem.reason_why_zero = "#{accept.points} / #{problem.fetch_max_points} points"
+      end
+      if problem.banned?
+        accepted_problem.reason_why_zero = problem.ban_reason
       end
     end
   end

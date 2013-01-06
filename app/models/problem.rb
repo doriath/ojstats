@@ -7,6 +7,8 @@ class Problem
   field :score, type: Float
   field :num_accepts, type: Integer
   field :max_points, type: Float
+  field :banned, type: Boolean, default: false
+  field :ban_reason, type: String
 
   has_many :accepted_problems
 
@@ -33,7 +35,7 @@ class Problem
   # @param [String] online_judge_name
   def self.create_from_scraper!(data, online_judge_name)
     score = 1
-    if data.num_accepts
+    if data.num_accepts and data.num_accepts != -1
       score = case online_judge_name
               when 'spoj'
                 360.0 / (120.0 + data.num_accepts)

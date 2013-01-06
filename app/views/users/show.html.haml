@@ -30,6 +30,10 @@
         %td
           %span{class: ['badge', accepted_problem.online_judge]}= accepted_problem.online_judge
         %td
-          %span.help{ title: t("score_help.#{accepted_problem.online_judge}")}
-            = accepted_problem.score.round(2)
-          %span.lighter (#{accepted_problem.problem.num_accepts})
+          - if accepted_problem.score == 0.0
+            %span.help{title: accepted_problem.reason_why_zero, style: 'color: red'}
+              = 0.0
+          - else
+            %span.help{title: t("score_help.#{accepted_problem.online_judge}")}
+              = accepted_problem.score.round(2)
+            %span.lighter (#{accepted_problem.problem.num_accepts})
