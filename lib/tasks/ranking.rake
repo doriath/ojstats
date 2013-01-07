@@ -53,6 +53,6 @@ namespace :ranking do
     end
   end
 
-  task :refresh_all => [:clean, :problem_scores, :ban_problems, :refresh] do
+  task :refresh_all => [:clean, :problem_scores, :refresh] do
   end
 end
