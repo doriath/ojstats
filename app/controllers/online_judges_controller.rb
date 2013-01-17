@@ -25,6 +25,7 @@ class OnlineJudgesController < ApplicationController
   def update
     @online_judge = current_user.online_judges.select { |x| x.name == params[:id] }.first
     if @online_judge.update_attributes params[:online_judge]
+      current_user.accepted_problems.destroy_all(online_judge: params[:online_judge][:name])
       redirect_to online_judges_path, notice: 'Online judge has been updated'
     else
       render :edit
