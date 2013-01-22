@@ -12,6 +12,7 @@ class OnlineJudge
   def refresh
     accepts = fetcher.fetch_accepts(login)
 
+    user.accepted_problems.delete_all
     accepts.each do |accept|
       update_problem accept
     end
