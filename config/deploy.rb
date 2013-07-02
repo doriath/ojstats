@@ -48,6 +48,8 @@ namespace :ranking do
   end
 end
 
+set :shared_children, shared_children + %w{public/uploads}
+
 after 'deploy:update_code', 'deploy:symlink_shared'
 
 require './config/boot'
