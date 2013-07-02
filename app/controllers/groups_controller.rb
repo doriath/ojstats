@@ -48,6 +48,12 @@ class GroupsController < ApplicationController
     redirect_to current_stage_group_path(@group), notice: "Succesfully joined group"
   end
 
+  def leave
+    @group = Group.find(params[:id])
+    @group.users.delete current_user
+    redirect_to groups_path(@group), notice: "Succesfully left group"
+  end
+
   def current_stage
     @group = Group.find(params[:id])
     @stage = @group.current_stage

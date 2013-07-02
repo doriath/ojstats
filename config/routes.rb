@@ -26,6 +26,7 @@ Ojstats::Application.routes.draw do
   resources :groups do
     member do
       put :join
+      put :leave
       get :current_stage
       get :all_stages
     end

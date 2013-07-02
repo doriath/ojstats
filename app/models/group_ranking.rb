@@ -24,6 +24,19 @@ class GroupRanking
   end
 
   def states_for user
+    @states ||= build_states
+    @states[user]
+  end
+
+  def build_states
+    states = {}
+    @users.each do |user|
+      states[user] = get_user_results user
+    end
+    states
+  end
+
+  def get_user_results user
     tasks.map do |t|
       if user.solved_problem?(t.problem)
         :accepted
@@ -37,5 +50,9 @@ class GroupRanking
 
   def score_for user
     states_for(user).count(:accepted)
+  end
+
+  def position_for user
+    @users.select{ |u| score_for(u) > score_for(user)}.count + 1
   end
 end

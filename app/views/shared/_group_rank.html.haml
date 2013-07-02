@@ -7,12 +7,25 @@
       - @ranking.tasks.each do |task|
         %th= link_to task.name, task.problem.url if task.problem
   %tbody
-    - @ranking.users.each_with_index do |user, i|
+    - @ranking.users.each do |user|
       %tr
-        %td= i+1
+        %td= @ranking.position_for(user)
         %td= user.display_name
         %td= @ranking.score_for(user)
         - @ranking.states_for(user).each do |state|
+          - if state == :accepted
+            %td.accepted OK
+          - elsif state == :unattempted
+            %td
+          - else
+            %td.attempted= state
+
+    - unless @group.users.include? current_user
+      %tr.not-member
+        %td .
+        %td= current_user.display_name
+        %td .
+        - @ranking.get_user_results(current_user).each do |state|
           - if state == :accepted
             %td.accepted OK
           - elsif state == :unattempted
