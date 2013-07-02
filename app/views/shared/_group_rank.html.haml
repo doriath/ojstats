@@ -15,5 +15,7 @@
         - @ranking.states_for(user).each do |state|
           - if state == :accepted
             %td.accepted OK
-          - else
+          - elsif state == :unattempted
             %td
+          - else
+            %td.attempted= state

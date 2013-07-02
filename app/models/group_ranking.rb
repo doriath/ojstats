@@ -14,20 +14,25 @@ class GroupRanking
   end
 
   def build_tasks
+    tasks = []
     if @stage
-      return @stage.tasks.order_by(:name.asc)
+      tasks = @stage.tasks
     else
-      tasks = []
-      @group.stages.each do |stage|
-        tasks = tasks.concat(stage.tasks)
-      end
-      tasks = tasks.sort_by{ |t| [t.name[0], t.name.length, t.name] }
-      return tasks
+      @group.stages.each{ |s| tasks = tasks.concat(s.tasks) }
     end
+    tasks.sort_by{ |t| [t.name[0], t.name.length, t.name] }
   end
 
   def states_for user
-    tasks.map{ |t| user.solved_problem?(t.problem) ? :accepted : :failed}
+    tasks.map do |t|
+      if user.solved_problem?(t.problem)
+        :accepted
+      elsif user.attempted_problem(t.problem)
+        user.attempted_problem(t.problem).result
+      else
+        :unattempted
+      end
+    end
   end
 
   def score_for user
