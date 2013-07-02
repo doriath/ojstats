@@ -23,6 +23,8 @@ Ojstats::Application.routes.draw do
 
   resources :users, only: :show
 
+  resources :groups
+
   resources :online_judges do
     post :refresh, on: :member
   end

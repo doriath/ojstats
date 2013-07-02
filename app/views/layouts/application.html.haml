@@ -27,6 +27,8 @@
             %ul.nav
               %li{class: ("active" if params[:controller] == "standings")}= link_to "Ranking", root_path
             %ul.nav
+              %li{class: ("active" if params[:controller] == "groups")}= link_to "Groups", groups_path
+            %ul.nav
               %li{class: ("active" if params[:controller] == "problems")}= link_to "Problems", problems_path
             %ul.nav.pull-right
               - if current_user

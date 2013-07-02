@@ -1,0 +1,18 @@
+%h1 Listing groups
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Name
+  %tbody
+    - @groups.each do |group|
+      %tr
+        %td= link_to group.name, group
+        - if group.creator_id.to_s == current_user_id.to_s
+          %td= link_to 'Edit', edit_group_path(group)
+          %td= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' }
+        - else
+          %td
+          %td
+
+= link_to 'New Group', new_group_path
