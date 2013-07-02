@@ -8,7 +8,7 @@ class Group
   has_many :stages
 
   def current_stage
-    self.stages.last
+    self.stages.where(:begin_time.lte => DateTime.now.utc, :end_time.gte => DateTime.now.utc).first
   end
 
   def created_by? user

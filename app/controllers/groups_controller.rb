@@ -20,7 +20,7 @@ class GroupsController < ApplicationController
     @group = Group.new(params[:group])
     @group.creator_id = current_user.id
     if @group.save
-      redirect_to @group, notice: 'Group was successfully created.'
+      redirect_to current_stage_group_path(@group), notice: 'Group was successfully created.'
     else
       render action: "new"
     end
@@ -30,7 +30,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
 
     if @group.update_attributes(params[:group])
-      redirect_to @group, notice: 'Group was successfully updated.'
+      redirect_to current_stage_group_path(@group), notice: 'Group was successfully updated.'
     else
       render action: "edit"
     end
@@ -57,7 +57,11 @@ class GroupsController < ApplicationController
   def current_stage
     @group = Group.find(params[:id])
     @stage = @group.current_stage
+    unless @stage
+      return redirect_to all_stages_group_url(@group), alert: "There is no ongoing stage in the group"
+    end
     @ranking = GroupRanking.new(@group, @stage)
+    @time_left = ((@stage.end_time - DateTime.now.utc) * 24 * 60 * 60).to_i
   end
 
   def all_stages

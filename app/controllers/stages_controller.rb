@@ -18,7 +18,7 @@ class StagesController < ApplicationController
   def create
     @stage = @group.stages.new(params[:stage])
     if @stage.save
-      redirect_to @group, notice: 'Stage was successfully created.'
+      redirect_to current_stage_group_path(@group), notice: 'Stage was successfully created.'
     else
       render action: "new"
     end
@@ -28,7 +28,7 @@ class StagesController < ApplicationController
     @stage = @group.stages.find(params[:id])
 
     if @stage.update_attributes(params[:stage])
-      redirect_to @group, notice: 'Stage was successfully updated.'
+      redirect_to current_stage_group_path(@group), notice: 'Stage was successfully updated.'
     else
       render action: "edit"
     end
@@ -37,7 +37,7 @@ class StagesController < ApplicationController
   def destroy
     @stage = @group.stages.find(params[:id])
     @stage.destroy
-    redirect_to @group, notice: "Stage deleted"
+    redirect_to current_stage_group_path(@group), notice: "Stage deleted"
   end
 
   private
