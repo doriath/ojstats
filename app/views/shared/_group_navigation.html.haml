@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%h1= @group.name
+%br
+
+%ul.nav.nav-tabs
+  %li.pull-left{class: ('active' if controller.action_name == 'current_stage')}= link_to 'Current Stage', current_stage_group_path(@group)
+  %li.pull-left{class: ('active' if controller.action_name == 'all_stages')}= link_to 'All stages', all_stages_group_path(@group)
+  %li.dropdown
+    %a.dropdown-toggle{data: {toggle: 'dropdown'}, href: "#"}
+      Another stage
+      %b.caret
+    %ul.dropdown-menu
+      - @group.stages.each do |stage|
+        %li= link_to stage.name, group_stage_path(@group, stage)
+
+  - if @group.created_by?(current_user)
+    %li.pull-right= link_to 'New stage', new_group_stage_path(@group)

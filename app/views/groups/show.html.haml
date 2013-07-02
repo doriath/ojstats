@@ -1,9 +1,3 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @group.name
-
-= link_to 'Edit', edit_group_path(@group)
-\|
-= link_to 'Back', groups_path
+= render 'shared/group_navigation'
+- @group.users.each do |u|
+  = u.email

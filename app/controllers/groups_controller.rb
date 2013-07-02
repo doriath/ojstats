@@ -42,8 +42,27 @@ class GroupsController < ApplicationController
     redirect_to groups_url
   end
 
+  def join
+    @group = Group.find(params[:id])
+    @group.users << current_user
+    redirect_to @group, notice: "Succesfully joined group"
+  end
+
+  def current_stage
+    @group = Group.find(params[:id])
+    @stage = @group.current_stage
+    @ranking = GroupRanking.new(@group, @stage)
+  end
+
+  def all_stages
+    @group = Group.find(params[:id])
+  end
+
+  private
+
   def authorize_creator
-    if (not current_user) or current_user.id.to_s != Group.find(params[:id]).creator_id.to_s
+    @group = Group.find(params[:id])
+    unless @group.created_by? current_user
       redirect_to root_url, alert: "You cannot manage this group"
     end
   end
