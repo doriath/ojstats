@@ -10,9 +10,14 @@
     %a.dropdown-toggle{data: {toggle: 'dropdown'}, href: "#"}
       Another stage
       %b.caret
-    %ul.dropdown-menu
+    %ul.dropdown-menu.menu-with-images
       - @group.stages.each do |stage|
-        %li= link_to stage.name, group_stage_path(@group, stage)
+        %li
+          = link_to group_stage_path(@group, stage) do
+            = image_tag stage.avatar, height: 35, width: 35
+            %span= stage.name
+            %span.date= "(#{l stage.begin_time, format: :date} - #{l stage.end_time, format: :date})"
+
 
   - if @group.created_by?(current_user)
     %li.pull-right= link_to 'New stage', new_group_stage_path(@group)
