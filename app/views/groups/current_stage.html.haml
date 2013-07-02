@@ -1,0 +1,12 @@
+= render 'shared/group_navigation'
+
+.stage-timer
+  .info Time left:
+  .time{data: {time: "#{@time_left}"}}
+
+%h3
+  = image_tag @stage.avatar
+  = @stage.name
+%br
+
+= render 'shared/group_rank'

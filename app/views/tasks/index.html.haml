@@ -1,0 +1,17 @@
+%h1 Listing groups
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Name
+      %th Url
+  %tbody
+    - @tasks.each do |task|
+      %tr
+        %td= link_to task.name, [@group, @stage, task]
+        %td= link_to task.problem.url, task.problem.url if task.problem
+        %td= link_to 'Edit', edit_group_stage_task_path(@group, @stage, task)
+        %td= link_to 'Destroy', [@group, @stage, task], method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'New Task', new_group_stage_task_path(@group, @stage), class: 'btn'
+= link_to 'back', group_stage_path(@group, @stage)

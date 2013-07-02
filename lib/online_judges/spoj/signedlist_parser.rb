@@ -12,6 +12,11 @@ module OnlineJudges::Spoj
       @accepts ||= compute_accepts
     end
 
+    # @return [Array<Attempt>]
+    def attempts
+      @attempts ||= compute_attempts
+    end
+
     private
 
     def compute_accepts
@@ -26,6 +31,19 @@ module OnlineJudges::Spoj
         end
       end
       accepted.values
+    end
+
+    # @note takes any score result as accepted
+    def compute_attempts
+      attempted = {}
+      submissions.reverse.each do |s|
+        if s.result == "AC" or s.points
+          attempted[s.problem] = Attempt.new(s.submitted_at, s.problem, "AC")
+        elsif (not attempted[s.problem]) or (attempted[s.problem].result != "AC")
+          attempted[s.problem] = Attempt.new(s.submitted_at, s.problem, s.result)
+        end
+      end
+      attempted.values.delete_if{ |a| a.result == "AC" }
     end
 
     # @return [Array<Submission>]

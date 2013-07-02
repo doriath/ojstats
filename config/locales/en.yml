@@ -5,6 +5,7 @@ en:
   time:
     formats:
       default: "%d.%m.%y, %H:%M"
+      date: "%d/%m"
   date:
     formats:
       default: "%d %B %Y"

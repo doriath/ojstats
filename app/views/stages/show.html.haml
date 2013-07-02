@@ -1,0 +1,13 @@
+= render 'shared/group_navigation'
+
+- if @group.created_by? current_user
+  %div{style: "float: right"}= link_to "new task", new_group_stage_task_path(@group, @stage), class: 'btn'
+  %div{style: "float: right"}= link_to "tasks", group_stage_tasks_path(@group, @stage), class: 'btn'
+  %div{style: "float: right"}= link_to "edit stage", edit_group_stage_path(@group, @stage), class: 'btn'
+
+%h3
+  = image_tag @stage.avatar
+  = @stage.name
+%br
+
+= render 'shared/group_rank'

@@ -11,6 +11,13 @@ module OnlineJudges
       OnlineJudges::Spoj::SignedlistParser.new(url).accepts
     end
 
+    # @param [String] user_name
+    # @return [Array<Attempt>]
+    def fetch_attempts(user_name)
+      url = "http://www.spoj.com/status/#{user_name}/signedlist/"
+      OnlineJudges::Spoj::SignedlistParser.new(url).attempts
+    end
+
     # @param [String] problem_name
     # @return [Problem]
     def fetch_problem(problem_name)

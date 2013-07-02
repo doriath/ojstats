@@ -17,8 +17,21 @@ class User
 
   field :display_name, type: String
   has_many :accepted_problems
+  has_many :attempted_problems
   has_many :ranking_filters
+  has_many :created_groups, class_name: 'Group', inverse_of: :creator
   embeds_many :online_judges, class_name: 'OnlineJudge', inverse_of: :user
+  has_and_belongs_to_many :groups
 
   validates_presence_of :display_name, :email, :encrypted_password
+
+  # TODO OPTIMIZE SOOOOOOO UNEFFICENT
+  def solved_problem? problem
+    self.accepted_problems.where(problem: problem).to_a.any?
+  end
+
+  # TODO OPTIMIZE SOOOOOOO UNEFFICENT
+  def attempted_problem problem
+    self.attempted_problems.where(problem: problem).to_a.first
+  end
 end
