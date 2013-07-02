@@ -1,17 +1,8 @@
 = render 'shared/group_navigation'
-current
 
-%table.table.table-bordered
-  %thead
-    %th
-      %th
-      - @ranking.tasks.each do |task|
-        %th= link_to task.name, task.url
-  %tbody
-    - @ranking.users.each do |user|
-      %td= user.display_name
-      - @ranking.states_for(user).each do |state|
-        - if state == :accepted
-          %td.accepted OK
-        - else
-          %td
+%h3
+  = image_tag @stage.avatar
+  = @stage.name
+%br
+
+= render 'shared/group_rank'

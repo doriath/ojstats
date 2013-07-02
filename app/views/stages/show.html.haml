@@ -5,21 +5,9 @@
   %div{style: "float: right"}= link_to "tasks", group_stage_tasks_path(@group, @stage), class: 'btn'
   %div{style: "float: right"}= link_to "edit stage", edit_group_stage_path(@group, @stage), class: 'btn'
 
-%h3= @stage.name
+%h3
+  = image_tag @stage.avatar
+  = @stage.name
+%br
 
-
-%table.table.table-bordered.group-table
-  %thead
-    %tr
-      %th
-      - @ranking.tasks.each do |task|
-        %th= link_to task.name, task.problem.url if task.problem
-  %tbody
-    - @ranking.users.each do |user|
-      %tr
-        %td= user.display_name
-        - @ranking.states_for(user).each do |state|
-          - if state == :accepted
-            %td.accepted OK
-          - else
-            %td
+= render 'shared/group_rank'

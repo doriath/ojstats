@@ -7,7 +7,7 @@
   %tbody
     - @groups.each do |group|
       %tr
-        %td= link_to group.name, group
+        %td= link_to group.name, current_stage_group_path(group)
         %td= link_to 'Join', join_group_path(group), "method" => "PUT"
         - if group.creator_id.to_s == current_user_id.to_s
           %td= link_to 'Edit', edit_group_path(group)

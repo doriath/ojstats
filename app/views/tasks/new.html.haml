@@ -1,11 +1,1 @@
-= simple_form_for([@group, @stage, @task]) do |f|
-  = f.error_notification
-  %legend New task
-
-  .form-inputs
-    = f.input :name
-
-    = f.input :problem, :collection => Problem.all.order_by(:name.asc), label_method: :url
-
-  .form-actions
-    = f.button :submit
+= render 'form'

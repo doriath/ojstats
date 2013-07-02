@@ -1,11 +1,1 @@
-= simple_form_for([@group, @stage]) do |f|
-  = f.error_notification
-  %legend New stage
-
-  .form-inputs
-    = f.input :name
-    = f.input :begin_time, as: :datetime
-    = f.input :end_time, as: :datetime
-
-  .form-actions
-    = f.button :submit
+= render 'form'

@@ -56,6 +56,7 @@ class GroupsController < ApplicationController
 
   def all_stages
     @group = Group.find(params[:id])
+    @ranking = GroupRanking.new(@group)
   end
 
   private

@@ -37,6 +37,7 @@ gem 'airbrake'
 gem 'newrelic_rpm'
 gem 'newrelic_moped'
 
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 group :development do
   gem 'quiet_assets'

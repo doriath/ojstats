@@ -21,7 +21,7 @@ class TasksController < ApplicationController
   def create
     @task = @stage.tasks.new(params[:task])
     if @task.save
-      redirect_to @group, notice: 'Task was successfully created.'
+      redirect_to group_stage_tasks_url(@group, @stage), notice: 'Task was successfully created.'
     else
       render action: "new"
     end
