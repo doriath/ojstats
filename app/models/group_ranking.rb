@@ -13,6 +13,10 @@ class GroupRanking
     @users
   end
 
+  def ordered_users
+    @users.sort_by{ |u| position_for(u) }
+  end
+
   def build_tasks
     tasks = []
     if @stage
