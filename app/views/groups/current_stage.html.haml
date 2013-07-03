@@ -5,7 +5,8 @@
   .time{data: {time: "#{@time_left}"}}
 
 %h3
-  = image_tag @stage.avatar
+  - if @stage.avatar.file
+    = image_tag @stage.avatar
   = @stage.name
 %br
 

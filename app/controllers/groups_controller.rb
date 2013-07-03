@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_filter :authorize_creator, only: [:edit, :update, :destroy]
+  before_filter :authorize_user, only: [:new, :create]
   def index
     @groups = Group.all
   end
