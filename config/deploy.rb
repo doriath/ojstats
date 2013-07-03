@@ -54,3 +54,12 @@ after 'deploy:update_code', 'deploy:symlink_shared'
 
 require './config/boot'
 require 'airbrake/capistrano'
+
+
+desc "tail log files"
+task :tail, :roles => :app do
+  run "tail -f #{shared_path}/log/#{rails_env}.log" do |channel, stream, data|
+    puts "#{channel[:host]}: #{data}"
+    break if stream == :err
+  end
+end
