@@ -23,6 +23,19 @@ Ojstats::Application.routes.draw do
 
   resources :users, only: :show
 
+  resources :groups do
+    member do
+      put :join
+      put :leave
+      get :current_stage
+      get :all_stages
+    end
+
+    resources :stages do
+      resources :tasks
+    end
+  end
+
   resources :online_judges do
     post :refresh, on: :member
   end

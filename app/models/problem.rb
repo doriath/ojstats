@@ -11,6 +11,8 @@ class Problem
   field :ban_reason, type: String
 
   has_many :accepted_problems
+  has_many :attempted_problems
+  has_many :tasks
 
   def fetch_max_points
     unless max_points

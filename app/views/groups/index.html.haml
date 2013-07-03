@@ -1,0 +1,24 @@
+%h1 Listing groups
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Name
+  %tbody
+    - @groups.each do |group|
+      %tr
+        %td= link_to group.name, current_stage_group_path(group)
+        %td= link_to 'Join', join_group_path(group), "method" => "PUT"
+        - if group.users.include? current_user
+          %td= link_to 'Leave', leave_group_path(group), "method" => "PUT"
+        - else
+          %td
+
+        - if group.creator_id.to_s == current_user_id.to_s
+          %td= link_to 'Edit', edit_group_path(group)
+          %td= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' }
+        - else
+          %td
+          %td
+
+= link_to 'New Group', new_group_path
