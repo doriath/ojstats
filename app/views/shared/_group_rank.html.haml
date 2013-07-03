@@ -7,7 +7,7 @@
       - @ranking.tasks.each do |task|
         %th= link_to task.name, task.problem.url if task.problem
   %tbody
-    - @ranking.users.each do |user|
+    - @ranking.ordered_users.each do |user|
       %tr
         %td= @ranking.position_for(user)
         %td= user.display_name
