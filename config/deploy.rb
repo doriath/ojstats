@@ -35,6 +35,7 @@ namespace :deploy do
   task :symlink_shared do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
   end
 end
 
@@ -48,13 +49,12 @@ namespace :ranking do
   end
 end
 
-set :shared_children, shared_children + %w{public/uploads}
+#set :shared_children, shared_children + %w{public/uploads}
 
 after 'deploy:update_code', 'deploy:symlink_shared'
 
 require './config/boot'
 require 'airbrake/capistrano'
-
 
 desc "tail log files"
 task :tail, :roles => :app do
