@@ -3,7 +3,7 @@
 class Task
   include Mongoid::Document
   field :name, type: String
+  field :url
 
   belongs_to :stage
-  belongs_to :problem
 end

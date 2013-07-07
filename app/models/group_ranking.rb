@@ -42,12 +42,19 @@ class GroupRanking
 
   def get_user_results user
     tasks.map do |t|
-      if user.solved_problem?(t.problem)
-        :accepted
-      elsif user.attempted_problem(t.problem)
-        user.attempted_problem(t.problem).result
+      if t.url == nil
+        :unk
       else
-        :unattempted
+        problem = Problem.where(url: t.url).first
+        if problem == nil
+          :unk
+        elsif user.solved_problem?(problem)
+          :accepted
+        elsif user.attempted_problem(problem)
+          user.attempted_problem(problem).result
+        else
+          :unattempted
+        end
       end
     end
   end
