@@ -5,12 +5,12 @@
       %th Competitor
       %th pts.
       - @ranking.tasks.each do |task|
-        %th= link_to task.name, task.problem.url if task.problem
+        %th= link_to task.name, task.url if task.url
   %tbody
     - @ranking.ordered_users.each do |user|
       %tr
         %td= @ranking.position_for(user)
-        %td= user.display_name
+        %td= link_to user.display_name, user_path(user)
         %td= @ranking.score_for(user)
         - @ranking.states_for(user).each do |state|
           - if state == :accepted
