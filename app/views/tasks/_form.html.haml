@@ -5,7 +5,7 @@
   .form-inputs
     = f.input :name
 
-    = f.input :problem_id, :collection => Problem.all.order_by(:name.asc), label_method: :url, value_method: :id
+    = f.input :url, :collection => Problem.all.order_by(:name.asc), label_method: :url, value_method: :url
 
   .form-actions
     = f.button :submit
