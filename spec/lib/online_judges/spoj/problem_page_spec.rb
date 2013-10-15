@@ -36,4 +36,10 @@ describe OnlineJudges::Spoj::ProblemPage do
     before { mock_request url + "start=100000", 'spoj/TCONNUM_last_page.html' }
     its(:problem) { should == OnlineJudges::Problem.new('TCONNUM', 213, 'http://pl.spoj.pl/problems/TCONNUM/', 10, 3) }
   end
+
+  context 'for problem with no accepts' do
+    let(:url) { 'http://pl.spoj.pl/ranks/TPORT/' }
+    before { mock_request url, 'spoj/TPORT.html' }
+    its(:problem) { should == OnlineJudges::Problem.new('TPORT', 0, 'http://pl.spoj.pl/problems/TPORT/') }
+  end
 end

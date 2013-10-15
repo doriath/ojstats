@@ -20,7 +20,11 @@ module OnlineJudges::Spoj
         problem.num_accepts = positions.last.text.strip.to_i
       end
 
-      best_status = page.css('.statusres').first.text.strip
+      best_status = ""
+      if page.css('.statusres').first
+        best_status = page.css('.statusres').first.text.strip
+      end
+
       if contains_number? best_status
         problem.best_points = convert_to_float best_status
 
