@@ -60,7 +60,7 @@ class OnlineJudge
     if user_attempted_problem? problem
       old = get_attempt problem
       if old.attempted_at < attempt.attempted_at
-        user.attempted_problems.find(attempt.id).update_attributes!(
+        user.attempted_problems.find(old.id).update_attributes!(
           {
             attempted_at: attempt.attempted_at,
             result: attempt.result
