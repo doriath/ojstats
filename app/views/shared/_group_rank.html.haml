@@ -20,7 +20,7 @@
           - else
             %td.attempted= state
 
-    - unless @group.users.include? current_user
+    - if current_user and not @group.users.include? current_user
       %tr.not-member
         %td .
         %td= current_user.display_name
