@@ -46,6 +46,7 @@ describe OnlineJudges::Spoj::ProblemPage do
   context 'for problem with no accepts' do
     let(:url) { 'http://pl.spoj.pl/ranks/PALBUILD/' }
     before { mock_request url, 'spoj/PALBUILD.html' }
-    its(:problem) { should == OnlineJudges::Problem.new('PALBUILD', 0, 'http://pl.spoj.pl/problems/PALBUILD/') }
+    before { mock_request url + "start=100000", 'spoj/PALBUILD.html' }
+    its(:problem) { should == OnlineJudges::Problem.new('PALBUILD', 3, 'http://pl.spoj.pl/problems/PALBUILD/') }
   end
 end

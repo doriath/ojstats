@@ -54,7 +54,8 @@ group :development do
   gem 'growl'
   gem 'rb-readline'
 
-  gem 'capistrano'
+  gem 'capistrano', '2.15.5'
+  gem 'capistrano_colors'
 
   gem 'rails_best_practices'
 end
