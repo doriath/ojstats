@@ -6,8 +6,8 @@ describe CustomFilter do
     start_date = Date.new(2010, 12, 21)
     end_date_params = {type: 'fixed', date: '2010-12-28'}
     end_date = Date.new(2010, 12, 28)
-    DateSelector.should_receive(:new).with(start_date_params).and_return(stub(date: start_date))
-    DateSelector.should_receive(:new).with(end_date_params).and_return(stub(date: end_date))
+    DateSelector.should_receive(:new).with(start_date_params).and_return(double(date: start_date))
+    DateSelector.should_receive(:new).with(end_date_params).and_return(double(date: end_date))
 
     custom_filter = CustomFilter.new(start_date_params, end_date_params)
 

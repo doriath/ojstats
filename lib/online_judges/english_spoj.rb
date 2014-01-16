@@ -22,7 +22,11 @@ module OnlineJudges
     # @return [Problem]
     def fetch_problem(problem_name)
       url = "http://www.spoj.com/ranks/#{problem_name}/"
-      OnlineJudges::Spoj::ProblemPage.new(url).problem
+      begin
+        OnlineJudges::Spoj::ProblemPage.new(url).problem
+      rescue => e
+        raise e, "Problem #{url} failed", e.backtrace
+      end
     end
 
     # It will fetch name and number of accepts of each problem available on

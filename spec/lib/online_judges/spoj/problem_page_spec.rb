@@ -42,4 +42,10 @@ describe OnlineJudges::Spoj::ProblemPage do
     before { mock_request url, 'spoj/TPORT.html' }
     its(:problem) { should == OnlineJudges::Problem.new('TPORT', 0, 'http://pl.spoj.pl/problems/TPORT/') }
   end
+
+  context 'for problem with no accepts' do
+    let(:url) { 'http://pl.spoj.pl/ranks/PALBUILD/' }
+    before { mock_request url, 'spoj/PALBUILD.html' }
+    its(:problem) { should == OnlineJudges::Problem.new('PALBUILD', 0, 'http://pl.spoj.pl/problems/PALBUILD/') }
+  end
 end

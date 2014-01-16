@@ -11,7 +11,7 @@ describe OnlineJudges::PolishSpoj do
       OnlineJudges::Spoj::SignedlistParser.
         should_receive(:new).
         with('http://pl.spoj.com/status/doriath/signedlist/').
-        and_return(stub(accepts: accepts))
+        and_return(double(accepts: accepts))
 
       polish_spoj.fetch_accepts('doriath').should == accepts
     end
@@ -24,7 +24,7 @@ describe OnlineJudges::PolishSpoj do
       OnlineJudges::Spoj::ProblemPage.
         should_receive(:new).
         with('http://pl.spoj.com/ranks/PRIME/').
-        and_return(stub(problem: problem))
+        and_return(double(problem: problem))
 
       polish_spoj.fetch_problem('PRIME').should == problem
     end

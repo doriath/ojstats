@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'nokogiri'
 gem 'rails', '3.2.11'
 
 # Gems used only for assets and not required
@@ -14,7 +15,7 @@ group :assets do
 
   gem 'jquery-qtip2-rails'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails', '= 2.1.3'
+  gem 'twitter-bootstrap-rails'
   gem 'bootstrap-datepicker-rails'
 end
 
@@ -27,7 +28,6 @@ gem 'simple_form'
 gem 'jquery-rails'
 
 gem 'typhoeus'
-gem 'nokogiri'
 gem 'gravatar_image_tag'
 
 gem 'thin'
@@ -55,7 +55,6 @@ group :development do
   gem 'rb-readline'
 
   gem 'capistrano'
-  gem 'capistrano_colors'
 
   gem 'rails_best_practices'
 end

@@ -6,7 +6,7 @@ describe Problem do
 
     it 'should fetch new problem for the first time' do
       fetched_problem = OnlineJudges::Problem.new('PRIME', 60)
-      Problem.should_receive(:scraper).with('plspoj').and_return(stub(fetch_problem: fetched_problem))
+      Problem.should_receive(:scraper).with('plspoj').and_return(double(fetch_problem: fetched_problem))
 
       problem.should be_persisted
       problem.name.should == 'PRIME'
