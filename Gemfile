@@ -15,7 +15,7 @@ group :assets do
 
   gem 'jquery-qtip2-rails'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails'
+  gem 'twitter-bootstrap-rails', '2.1.7'
   gem 'bootstrap-datepicker-rails'
 end
 

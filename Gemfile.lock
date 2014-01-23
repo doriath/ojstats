@@ -297,10 +297,9 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    twitter-bootstrap-rails (2.2.8)
+    twitter-bootstrap-rails (2.1.7)
       actionpack (>= 3.1)
       execjs
-      rails (>= 3.1)
       railties (>= 3.1)
     typhoeus (0.6.7)
       ethon (~> 0.6.2)
@@ -368,7 +367,7 @@ DEPENDENCIES
   therubyracer
   thin
   timecop
-  twitter-bootstrap-rails
+  twitter-bootstrap-rails (= 2.1.7)
   typhoeus
   uglifier (>= 1.0.3)
   whenever
