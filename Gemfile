@@ -6,6 +6,7 @@ gem 'rails', '3.2.11'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'less-rails', '2.3.3'
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'rails-backbone'
