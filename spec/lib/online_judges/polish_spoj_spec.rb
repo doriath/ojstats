@@ -7,14 +7,20 @@ describe OnlineJudges::PolishSpoj do
   describe '#fetch_accepts' do
     let(:accepts) { [Accept.new('test', Time.zone.now)] }
 
-    it 'fetches accepts using signedlist parser' do
-      OnlineJudges::Spoj::SignedlistParser.
-        should_receive(:new).
-        with('http://pl.spoj.com/status/doriath/signedlist/').
-        and_return(double(accepts: accepts))
-
+    it 'fetches accepts using user page' do
+      mock_request 'http://pl.spoj.pl/users/doriath', 'spoj/plspoj_doriath.html'
       polish_spoj.fetch_accepts('doriath').should == accepts
     end
+
+    # Note: signedlist is no longer available
+    # it 'fetches accepts using signedlist parser' do
+    #   OnlineJudges::Spoj::SignedlistParser.
+    #     should_receive(:new).
+    #     with('http://pl.spoj.com/status/doriath/signedlist/').
+    #     and_return(double(accepts: accepts))
+
+    #   polish_spoj.fetch_accepts('doriath').should == accepts
+    # end
   end
 
   describe '#fetch_problem' do

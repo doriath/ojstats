@@ -1,0 +1,614 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>POLSKI SPOJ  - User doriath: test your programming skills on-line</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+<META NAME="Keywords" CONTENT="programming, language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+
+<link href="//pl.spoj.com/gfx/favicon.png" rel="shortcut icon" type="image/x-icon">
+<link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+<link href="//pl.spoj.com/themes/common.css" rel="stylesheet" type="text/css" id="theme">
+<link href="//pl.spoj.com/themes/contest_new.css" rel="stylesheet" type="text/css" id="theme">
+<link href="//pl.spoj.com/style.css" rel="stylesheet" type="text/css" id="theme">
+<link href="//pl.spoj.com/themes/tooltips.css" rel="stylesheet" type="text/css" id="theme">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script type='text/javascript' src='//pl.spoj.com/gfx/jquery-1.11.1.min.js'></script>
+<script type="text/javascript" src="//pl.spoj.com/gfx/jquery.timers.js"></script>
+<script type="text/javascript" src="//pl.spoj.com/gfx/jquery.cookie.js"></script> 
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+function UnCryptMailto(s) {
+	var n=0;
+	var r="";
+	for(var i=0;i<s.length;i++) {		
+		n=s.charCodeAt(i); 
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n+(2));	
+	}
+	return r;
+}
+function linkTo_UnCryptMailto(s)	{
+	location.href=UnCryptMailto(s);
+}
+// -->
+</script>
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushCSharp.js"></script>
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+	<link type="text/css" rel="stylesheet" href="/gfx/SyntaxHighlighter/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="/gfx/SyntaxHighlighter/styles/shThemeDefault.css"/>
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	
+
+		<meta property="og:image" content="http://www.spoj.com/gfx/spoj-fb.jpg"/>
+	<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+	<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+</head>
+<body>
+
+
+
+<div class="container maintable" id="maintable2">
+	<div class="row">
+		<div class="col-md-12" id="header">
+	        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		        <tr>
+					<td class="headerleft"/>
+					<td class="headercenter">
+						<h1>POLSKI SPOJ</h1>
+					</td>
+					<td class="headerright"/>
+				</tr>
+			</table>
+			<a href="//www.spoj.com/" class="navbar-brand ">
+				<img src="/gfx/2015e.png" style="height: 40px;">
+			</a>
+						<div class="name text-right">
+				<!-- <h2 style="display: inline-block;">POLSKI SPOJ</h2> -->
+				
+				<a href="/" style="margin-right: 20px;">POLSKI SPOJ</a>
+				
+									
+							</div>
+			
+			<div class="submenu">
+				<!-- 
+				<ol class="breadcrumb">
+				  <li><a href="/problems">Problems</a></li>
+				  <li><a href="/problems/riddle">riddle</a></li>
+				  <li class="active">Get familiar with online judging</li>
+				</ol>
+					 -->
+			</div>
+	    </div>
+	</div>
+	<div class="row"><div class="col-md-2 menu" id="leftmenu" valign="top">
+
+<div class="well">
+
+		<a href="//www.spoj.com/login/aHR0cDovL3BsLnNwb2ouY29tL3VzZXJzL2RvcmlhdGgv" class="text-success"><i class="fa fa-sign-in"></i> <strong>sign in</strong></a>
+	
+	<div class="menucmd"><a href="/tutorials">tutoriale</a><br><br><a href="/status">status</a><br><a href="/submit">zg&#322;aszanie</a><br><a href="/problems/latwe/">zadania</a><br><br><a href="/ranks">ranking</a><br><br><a href="/news">wiadomo&#347;ci</a><br><a href="/embed/info/">materia&#322;y</a><br><a href="/embed/rules/">zasady</a><br><a href="/forum/">forum</a><br><a href="/embed/links/">linki</a><br><hr></div><a href="/problems/latwe/"></a><br>
+	
+	
+			<div class="c160x600left">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- spoj_all_160x600_left -->
+		<ins class="adsbygoogle"
+				style="display:inline-block;width:160px;height:600px"
+						data-ad-client="ca-pub-4453360425583535"
+								data-ad-slot="8266694231"></ins>
+								<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+		</script></div>
+		
+			
+<div class="time">
+	SPOJ time:</div>
+<div class="time">
+	<div>2015-09-21</div>
+	<div><b>02 : 17 : 19</b></div>
+</div>		
+	</div>
+
+</div><div class="col-md-10 content0" id="content0">
+	<div class="row">
+		<div class="col-md-10 content" id="content">
+		
+		
+                
+
+
+<H3> Dane u&#380;ytkownika Tomasz Zurkowski </H3>
+
+<p>
+<table cellspacing="10" align="center">
+<tr>
+    <td align="right"><i>Login:</i></td>
+    <td align="left"><i><font color="brown">doriath</font></i></td>
+</tr>
+<tr>
+    <td align="right">Kraj:</td>
+    <td>POLAND</td>
+</tr>
+<tr>
+    <td align="right">Instytucja:</td>
+    <td>Politechnika Poznañska</td>
+</tr>
+
+
+
+
+</table>
+
+
+<a href="/status/doriath/">Historia zg&#322;osze&#324;</a><br>
+(<a href="/status/doriath/signedlist/">wersja tekstowa</a>)</p>
+
+<p align="left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Lista rozwi&#261;zanych zada&#324;:</b>
+<br>
+<table width="91%" align="center">
+<tr>
+<td align="left" width="14%"><a href="/status/ALGWLACZ,doriath/">ALGWLACZ</a></td>
+<td align="left" width="14%"><a href="/status/ETI07E8,doriath/">ETI07E8</a></td>
+<td align="left" width="14%"><a href="/status/KART,doriath/">KART</a></td>
+<td align="left" width="14%"><a href="/status/MWP3_2B1,doriath/">MWP3_2B1</a></td>
+<td align="left" width="14%"><a href="/status/POTKON1,doriath/">POTKON1</a></td>
+<td align="left" width="14%"><a href="/status/PTNEWTON,doriath/">PTNEWTON</a></td>
+<td align="left" width="14%"><a href="/status/TCONNUM,doriath/">TCONNUM</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BAJTELEK,doriath/">BAJTELEK</a></td>
+<td align="left" width="14%"><a href="/status/ETI07F1,doriath/">ETI07F1</a></td>
+<td align="left" width="14%"><a href="/status/KASZTANY,doriath/">KASZTANY</a></td>
+<td align="left" width="14%"><a href="/status/MWP3_3D,doriath/">MWP3_3D</a></td>
+<td align="left" width="14%"><a href="/status/POTSAM,doriath/">POTSAM</a></td>
+<td align="left" width="14%"><a href="/status/PTPODZB,doriath/">PTPODZB</a></td>
+<td align="left" width="14%"><a href="/status/TDBFS,doriath/">TDBFS</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BAJTST,doriath/">BAJTST</a></td>
+<td align="left" width="14%"><a href="/status/ETI07F2,doriath/">ETI07F2</a></td>
+<td align="left" width="14%"><a href="/status/KC001,doriath/">KC001</a></td>
+<td align="left" width="14%"><a href="/status/MWPZ06A,doriath/">MWPZ06A</a></td>
+<td align="left" width="14%"><a href="/status/PP0501A,doriath/">PP0501A</a></td>
+<td align="left" width="14%"><a href="/status/PTROL,doriath/">PTROL</a></td>
+<td align="left" width="14%"><a href="/status/TDIVL,doriath/">TDIVL</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BALANCE,doriath/">BALANCE</a></td>
+<td align="left" width="14%"><a href="/status/ETI07F3,doriath/">ETI07F3</a></td>
+<td align="left" width="14%"><a href="/status/KC003,doriath/">KC003</a></td>
+<td align="left" width="14%"><a href="/status/MWPZ06B,doriath/">MWPZ06B</a></td>
+<td align="left" width="14%"><a href="/status/PP0502B,doriath/">PP0502B</a></td>
+<td align="left" width="14%"><a href="/status/PTSUMY,doriath/">PTSUMY</a></td>
+<td align="left" width="14%"><a href="/status/TFIBRE,doriath/">TFIBRE</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BEZPRZEC,doriath/">BEZPRZEC</a></td>
+<td align="left" width="14%"><a href="/status/EUCGAME,doriath/">EUCGAME</a></td>
+<td align="left" width="14%"><a href="/status/KC004,doriath/">KC004</a></td>
+<td align="left" width="14%"><a href="/status/MWPZ06C,doriath/">MWPZ06C</a></td>
+<td align="left" width="14%"><a href="/status/PP0504B,doriath/">PP0504B</a></td>
+<td align="left" width="14%"><a href="/status/PTWPZ073,doriath/">PTWPZ073</a></td>
+<td align="left" width="14%"><a href="/status/TFRACAL,doriath/">TFRACAL</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BFEVIL,doriath/">BFEVIL</a></td>
+<td align="left" width="14%"><a href="/status/EULER_PH,doriath/">EULER_PH</a></td>
+<td align="left" width="14%"><a href="/status/KC005,doriath/">KC005</a></td>
+<td align="left" width="14%"><a href="/status/MWPZ06D,doriath/">MWPZ06D</a></td>
+<td align="left" width="14%"><a href="/status/PP0504D,doriath/">PP0504D</a></td>
+<td align="left" width="14%"><a href="/status/PTWPZ076,doriath/">PTWPZ076</a></td>
+<td align="left" width="14%"><a href="/status/TLCS,doriath/">TLCS</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BFN1,doriath/">BFN1</a></td>
+<td align="left" width="14%"><a href="/status/EXPLO,doriath/">EXPLO</a></td>
+<td align="left" width="14%"><a href="/status/KC008,doriath/">KC008</a></td>
+<td align="left" width="14%"><a href="/status/MWPZ06H,doriath/">MWPZ06H</a></td>
+<td align="left" width="14%"><a href="/status/PP0505D,doriath/">PP0505D</a></td>
+<td align="left" width="14%"><a href="/status/PTWPZ077,doriath/">PTWPZ077</a></td>
+<td align="left" width="14%"><a href="/status/TMUL,doriath/">TMUL</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BFN2,doriath/">BFN2</a></td>
+<td align="left" width="14%"><a href="/status/FANGEN,doriath/">FANGEN</a></td>
+<td align="left" width="14%"><a href="/status/KC009,doriath/">KC009</a></td>
+<td align="left" width="14%"><a href="/status/MWPZ06X,doriath/">MWPZ06X</a></td>
+<td align="left" width="14%"><a href="/status/PP0506A,doriath/">PP0506A</a></td>
+<td align="left" width="14%"><a href="/status/PTWPZ078,doriath/">PTWPZ078</a></td>
+<td align="left" width="14%"><a href="/status/TOPSES,doriath/">TOPSES</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BFN3,doriath/">BFN3</a></td>
+<td align="left" width="14%"><a href="/status/FCTRL3,doriath/">FCTRL3</a></td>
+<td align="left" width="14%"><a href="/status/KC010,doriath/">KC010</a></td>
+<td align="left" width="14%"><a href="/status/MWPZ06Y,doriath/">MWPZ06Y</a></td>
+<td align="left" width="14%"><a href="/status/PP0506B,doriath/">PP0506B</a></td>
+<td align="left" width="14%"><a href="/status/PTWPZ083,doriath/">PTWPZ083</a></td>
+<td align="left" width="14%"><a href="/status/TPERM2,doriath/">TPERM2</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BFNTEST,doriath/">BFNTEST</a></td>
+<td align="left" width="14%"><a href="/status/FIB,doriath/">FIB</a></td>
+<td align="left" width="14%"><a href="/status/KC012,doriath/">KC012</a></td>
+<td align="left" width="14%"><a href="/status/MWPZ06Z,doriath/">MWPZ06Z</a></td>
+<td align="left" width="14%"><a href="/status/PP0506C,doriath/">PP0506C</a></td>
+<td align="left" width="14%"><a href="/status/PTWPZ091,doriath/">PTWPZ091</a></td>
+<td align="left" width="14%"><a href="/status/TPERML,doriath/">TPERML</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BICAKE,doriath/">BICAKE</a></td>
+<td align="left" width="14%"><a href="/status/FLAMASTE,doriath/">FLAMASTE</a></td>
+<td align="left" width="14%"><a href="/status/KC014,doriath/">KC014</a></td>
+<td align="left" width="14%"><a href="/status/NAMES,doriath/">NAMES</a></td>
+<td align="left" width="14%"><a href="/status/PP0601A,doriath/">PP0601A</a></td>
+<td align="left" width="14%"><a href="/status/PTWPZ093,doriath/">PTWPZ093</a></td>
+<td align="left" width="14%"><a href="/status/TRN,doriath/">TRN</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BINOMS,doriath/">BINOMS</a></td>
+<td align="left" width="14%"><a href="/status/FUNINT,doriath/">FUNINT</a></td>
+<td align="left" width="14%"><a href="/status/KC022,doriath/">KC022</a></td>
+<td align="left" width="14%"><a href="/status/NEWBALLS,doriath/">NEWBALLS</a></td>
+<td align="left" width="14%"><a href="/status/PP0601A2,doriath/">PP0601A2</a></td>
+<td align="left" width="14%"><a href="/status/PTWPZ094,doriath/">PTWPZ094</a></td>
+<td align="left" width="14%"><a href="/status/TRNGLFLD,doriath/">TRNGLFLD</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BIPART,doriath/">BIPART</a></td>
+<td align="left" width="14%"><a href="/status/FZI_STEF,doriath/">FZI_STEF</a></td>
+<td align="left" width="14%"><a href="/status/KC023,doriath/">KC023</a></td>
+<td align="left" width="14%"><a href="/status/NWD,doriath/">NWD</a></td>
+<td align="left" width="14%"><a href="/status/PP0601B,doriath/">PP0601B</a></td>
+<td align="left" width="14%"><a href="/status/PZPI1,doriath/">PZPI1</a></td>
+<td align="left" width="14%"><a href="/status/TROJEDNO,doriath/">TROJEDNO</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BISORT,doriath/">BISORT</a></td>
+<td align="left" width="14%"><a href="/status/GLUTTON,doriath/">GLUTTON</a></td>
+<td align="left" width="14%"><a href="/status/KC024,doriath/">KC024</a></td>
+<td align="left" width="14%"><a href="/status/NWW,doriath/">NWW</a></td>
+<td align="left" width="14%"><a href="/status/PP0602A,doriath/">PP0602A</a></td>
+<td align="left" width="14%"><a href="/status/PZPI2,doriath/">PZPI2</a></td>
+<td align="left" width="14%"><a href="/status/TSQRL,doriath/">TSQRL</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BSPIES,doriath/">BSPIES</a></td>
+<td align="left" width="14%"><a href="/status/HEAP,doriath/">HEAP</a></td>
+<td align="left" width="14%"><a href="/status/KMP,doriath/">KMP</a></td>
+<td align="left" width="14%"><a href="/status/ODWROTNO,doriath/">ODWROTNO</a></td>
+<td align="left" width="14%"><a href="/status/PP0602B,doriath/">PP0602B</a></td>
+<td align="left" width="14%"><a href="/status/PZPI3,doriath/">PZPI3</a></td>
+<td align="left" width="14%"><a href="/status/TTRI,doriath/">TTRI</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/BTURN,doriath/">BTURN</a></td>
+<td align="left" width="14%"><a href="/status/HILLS,doriath/">HILLS</a></td>
+<td align="left" width="14%"><a href="/status/KNUTH_PI,doriath/">KNUTH_PI</a></td>
+<td align="left" width="14%"><a href="/status/OI09_KOL,doriath/">OI09_KOL</a></td>
+<td align="left" width="14%"><a href="/status/PP0602B2,doriath/">PP0602B2</a></td>
+<td align="left" width="14%"><a href="/status/RNO_DOD,doriath/">RNO_DOD</a></td>
+<td align="left" width="14%"><a href="/status/T_PINTR,doriath/">T_PINTR</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/CALC,doriath/">CALC</a></td>
+<td align="left" width="14%"><a href="/status/HILLS2,doriath/">HILLS2</a></td>
+<td align="left" width="14%"><a href="/status/KRO,doriath/">KRO</a></td>
+<td align="left" width="14%"><a href="/status/OI13_MET,doriath/">OI13_MET</a></td>
+<td align="left" width="14%"><a href="/status/PP0602D,doriath/">PP0602D</a></td>
+<td align="left" width="14%"><a href="/status/RODZ_TRO,doriath/">RODZ_TRO</a></td>
+<td align="left" width="14%"><a href="/status/T_POTEGA,doriath/">T_POTEGA</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/CALC2,doriath/">CALC2</a></td>
+<td align="left" width="14%"><a href="/status/JBART,doriath/">JBART</a></td>
+<td align="left" width="14%"><a href="/status/LCITY,doriath/">LCITY</a></td>
+<td align="left" width="14%"><a href="/status/OIG1_BIT,doriath/">OIG1_BIT</a></td>
+<td align="left" width="14%"><a href="/status/PP0604A,doriath/">PP0604A</a></td>
+<td align="left" width="14%"><a href="/status/ROWNANIE,doriath/">ROWNANIE</a></td>
+<td align="left" width="14%"><a href="/status/VSR,doriath/">VSR</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/CHAOS,doriath/">CHAOS</a></td>
+<td align="left" width="14%"><a href="/status/JGGHACK,doriath/">JGGHACK</a></td>
+<td align="left" width="14%"><a href="/status/LEMONS,doriath/">LEMONS</a></td>
+<td align="left" width="14%"><a href="/status/OIG1_DIA,doriath/">OIG1_DIA</a></td>
+<td align="left" width="14%"><a href="/status/PP0604B,doriath/">PP0604B</a></td>
+<td align="left" width="14%"><a href="/status/ROZ,doriath/">ROZ</a></td>
+<td align="left" width="14%"><a href="/status/WI_DZWON,doriath/">WI_DZWON</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/CHSTAMPS,doriath/">CHSTAMPS</a></td>
+<td align="left" width="14%"><a href="/status/JHTMLLET,doriath/">JHTMLLET</a></td>
+<td align="left" width="14%"><a href="/status/LENLCS,doriath/">LENLCS</a></td>
+<td align="left" width="14%"><a href="/status/OIG1_LOT,doriath/">OIG1_LOT</a></td>
+<td align="left" width="14%"><a href="/status/PP0606A,doriath/">PP0606A</a></td>
+<td align="left" width="14%"><a href="/status/SIGALRM,doriath/">SIGALRM</a></td>
+<td align="left" width="14%"><a href="/status/WI_IDEN,doriath/">WI_IDEN</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/DAPPLES,doriath/">DAPPLES</a></td>
+<td align="left" width="14%"><a href="/status/JLITOSL,doriath/">JLITOSL</a></td>
+<td align="left" width="14%"><a href="/status/LESSTHAN,doriath/">LESSTHAN</a></td>
+<td align="left" width="14%"><a href="/status/OIG1_SKL,doriath/">OIG1_SKL</a></td>
+<td align="left" width="14%"><a href="/status/PP0606C,doriath/">PP0606C</a></td>
+<td align="left" width="14%"><a href="/status/SIMREL,doriath/">SIMREL</a></td>
+<td align="left" width="14%"><a href="/status/WI_SZYFR,doriath/">WI_SZYFR</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/DCZPROST,doriath/">DCZPROST</a></td>
+<td align="left" width="14%"><a href="/status/JPESEL,doriath/">JPESEL</a></td>
+<td align="left" width="14%"><a href="/status/LIDER,doriath/">LIDER</a></td>
+<td align="left" width="14%"><a href="/status/OSTBR,doriath/">OSTBR</a></td>
+<td align="left" width="14%"><a href="/status/PPODST,doriath/">PPODST</a></td>
+<td align="left" width="14%"><a href="/status/SKARBFI,doriath/">SKARBFI</a></td>
+<td align="left" width="14%"><a href="/status/WI_TRIGR,doriath/">WI_TRIGR</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/DOUGHNUT,doriath/">DOUGHNUT</a></td>
+<td align="left" width="14%"><a href="/status/JROWLIN,doriath/">JROWLIN</a></td>
+<td align="left" width="14%"><a href="/status/MACIERZE,doriath/">MACIERZE</a></td>
+<td align="left" width="14%"><a href="/status/OSTSIL,doriath/">OSTSIL</a></td>
+<td align="left" width="14%"><a href="/status/PPP07C,doriath/">PPP07C</a></td>
+<td align="left" width="14%"><a href="/status/SPEEDM,doriath/">SPEEDM</a></td>
+<td align="left" width="14%"><a href="/status/WSEGA,doriath/">WSEGA</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/DYZIO2,doriath/">DYZIO2</a></td>
+<td align="left" width="14%"><a href="/status/JSORTBIZ,doriath/">JSORTBIZ</a></td>
+<td align="left" width="14%"><a href="/status/MAXMINBR,doriath/">MAXMINBR</a></td>
+<td align="left" width="14%"><a href="/status/PA05_POT,doriath/">PA05_POT</a></td>
+<td align="left" width="14%"><a href="/status/PRIME_T,doriath/">PRIME_T</a></td>
+<td align="left" width="14%"><a href="/status/SPIN_PL,doriath/">SPIN_PL</a></td>
+<td align="left" width="14%"><a href="/status/WSEGB,doriath/">WSEGB</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/EQUIVCYC,doriath/">EQUIVCYC</a></td>
+<td align="left" width="14%"><a href="/status/JSPACE,doriath/">JSPACE</a></td>
+<td align="left" width="14%"><a href="/status/MISER,doriath/">MISER</a></td>
+<td align="left" width="14%"><a href="/status/PA07_AUT,doriath/">PA07_AUT</a></td>
+<td align="left" width="14%"><a href="/status/PROGC01,doriath/">PROGC01</a></td>
+<td align="left" width="14%"><a href="/status/STOS,doriath/">STOS</a></td>
+<td align="left" width="14%"><a href="/status/WYMIANA,doriath/">WYMIANA</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI06F2,doriath/">ETI06F2</a></td>
+<td align="left" width="14%"><a href="/status/JSUMDUZE,doriath/">JSUMDUZE</a></td>
+<td align="left" width="14%"><a href="/status/MN06_6,doriath/">MN06_6</a></td>
+<td align="left" width="14%"><a href="/status/PA07_NAW,doriath/">PA07_NAW</a></td>
+<td align="left" width="14%"><a href="/status/PROGC02,doriath/">PROGC02</a></td>
+<td align="left" width="14%"><a href="/status/SUMA,doriath/">SUMA</a></td>
+<td align="left" width="14%"><a href="/status/WZP09_2F,doriath/">WZP09_2F</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI06F3,doriath/">ETI06F3</a></td>
+<td align="left" width="14%"><a href="/status/JSUMRZYM,doriath/">JSUMRZYM</a></td>
+<td align="left" width="14%"><a href="/status/MN06_7,doriath/">MN06_7</a></td>
+<td align="left" width="14%"><a href="/status/PASCHAR5,doriath/">PASCHAR5</a></td>
+<td align="left" width="14%"><a href="/status/PROGC03,doriath/">PROGC03</a></td>
+<td align="left" width="14%"><a href="/status/SUMAN,doriath/">SUMAN</a></td>
+<td align="left" width="14%"><a href="/status/XIWTPZA,doriath/">XIWTPZA</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI07E2,doriath/">ETI07E2</a></td>
+<td align="left" width="14%"><a href="/status/JSZYCER,doriath/">JSZYCER</a></td>
+<td align="left" width="14%"><a href="/status/MN_2,doriath/">MN_2</a></td>
+<td align="left" width="14%"><a href="/status/PASTAB2,doriath/">PASTAB2</a></td>
+<td align="left" width="14%"><a href="/status/PROGC04,doriath/">PROGC04</a></td>
+<td align="left" width="14%"><a href="/status/SYS,doriath/">SYS</a></td>
+<td align="left" width="14%"><a href="/status/XIWTPZD,doriath/">XIWTPZD</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI07E3,doriath/">ETI07E3</a></td>
+<td align="left" width="14%"><a href="/status/JSZYFR2,doriath/">JSZYFR2</a></td>
+<td align="left" width="14%"><a href="/status/MPOWER,doriath/">MPOWER</a></td>
+<td align="left" width="14%"><a href="/status/PASTAB4,doriath/">PASTAB4</a></td>
+<td align="left" width="14%"><a href="/status/PROGC05,doriath/">PROGC05</a></td>
+<td align="left" width="14%"><a href="/status/SZABLON,doriath/">SZABLON</a></td>
+<td align="left" width="14%"><a href="/status/,doriath/"></a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI07E4,doriath/">ETI07E4</a></td>
+<td align="left" width="14%"><a href="/status/JWSPLIN,doriath/">JWSPLIN</a></td>
+<td align="left" width="14%"><a href="/status/MSTRMND,doriath/">MSTRMND</a></td>
+<td align="left" width="14%"><a href="/status/PL6COL,doriath/">PL6COL</a></td>
+<td align="left" width="14%"><a href="/status/PROGC06,doriath/">PROGC06</a></td>
+<td align="left" width="14%"><a href="/status/TABLICA,doriath/">TABLICA</a></td>
+<td align="left" width="14%"><a href="/status/,doriath/"></a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI07E5,doriath/">ETI07E5</a></td>
+<td align="left" width="14%"><a href="/status/JZAPKAB,doriath/">JZAPKAB</a></td>
+<td align="left" width="14%"><a href="/status/MWP2_2B,doriath/">MWP2_2B</a></td>
+<td align="left" width="14%"><a href="/status/PLEXSORT,doriath/">PLEXSORT</a></td>
+<td align="left" width="14%"><a href="/status/PRZEDSZK,doriath/">PRZEDSZK</a></td>
+<td align="left" width="14%"><a href="/status/TADDL,doriath/">TADDL</a></td>
+<td align="left" width="14%"><a href="/status/,doriath/"></a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI07E6,doriath/">ETI07E6</a></td>
+<td align="left" width="14%"><a href="/status/JZLICZ,doriath/">JZLICZ</a></td>
+<td align="left" width="14%"><a href="/status/MWP2_3C,doriath/">MWP2_3C</a></td>
+<td align="left" width="14%"><a href="/status/POL,doriath/">POL</a></td>
+<td align="left" width="14%"><a href="/status/PTCLTZ,doriath/">PTCLTZ</a></td>
+<td align="left" width="14%"><a href="/status/TAXIMAN3,doriath/">TAXIMAN3</a></td>
+<td align="left" width="14%"><a href="/status/,doriath/"></a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI07E7,doriath/">ETI07E7</a></td>
+<td align="left" width="14%"><a href="/status/KAMELNEO,doriath/">KAMELNEO</a></td>
+<td align="left" width="14%"><a href="/status/MWP3_1C1,doriath/">MWP3_1C1</a></td>
+<td align="left" width="14%"><a href="/status/POTEGA,doriath/">POTEGA</a></td>
+<td align="left" width="14%"><a href="/status/PTEST,doriath/">PTEST</a></td>
+<td align="left" width="14%"><a href="/status/TBDW,doriath/">TBDW</a></td>
+<td align="left" width="14%"><a href="/status/,doriath/"></a></td>
+</tr>
+</table>
+
+
+
+<p align="left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b title="A list of problems to which solutions were submitted, but none have been accepted to date">Trwaj&#261; zmagania z zadaniami:</b>
+<br>
+<table width="91%" align="center">
+<tr>
+<td align="left" width="14%"><a href="/status/BFN5,doriath/">BFN5</a></td>
+<td align="left" width="14%"><a href="/status/ETI07E1,doriath/">ETI07E1</a></td>
+<td align="left" width="14%"><a href="/status/KC015,doriath/">KC015</a></td>
+<td align="left" width="14%"><a href="/status/LCP,doriath/">LCP</a></td>
+<td align="left" width="14%"><a href="/status/PZPI06_X,doriath/">PZPI06_X</a></td>
+<td align="left" width="14%"><a href="/status/SHELVES,doriath/">SHELVES</a></td>
+<td align="left" width="14%"><a href="/status/TRCTARCH,doriath/">TRCTARCH</a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/CANTEEN,doriath/">CANTEEN</a></td>
+<td align="left" width="14%"><a href="/status/FUNCT1,doriath/">FUNCT1</a></td>
+<td align="left" width="14%"><a href="/status/KC017,doriath/">KC017</a></td>
+<td align="left" width="14%"><a href="/status/MWP2_2C,doriath/">MWP2_2C</a></td>
+<td align="left" width="14%"><a href="/status/PZPI4,doriath/">PZPI4</a></td>
+<td align="left" width="14%"><a href="/status/SIL,doriath/">SIL</a></td>
+<td align="left" width="14%"><a href="/status/,doriath/"></a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/CWANY_LU,doriath/">CWANY_LU</a></td>
+<td align="left" width="14%"><a href="/status/GOEDEL,doriath/">GOEDEL</a></td>
+<td align="left" width="14%"><a href="/status/KEYS,doriath/">KEYS</a></td>
+<td align="left" width="14%"><a href="/status/NIEKOLEJ,doriath/">NIEKOLEJ</a></td>
+<td align="left" width="14%"><a href="/status/PZPI5,doriath/">PZPI5</a></td>
+<td align="left" width="14%"><a href="/status/STAMPSLO,doriath/">STAMPSLO</a></td>
+<td align="left" width="14%"><a href="/status/,doriath/"></a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI06E1,doriath/">ETI06E1</a></td>
+<td align="left" width="14%"><a href="/status/GOLEBIE,doriath/">GOLEBIE</a></td>
+<td align="left" width="14%"><a href="/status/KMSL4B,doriath/">KMSL4B</a></td>
+<td align="left" width="14%"><a href="/status/PICIRC,doriath/">PICIRC</a></td>
+<td align="left" width="14%"><a href="/status/RECT2,doriath/">RECT2</a></td>
+<td align="left" width="14%"><a href="/status/SUDOKUC,doriath/">SUDOKUC</a></td>
+<td align="left" width="14%"><a href="/status/,doriath/"></a></td>
+</tr>
+<tr>
+<td align="left" width="14%"><a href="/status/ETI06F1,doriath/">ETI06F1</a></td>
+<td align="left" width="14%"><a href="/status/JZYCIE,doriath/">JZYCIE</a></td>
+<td align="left" width="14%"><a href="/status/KMS_3A,doriath/">KMS_3A</a></td>
+<td align="left" width="14%"><a href="/status/PTWPZ092,doriath/">PTWPZ092</a></td>
+<td align="left" width="14%"><a href="/status/RNO_SA,doriath/">RNO_SA</a></td>
+<td align="left" width="14%"><a href="/status/TMAMUTKP,doriath/">TMAMUTKP</a></td>
+<td align="left" width="14%"><a href="/status/,doriath/"></a></td>
+</tr>
+</table>	        					
+				
+				<div style="clear: both"></div>
+	        </div><!-- end #content -->
+	        <div class="col-md-2" id="subcont">
+								
+								
+				
+				<script type="text/javascript">
+				
+				$(function(){
+					setTimeout(function(){
+						$('.no_a_info').css('visibility', 'visible');
+					}, 5000);
+				});
+				</script>
+				
+					        </div>
+		</div><!-- endof row in #content0 -->
+	</div><!-- endof #content0 -->
+</div><!-- endof div.row -->
+
+<div class="row">
+	<div class="col-md-12 footer" id="footer">
+	<div class="a-footer"></div>
+	<script language="javascript" type="text/javascript">
+	
+	
+	
+	
+	
+	
+		</script>
+	    <div style="font-size:10px; color:#aaaaaa;">
+    ISO C99,  C/C++, C++0x, kurs programowania w C++, zbiór algorytmów, algorytmy i struktury danych, sortowanie, kolejki priorytetowe, algorytmy grafowe, otoczka wypukła, odwrócona notacja polska, drzewo spinające, drzewo wyszukiwań binarnych, algorytm Euklidesa, NWD, ONP, haszowanie, stos, kolejka, kopiec, drzewa BST, AVL, RB, B-drzewa, diagram Voronoi, triangulacja, algorytm Karatsuby, kopiec Fibbonaciego
+</div>	</div>
+</div>
+
+
+</div><!-- end of #maintable -->
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+
+<div class="a-header"></div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=321676846207";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--<div id="fb-root"></div>
+<script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>-->
+
+
+<div style="font-size:10px; margin-top:4px; color: rgb(85,80,95); text-align: center">
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com" style="color:black">Sphere Research Labs</a>.
+</div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10507872-1']);
+    _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                      })();
+                      </script>
+
+<!-- 
+<script type="text/javascript">
+(function() {
+	var wrc = document.createElement('script'); wrc.type = 'text/javascript'; wrc.async = true; window.rc_utm_source='spoj';
+	wrc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'recruitcoders.com/w4loader.js';
+	var s = document.getElementsByTagName('body')[0]; s.appendChild(wrc);
+})();
+</script>
+ -->
+
+</body>
+</html>

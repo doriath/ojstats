@@ -7,8 +7,15 @@ module OnlineJudges
     # @param [String] user_name
     # @return [Array<Accept>]
     def fetch_accepts(user_name)
-      url = "http://pl.spoj.com/status/#{user_name}/signedlist/"
-      OnlineJudges::Spoj::SignedlistParser.new(url).accepts
+      # url = "http://pl.spoj.com/status/#{user_name}/signedlist/"
+      # OnlineJudges::Spoj::SignedlistParser.new(url).accepts
+
+      url = "http://pl.spoj.com/users/#{user_name}/"
+      OnlineJudges::PolishSpoj::UserPage.new(url).solved_problems.map do |solved_problem|
+        puts "Checking attempts for #{solved_problem}"
+        OnlineJudges::PolishSpoj::StatusPage.new(
+          "http://pl.spoj.com/status/#{solved_problem},#{user_name}/", solved_problem).first_accept
+      end.compact
     end
 
     # @param [String] user_name
