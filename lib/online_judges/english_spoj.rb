@@ -23,7 +23,7 @@ module OnlineJudges
     def fetch_problem(problem_name)
       url = "http://www.spoj.com/ranks/#{problem_name}/"
       begin
-        OnlineJudges::Spoj::ProblemPage.new(url).problem
+        OnlineJudges::EnglishSpoj::ProblemPage.new(url).problem
       rescue => e
         raise e, "Problem #{url} failed", e.backtrace
       end
@@ -37,7 +37,7 @@ module OnlineJudges
     # @return [Array<Problem>]
     def fetch_all_problems
       url = 'http://www.spoj.com/problems/classical/'
-      OnlineJudges::Spoj::ProblemsPage.problems_starting_from(url)
+      OnlineJudges::EnglishSpoj::ProblemsPage.problems_starting_from(url)
     end
   end
 end
