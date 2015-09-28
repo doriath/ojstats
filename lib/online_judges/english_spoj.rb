@@ -1,3 +1,5 @@
+require './lib/online_judges/english_spoj/user_page'
+
 module OnlineJudges
   class EnglishSpoj
     def name
@@ -7,17 +9,15 @@ module OnlineJudges
     # @param [String] user_name
     # @return [Array<Accept>]
     def fetch_accepts(user_name, already_fetched_accepts)
-      url = "http://spoj.com/users/#{user_name}/"
+      url = "http://www.spoj.com/users/#{user_name}/"
       OnlineJudges::EnglishSpoj::UserPage.new(url).solved_problems.map do |solved_problem|
-        p solved_problem
-        next
         if already_fetched_accepts.include?(solved_problem)
           puts "Problem #{solved_problem} already solved. Skipping."
           next
         end
         puts "Checking attempts for #{solved_problem}"
         OnlineJudges::EnglishSpoj::StatusPage.new(
-          "http://pl.spoj.com/status/#{solved_problem},#{user_name}/", solved_problem).first_accept
+          "http://www.spoj.com/status/#{solved_problem},#{user_name}/", solved_problem).first_accept
       end.compact
     end
 
