@@ -6,12 +6,17 @@ module OnlineJudges
 
     # @param [String] user_name
     # @return [Array<Accept>]
-    def fetch_accepts(user_name)
+    def fetch_accepts(user_name, already_fetched_accepts)
+      # Note: signedlist is no longer available
       # url = "http://pl.spoj.com/status/#{user_name}/signedlist/"
       # OnlineJudges::Spoj::SignedlistParser.new(url).accepts
 
       url = "http://pl.spoj.com/users/#{user_name}/"
       OnlineJudges::PolishSpoj::UserPage.new(url).solved_problems.map do |solved_problem|
+        if already_fetched_accepts.include?(solved_problem)
+          puts "Problem #{solved_problem} already solved. Skipping."
+          next
+        end
         puts "Checking attempts for #{solved_problem}"
         OnlineJudges::PolishSpoj::StatusPage.new(
           "http://pl.spoj.com/status/#{solved_problem},#{user_name}/", solved_problem).first_accept
@@ -20,10 +25,10 @@ module OnlineJudges
 
     # @param [String] user_name
     # @return [Array<Attempt>]
-    def fetch_attempts(user_name)
-      url = "http://pl.spoj.com/status/#{user_name}/signedlist/"
-      OnlineJudges::Spoj::SignedlistParser.new(url).attempts
-    end
+    # def fetch_attempts(user_name)
+    #   url = "http://pl.spoj.com/status/#{user_name}/signedlist/"
+    #   OnlineJudges::Spoj::SignedlistParser.new(url).attempts
+    # end
 
     # @param [String] problem_name
     # @return [Problem]

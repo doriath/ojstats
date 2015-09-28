@@ -13,7 +13,7 @@ describe OnlineJudges::EnglishSpoj do
         with('http://www.spoj.com/status/doriath/signedlist/').
         and_return(double(accepts: accepts))
 
-      english_spoj.fetch_accepts('doriath').should == accepts
+      english_spoj.fetch_accepts('doriath', []).should == accepts
     end
   end
 

@@ -10,11 +10,11 @@ class OnlineJudge
   validates_inclusion_of :name, in: %w(plspoj spoj)
 
   def refresh
-    accepts = fetcher.fetch_accepts(login)
-    attempts = fetcher.fetch_attempts(login)
+    already_fetched_accepts = user.accepted_problems.select { |accept| accept.online_judge == name }
+    already_fetched_accepts.map! { |a| a.problem.name }
 
+    accepts = fetcher.fetch_accepts(login, already_fetched_accepts)
     accepts.each{ |accept| update_problem(accept)}
-    attempts.each{ |attempt| update_attempt attempt }
   end
 
   private

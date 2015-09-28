@@ -8,7 +8,7 @@ describe OnlineJudges::PolishSpoj::UserPage do
     let(:url) { 'http://pl.spoj.pl/users/doriath/' }
     before { mock_request url, 'spoj/plspoj_doriath.html' }
     it 'should get accepts' do
-      subject.accepts.size.should == 226
+      subject.solved_problems.size.should == 226
     end
   end
 end

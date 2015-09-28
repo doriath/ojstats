@@ -6,7 +6,7 @@ module OnlineJudges
 
     # @param [String] user_name
     # @return [Array<Accept>]
-    def fetch_accepts(user_name)
+    def fetch_accepts(user_name, already_fetched_accepts)
       url = "http://www.spoj.com/status/#{user_name}/signedlist/"
       OnlineJudges::Spoj::SignedlistParser.new(url).accepts
     end

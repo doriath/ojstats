@@ -4,6 +4,7 @@ logger.formatter = nil
 namespace :ranking do
   task :refresh => :environment do
     User.all.each do |user|
+      logger.info "Refreshing user #{user.display_name}"
       user.online_judges.each do |online_judge|
         online_judge.refresh
       end

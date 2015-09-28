@@ -1,0 +1,587 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>POLSKI SPOJ  - Status: test your programming skills on-line</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+<META NAME="Keywords" CONTENT="programming, language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+<META NAME="robots" CONTENT="noindex">
+<link href="//pl.spoj.com/gfx/favicon.png" rel="shortcut icon" type="image/x-icon">
+<link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+<link href="//pl.spoj.com/themes/common.css" rel="stylesheet" type="text/css" id="theme">
+<link href="//pl.spoj.com/themes/contest_new.css" rel="stylesheet" type="text/css" id="theme">
+<link href="//pl.spoj.com/style.css" rel="stylesheet" type="text/css" id="theme">
+<link href="//pl.spoj.com/themes/tooltips.css" rel="stylesheet" type="text/css" id="theme">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script type='text/javascript' src='//pl.spoj.com/gfx/jquery-1.11.1.min.js'></script>
+<script type="text/javascript" src="//pl.spoj.com/gfx/jquery.timers.js"></script>
+<script type="text/javascript" src="//pl.spoj.com/gfx/jquery.cookie.js"></script> 
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+function UnCryptMailto(s) {
+	var n=0;
+	var r="";
+	for(var i=0;i<s.length;i++) {		
+		n=s.charCodeAt(i); 
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n+(2));	
+	}
+	return r;
+}
+function linkTo_UnCryptMailto(s)	{
+	location.href=UnCryptMailto(s);
+}
+// -->
+</script>
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushCSharp.js"></script>
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+	<link type="text/css" rel="stylesheet" href="/gfx/SyntaxHighlighter/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="/gfx/SyntaxHighlighter/styles/shThemeDefault.css"/>
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	
+
+		<meta property="og:image" content="http://www.spoj.com/gfx/spoj-fb.jpg"/>
+	<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+	<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 100,000 registered users and over 10000 problems. The solution to problems can be submitted in over 40 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+</head>
+<body>
+
+
+
+<div class="container maintable" id="maintable2">
+	<div class="row">
+		<div class="col-md-12" id="header">
+	        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		        <tr>
+					<td class="headerleft"/>
+					<td class="headercenter">
+						<h1>POLSKI SPOJ</h1>
+					</td>
+					<td class="headerright"/>
+				</tr>
+			</table>
+			<a href="//www.spoj.com/" class="navbar-brand ">
+				<img src="/gfx/2015e.png" style="height: 40px;">
+			</a>
+						<div class="name text-right">
+				<!-- <h2 style="display: inline-block;">POLSKI SPOJ</h2> -->
+				
+				<a href="/" style="margin-right: 20px;">POLSKI SPOJ</a>
+				
+									
+							</div>
+			
+			<div class="submenu">
+				<!-- 
+				<ol class="breadcrumb">
+				  <li><a href="/problems">Problems</a></li>
+				  <li><a href="/problems/riddle">riddle</a></li>
+				  <li class="active">Get familiar with online judging</li>
+				</ol>
+					 -->
+			</div>
+	    </div>
+	</div>
+	<div class="row"><div class="col-md-2 menu" id="leftmenu" valign="top">
+
+<div class="well">
+
+		<a href="//www.spoj.com/login/aHR0cDovL3BsLnNwb2ouY29tL3N0YXR1cy9UQURETCxkb3JpYXRoLw==" class="text-success"><i class="fa fa-sign-in"></i> <strong>sign in</strong></a>
+	
+	<div class="menucmd"><a href="/tutorials">tutoriale</a><br><br><a href="/status">status</a><br><a href="/submit">zg&#322;aszanie</a><br><a href="/problems/latwe/">zadania</a><br><br><a href="/ranks">ranking</a><br><br><a href="/news">wiadomo&#347;ci</a><br><a href="/embed/info/">materia&#322;y</a><br><a href="/embed/rules/">zasady</a><br><a href="/forum/">forum</a><br><a href="/embed/links/">linki</a><br><hr></div><a href="/problems/latwe/"></a><br>
+	
+	
+			<div class="c160x600left">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- spoj_all_160x600_left -->
+		<ins class="adsbygoogle"
+				style="display:inline-block;width:160px;height:600px"
+						data-ad-client="ca-pub-4453360425583535"
+								data-ad-slot="8266694231"></ins>
+								<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+		</script></div>
+		
+			
+<div class="time">
+	SPOJ time:</div>
+<div class="time">
+	<div>2015-09-28</div>
+	<div><b>05 : 27 : 39</b></div>
+</div>		
+	</div>
+
+</div><div class="col-md-10 content0" id="content0">
+	<div class="row">
+		<div class="col-md-10 content" id="content">
+		
+		
+                
+
+<script type="text/javascript" src="/gfx/jquery-ui-1.7.1.custom.min.js"></script>
+<script type="text/javascript" src="//ideone.com/api/1.1/service.js"></script>
+
+
+<script type='text/javascript' src='/gfx/jquery.bgiframe.js'></script>
+<script type='text/javascript' src='/gfx/jquery.tooltip.js'></script>
+<script type='text/javascript' src='/gfx/jquery.cxhelp.js'></script>
+
+
+<div class="cxitem" id="h_private">
+<div class="cxtitle">Private submission</div>
+<div>Private submission won't be visible to other users and <br/>won't be taken into consideration in ranks.</div>
+</div>
+
+<div class="cxitem" id="h_disqualified">
+<div class="cxtitle">Disqualify submission</div>
+<div>Your submission will be disqualified. Operation <br/>is not reversible.</div>
+</div>
+
+<div class="cxitem" id="h_hidden">
+<div class="cxtitle">Zg&#322;oszenie ukryte</div>
+<div> </div>
+</div>
+
+<div class="cxitem" id="h_public">
+<div class="cxtitle">Public submission</div>
+<div>
+<i>Click here to view source code.</i><br/></br>
+Source code of every submission to this problem <br/> in this contest is public.</div>
+</div>
+
+<div class="cxitem" id="h_execute">
+<div class="cxtitle">Pomoc</div>
+<div>
+</div>
+</div>
+
+<h3><a href="/users/doriath">Tomasz ¯urkowski:</a> Zg&#322;oszenia<br><a href="/problems/TADDL">Dodawanie liczb</a></h3>
+
+
+
+<script language="JavaScript">
+<!--
+$(document).ready(function(){
+        $('.pager_link__fake').bind('click', function(me){
+		var href=$(this).attr('href');
+                $('.content').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        //cache: false,
+                        //dataType: 'json',
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('.content').html(data);
+                                $('.content').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                $('.content').animate({opacity: 0.75},1);
+                        }
+                });
+                return false;
+        });
+});
+-->
+</script>
+
+<div class="aStatusTop c728x90"><div class="no_a_info"><strong class="text-center">Advertisement blocking software were detected ;( Please add this webpage to whitelist.</strong></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1212933435"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<form method="post">
+<table class="problems" width="100%">
+<tr class="headerrow">
+<th width="7%" class="headerrowleft">ID</th>
+<th width="12%">
+DATA</th>
+<th width="22%">ZADANIE</th><th width="16%">REZULTAT</th>
+<th width="6%">CZAS</th>
+<th width="6%">MEM</th>
+<th width="8%" class="headerrowright">J&#280;ZYK</th>
+</tr>
+<input type="hidden" id="max_id" value="835155" />
+<tr class="kol1"><td class="statustext">
+835155</td>
+
+
+<td class="status_sm">
+
+2007-05-04 13:44:29
+</td>
+
+<td><a href="/problems/TADDL/"  title="TADDL">Dodawanie liczb</a></td><td class="statusres" id="statusres_835155" status="15" manual="0">
+
+
+
+
+			10	
+
+
+
+	
+
+</td>
+<td class="statustext" id="statustime_835155"><!-- google_ad_section_start(weight=ignore) -->
+		<a href="/ranks/TADDL/" title="See the best solutions">
+		0.00		</a>
+	<!-- google_ad_section_end --></td>
+<td class="statustext" id="statusmem_835155">
+		
+
+    	2.6M
+    	</td>
+<td class="slang">
+	<p>C++</p><p class="small">5</p></td>
+</tr>
+
+</table>
+
+</form>
+
+<input type="hidden" id="debug" value="0"/>
+
+<script language="JavaScript">
+<!--
+		var loader = "<img src='/gfx/loader.gif'/>";
+        var screen_width = 1;
+        var screen_height = 1;
+        var win_width = 1;
+        var win_height = 1;
+        var win_left = 1;
+        var win_top = 1;
+        var tmp = "";
+		function load(){
+                a = new Array();
+                //for(var i = 0; i<9; i++){
+                        //var results = $('.statusres[status='+i+'][manual=0]').each(function(i, el){
+			var results = $('.statusres[final=0]').each(function(i, el){
+				if( $(el).attr('status') != '20'){
+	                                var zz = $(el).attr('id').substring(10);
+        	                        a.push( zz );
+                	                $('#statustime_'+zz).html(loader);
+				}
+                        });
+                //};
+                if( a.length > 0 ){
+                $.ajax({
+                        type: "POST",
+                        url: "/status/ajax=1,ajaxdiff=1",
+                        data: "ids="+a.join(','),
+                        dataType: 'json',
+                        success: function(data){
+                                for(var i = 0; i<data.length; i++){
+                                        $("#statusres_" + data[i].id).attr('status', data[i].status);
+					$("#statusres_" + data[i].id).attr('final', data[i].final);
+                                        $("#statusres_" + data[i].id).html(data[i].status_description);
+                                        $("#statustime_" + data[i].id).html(data[i].time);
+                                        $("#statusch_" + data[i].id).html(data[i].chk_id);
+                                        if( data[i].status >= 9 ){
+                                                $("#statusres_" + data[i].id).parent('tr').attr('class', 'kol');
+                                                $("#statusmem_" + data[i].id).html(data[i].mem);
+						if( data[i].final == '0' && data[i].status < 20){
+							$("#statustime_" + data[i].id).html( loader );
+						}
+                                        }
+                                        if( data[i].status == 15 ){
+                                                $("#statusres_" + data[i].id).parent('tr').attr('class', 'kol3');
+                                        }
+                                        if( data[i].status < 9 ){
+                                                $("#statusres_" + data[i].id).html( $("#statusres_" + data[i].id).html());
+                                                $("#statustime_" + data[i].id).html( loader );
+                                        }
+                                        $("#statusres_" + data[i].id).parent().attr('class', data[i].color);
+                                }
+				setTimeout(load, 5000);
+                        },
+                        error: function(err,a,b){
+							if( $("#debug").attr("value") == 1 ){
+								alert(err);
+								alert(a);
+								alert(b);
+								tmp = err;
+							};
+                        }
+                });
+                }
+        }
+
+$(document).ready(function(){
+        function reload_window_dim(){
+			screen_width = $(window).width() - 10;
+			screen_height = $(window).height() - 10;
+			win_width = screen_width * 4 / 5;
+			win_height = screen_height * 4 / 5;
+			win_left = screen_width / 10;
+			win_top = screen_height / 10;
+		}
+		reload_window_dim();
+
+        load();
+    
+        //$.ui.dialog.defaults.bgiframe = true;
+	
+		function source_code_execute(){
+			$("#op_window_sourcecode_link").unbind("click");
+			$("#op_window_sourcecode_link").bind("click", function(){
+				$('#op_window_mjudge').hide();
+				$('#op_window_sourcecode').show();
+				var url = $('#url').attr('value');
+				loadCode(url, "op_window_sourcecode", false);
+				return false;
+			});
+		}
+		function plain_text_execute(){
+			$("#op_window_plaintext_link").unbind("click");
+			$("#op_window_plaintext_link").bind("click", function(){
+				$('#op_window_mjudge').hide();
+				$('#op_window_sourcecode').show();
+				var url = $('#url').attr('value');
+				url = url.replace('src', 'src\/plain');
+				loadCode(url, "op_window_sourcecode", true);
+				return false;
+			});
+		}
+		function copy_to_submit_execute(){
+			$("#op_window_copy_to_submit_link").unbind("click");
+			$("#op_window_copy_to_submit_link").bind("click", function(){
+				var id = $('#solutionid').attr('value');
+				var pcode = $('#pcode').attr('value');
+				window.location.href = "/submit/"+pcode+"/?id="+id;
+			});
+		}
+		function manual_rejudge_execute(){
+			$("#op_window_mjudge_link").unbind("click");
+			$("#op_window_mjudge_link").bind("click", function(){
+				$('#op_window_mjudge').show();
+				$('#op_window_sourcecode').hide();
+				return false;
+			});
+		}
+		
+		function createWindow(){
+			/*
+			reload_window_dim();
+			$("#op_window").dialog({
+				//bgiframe: true,
+				autoOpen: false,
+				height: win_height,
+				width: win_width,
+				modal: true,
+				buttons: {
+					Close: function() {
+						$(this).dialog('close');
+						//$(this).dialog('destroy');
+					}
+				}
+			});
+			$(".ui-dialog .ui-dialog-titlebar").append("<a class=\"ui-dialog-titlebar-resize ui-corner-all\" href=\"\"><span class=\"ui-icon ui-icon-newwin\" unselectable=\"on\" style=\"-moz-user-select: none;\">resize</span></a>");
+			$(".ui-dialog .ui-dialog-titlebar .ui-icon-newwin").bind("click", function(){
+				reload_window_dim();
+				if( ! $(".ui-dialog").attr("max") ){
+					$('#op_window').parents('.ui-dialog:first').animate({ width: screen_width, height: screen_height, left: 0, top: 0 });
+					$('#op_window').animate({ width: screen_width, height: screen_height-100 });
+					$(".ui-dialog").attr("max", "1");
+				} else {
+					$('#op_window').parents('.ui-dialog:first').animate({ width: win_width, height: win_height, left: win_left, top: win_top });
+					$("#op_window").animate({ width: win_width, height: (win_height - 100) });
+					$(".ui-dialog").attr("max", "");
+				}
+				return false;
+			});
+			source_code_execute();
+			plain_text_execute();
+			manual_rejudge_execute();
+			copy_to_submit_execute();
+			*/
+		};
+		
+		createWindow(); 
+		
+		
+		function loadCode(url,objectid,pre){
+			$("#"+objectid).html(loader);
+			if( ! url ) return;
+			$.ajax({
+				type: "POST",
+				url: url,
+				cache: false,
+				data: "post=1",
+				success: function(data){
+					if( ! pre ){
+						$("#"+objectid).html(data);
+					} else {
+						$("#"+objectid).html("<pre>" + data + "</pre>");
+					}
+				},
+				error: function(){
+					$("#"+objectid).html("error ;(");	
+				}
+			});
+		}
+		
+		
+					
+			$(".op_window").bind("click", function(){
+				reload_window_dim();
+				$('#solutionid').attr('value', ( $(this).attr('sid') ) );
+				$('#pcode').attr('value', ( $(this).attr('pcode') ) );
+				$('#op_window').dialog('open');
+				$('#op_window').dialog('enable');
+				//$('.ui-dialog').css('display', 'block');
+				$(".ui-dialog").attr("max", "");
+				var url = "/files/src/" + $(this).attr('sid') + "/";
+				$('#url').attr('value', url);
+				loadCode(url, "op_window_sourcecode", false);
+				$("#op_window_sourcecode_link").click();
+				return false;
+			});
+			
+				
+		
+		
+		$(".ideone-run").click(function(){
+			var $this = $(this);
+			$.ajax({
+                	type: "post",
+                	url: "/files/src/plain/"+$(this).attr('sid')+"/",
+                	cache: false,
+                	dataType: 'html',
+                	success: function(data){
+                		ideone_submit(data, $this.attr('lang'), '', $this.attr('note'), true, true);
+                	}
+                });
+            return false;
+		});
+		
+	});
+-->
+</script>
+
+
+	<div id="op_window" title="<a href='#' id='op_window_sourcecode_link'>Source code</a> | <a href='#' id='op_window_plaintext_link'>Plain text</a> | <a href='#' id='op_window_copy_to_submit_link'><b>Copy to submit</b></a>">
+		<input type="hidden" class="url" value="" id="url"/>
+		<div id="op_window_sourcecode">
+		code...
+		</div>
+		<input type="hidden" class="solutionid" id="solutionid"/>
+		<input type="hidden" class="pcode" id="pcode"/>
+	</div>
+	        					
+				
+				<div style="clear: both"></div>
+	        </div><!-- end #content -->
+	        <div class="col-md-2" id="subcont">
+								
+								
+				
+				<script type="text/javascript">
+				
+				$(function(){
+					setTimeout(function(){
+						$('.no_a_info').css('visibility', 'visible');
+					}, 5000);
+				});
+				</script>
+				
+					        </div>
+		</div><!-- endof row in #content0 -->
+	</div><!-- endof #content0 -->
+</div><!-- endof div.row -->
+
+<div class="row">
+	<div class="col-md-12 footer" id="footer">
+	<div class="a-footer"></div>
+	<script language="javascript" type="text/javascript">
+	
+	
+	
+	
+	
+	
+		</script>
+	    <div style="font-size:10px; color:#aaaaaa;">
+    ISO C99,  C/C++, C++0x, kurs programowania w C++, zbiór algorytmów, algorytmy i struktury danych, sortowanie, kolejki priorytetowe, algorytmy grafowe, otoczka wypukła, odwrócona notacja polska, drzewo spinające, drzewo wyszukiwań binarnych, algorytm Euklidesa, NWD, ONP, haszowanie, stos, kolejka, kopiec, drzewa BST, AVL, RB, B-drzewa, diagram Voronoi, triangulacja, algorytm Karatsuby, kopiec Fibbonaciego
+</div>	</div>
+</div>
+
+
+</div><!-- end of #maintable -->
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+
+<div class="a-header"></div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=321676846207";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--<div id="fb-root"></div>
+<script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>-->
+
+
+<div style="font-size:10px; margin-top:4px; color: rgb(85,80,95); text-align: center">
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com" style="color:black">Sphere Research Labs</a>.
+</div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10507872-1']);
+    _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                      })();
+                      </script>
+
+<!-- 
+<script type="text/javascript">
+(function() {
+	var wrc = document.createElement('script'); wrc.type = 'text/javascript'; wrc.async = true; window.rc_utm_source='spoj';
+	wrc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'recruitcoders.com/w4loader.js';
+	var s = document.getElementsByTagName('body')[0]; s.appendChild(wrc);
+})();
+</script>
+ -->
+
+</body>
+</html>
