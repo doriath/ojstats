@@ -1,3 +1,5 @@
+require 'uri'
+
 module OnlineJudges
   class PolishSpoj
     def name
@@ -7,7 +9,7 @@ module OnlineJudges
     # @param [String] user_name
     # @return [Array<Accept>]
     def fetch_accepts(user_name, already_fetched_accepts)
-      url = "http://pl.spoj.com/users/#{user_name}/"
+      url = URI.escape("http://pl.spoj.com/users/#{user_name}/")
       OnlineJudges::PolishSpoj::UserPage.new(url).solved_problems.map do |solved_problem|
         if already_fetched_accepts.include?(solved_problem)
           puts "Problem #{solved_problem} already solved. Skipping."
@@ -22,7 +24,7 @@ module OnlineJudges
     # @param [String] problem_name
     # @return [Problem]
     def fetch_problem(problem_name)
-      url = "http://pl.spoj.com/ranks/#{problem_name}/"
+      url = URI.escape("http://pl.spoj.com/ranks/#{problem_name}/")
       OnlineJudges::Spoj::ProblemPage.new(url).problem
     end
 
