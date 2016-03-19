@@ -9,9 +9,9 @@ module OnlineJudges
 
       def solved_problems
         result = []
-        tables = page.css('#content table')
+        tables = page.css('.table-condensed')
         return [] if tables.size < 2
-        tables[1].css('a').each do |solved_problem|
+        tables[0].css('a').each do |solved_problem|
           next if solved_problem.text.empty?
           result << solved_problem.text.strip
         end

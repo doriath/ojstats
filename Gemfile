@@ -69,6 +69,7 @@ group :test, :development do
   gem 'cucumber-rails', require: false
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'vcr'
 
   # Javascript tests
   gem "jasminerice"

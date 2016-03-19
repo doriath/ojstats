@@ -6,12 +6,8 @@ describe OnlineJudges::PolishSpoj do
   subject(:polish_spoj) { OnlineJudges::PolishSpoj.new }
 
   describe '#fetch_accepts' do
-    let(:accepts) { [Accept.new('test', Time.zone.now)] }
-
-    it 'fetches accepts using user page' do
-      mock_request 'http://pl.spoj.pl/users/doriath', 'spoj/plspoj_doriath.html'
-      # TODO: Fix
-      # polish_spoj.fetch_accepts('doriath', []).should == accepts
+    it 'fetches accepts using user page', vcr: true do
+      polish_spoj.fetch_accepts('doriath', []).size.should == 226
     end
 
     # Note: signedlist is no longer available
